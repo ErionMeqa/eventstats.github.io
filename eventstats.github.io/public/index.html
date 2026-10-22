@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event Elo</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14171c;--mut:#6b7280;--line:#e5e7eb;--acc:#3b82f6;--up:#16a34a;--dn:#dc2626;--chip:#eef2f7;--shadow:0 1px 2px rgba(0,0,0,.05)}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--fg:#eceef2;--mut:#98a0ad;--line:#262b33;--acc:#6aa6ff;--up:#4ade80;--dn:#f87171;--chip:#212630;--shadow:none}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none} a:hover{color:var(--acc)}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+.nav{max-width:980px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:6px}
+.logo{font-weight:800;font-size:18px;margin-right:14px;letter-spacing:-.3px} .logo span{color:var(--acc)}
+.nav a.tab{padding:6px 12px;border-radius:8px;color:var(--mut);font-weight:600} .nav a.tab.on{background:var(--chip);color:var(--fg)} .sp{flex:1}
+main{max-width:980px;margin:0 auto;padding:22px 18px 60px}
+h1{font-size:26px;margin:0 0 4px;letter-spacing:-.4px} h2{font-size:17px;margin:28px 0 10px} .sub{color:var(--mut);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.wrap{overflow-x:auto} table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap} tr:last-child td{border-bottom:0}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);font-weight:700} td.num,th.num{text-align:right}
+tbody tr:hover{background:var(--chip)}
+.who{display:flex;align-items:center;gap:10px;font-weight:600}
+.av{width:30px;height:30px;border-radius:8px;flex:none;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px;overflow:hidden;image-rendering:pixelated}
+.av img{width:100%;height:100%;display:block}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-weight:700;font-size:13px;background:var(--chip)}
+.pill.up{color:var(--up);background:color-mix(in srgb,var(--up) 14%,transparent)} .pill.dn{color:var(--dn);background:color-mix(in srgb,var(--dn) 14%,transparent)}
+.rt{font-weight:800;font-variant-numeric:tabular-nums} .tier{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+.mut{color:var(--mut)} .medal{font-weight:800}
+.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.pod{padding:16px;text-align:center;border-top:4px solid var(--c)} .pod .av{width:56px;height:56px;margin:0 auto 8px;border-radius:12px;font-size:22px}
+.pod .n{font-weight:700} .pod .r{font-size:24px;font-weight:800;margin-top:2px} .pod .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+input.search{width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:inherit;margin-bottom:14px}
+.teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.team{padding:14px;border-left:5px solid var(--c)} .team .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.team b{font-size:15px} .team .pl{font-size:20px;font-weight:800;color:var(--c)} .team .m{color:var(--mut);font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:14px 0}
+.stat{padding:14px 16px} .stat .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;font-weight:700} .stat .v{font-size:24px;font-weight:800;margin-top:2px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;background:var(--c)}
+.head{display:flex;align-items:center;gap:14px;margin-bottom:6px} .head .av{width:56px;height:56px;border-radius:12px;font-size:22px}
+svg.chart{width:100%;height:auto;display:block} .tag{font-size:12px;padding:2px 8px;border-radius:6px;background:var(--chip);color:var(--mut);font-weight:600;margin-left:8px}
+input,button{font:inherit} .adm input{padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
+.adm button{padding:7px 14px;border:0;border-radius:8px;background:var(--acc);color:#fff;font-weight:600;cursor:pointer}
+@media(max-width:560px){.podium{grid-template-columns:1fr}.hide-s{display:none}}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#/">Event<span>Elo</span></a>
+<a class="tab" id="t-lb" href="#/">Leaderboard</a><a class="tab" id="t-ev" href="#/events">Events</a><span class="sp"></span><a class="tab" id="t-ad" href="#/admin">Admin</a></div></header>
+<main id="app">Loading...</main>
+<script>
+const $ = document.getElementById('app');
+const get = u => fetch(u).then(r => r.json());
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const hue = s => [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
+const COLORS = { crimson:'#dc2626', hazel:'#b45309', golden:'#eab308', mint:'#10b981', diamond:'#06b6d4', cobalt:'#2563eb', purple:'#9333ea', pink:'#ec4899',
+  red:'#ef4444', orange:'#f97316', yellow:'#ca8a04', lime:'#84cc16', green:'#16a34a', cyan:'#0891b2', aqua:'#14b8a6', blue:'#3b82f6' };
+const teamColor = t => COLORS[String(t).toLowerCase().split(' ')[0]] || `hsl(${hue(t)} 60% 50%)`;
+const tier = r => r >= 1800 ? '#f59e0b' : r >= 1650 ? '#a855f7' : r >= 1550 ? '#3b82f6' : r >= 1450 ? '#22c55e' : '#9ca3af';
+const sign = d => (d >= 0 ? '+' : '') + d.toFixed(1);
+const chg = (b, a) => { const d = a - b; return `<span class="pill ${d >= 0 ? 'up' : 'dn'}">${sign(d)}</span>`; };
+const ord = n => n + (['th','st','nd','rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : (n % 10 < 4 ? n % 10 : 0)]);
+const avatar = (name, uuid, cls = '') => uuid
+  ? `<div class="av ${cls}" style="background:hsl(${hue(name)} 55% 45%)"><img alt="" src="https://mc-heads.net/avatar/${uuid}/64" onerror="this.remove()">${esc(name[0] || '?')}</div>`
+  : `<div class="av ${cls}" style="background:hsl(${hue(name)} 55% 45%)">${esc((name[0] || '?').toUpperCase())}</div>`;
+const nav = id => ['lb','ev','ad'].forEach(k => document.getElementById('t-' + k).classList.toggle('on', k === id));
+
+async function leaderboard() {
+  nav('lb');
+  const rows = await get('/api/leaderboard');
+  const medal = i => ['#f59e0b', '#9ca3af', '#b45309'][i];
+  const table = list => `<div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th class="num">Rating</th><th class="num hide-s">Last event</th><th class="num hide-s">Peak</th><th class="num hide-s">Events</th></tr></thead><tbody>
+  ${list.map(p => `<tr><td class="mut">${p.rank}</td><td><a class="who" href="#/player/${p.id}">${avatar(p.name, p.uuid)}${esc(p.name)}</a></td>
+  <td class="num rt"><span class="tier" style="background:${tier(p.rating)}"></span>${Math.round(p.rating)}</td>
+  <td class="num hide-s">${p.last_change == null ? '' : `<span class="pill ${p.last_change >= 0 ? 'up' : 'dn'}">${sign(p.last_change)}</span>`}</td>
+  <td class="num hide-s mut">${Math.round(p.peak)}</td><td class="num hide-s mut">${p.events}</td></tr>`).join('') || '<tr><td colspan="6" class="mut">No players found.</td></tr>'}</tbody></table></div>`;
+  rows.forEach((p, i) => p.rank = i + 1);
+  $.innerHTML = `<h1>Leaderboard</h1><p class="sub">${rows.length} players rated across all events</p>
+  <div class="podium">${rows.slice(0, 3).map((p, i) => `<a class="card pod" style="--c:${medal(i)}" href="#/player/${p.id}">${avatar(p.name, p.uuid)}<div class="k">${ord(i + 1)}</div><div class="n">${esc(p.name)}</div><div class="r">${Math.round(p.rating)}</div></a>`).join('')}</div>
+  <input class="search" id="q" placeholder="Search players..."><div id="tbl">${table(rows)}</div>`;
+  document.getElementById('q').oninput = e => {
+    const q = e.target.value.toLowerCase();
+    document.getElementById('tbl').innerHTML = table(rows.filter(p => p.name.toLowerCase().includes(q)));
+  };
+}
+
+async function events() {
+  nav('ev');
+  const rows = await get('/api/events');
+  const byYear = {};
+  rows.forEach(e => (byYear[String(e.date).slice(0, 4)] ||= []).push(e));
+  $.innerHTML = `<h1>Events</h1><p class="sub">${rows.length} events</p>` + Object.keys(byYear).sort().reverse().map(y => `<h2>${y}</h2>
+  <div class="card wrap"><table><tbody>${byYear[y].map(e => `<tr><td><a href="#/event/${e.id}"><b>${esc(e.name)}</b></a></td><td class="mut">${esc(e.date)}</td><td class="num mut">${e.players} players</td></tr>`).join('')}</tbody></table></div>`).join('');
+}
+
+async function event(id) {
+  nav('ev');
+  const d = await get('/api/events/' + id);
+  const teamOnly = d.players.every(p => p.placement == null);
+  const gain = (name) => d.players.filter(p => p.team === name).reduce((s, p) => s + (p.after - p.before), 0) / Math.max(1, d.players.filter(p => p.team === name).length);
+  $.innerHTML = `<h1>${esc(d.event.name)}</h1><p class="sub">${esc(d.event.date)} · ${d.players.length} players${d.teams.length ? ' · ' + d.teams.length + ' teams' : ''}</p>
+  ${d.teams.length ? `<h2>Team standings</h2><div class="teams">${d.teams.map(t => `<div class="card team" style="--c:${teamColor(t.name)}">
+    <div class="top"><b>${esc(t.name)}</b><span class="pl">${ord(t.placement)}</span></div>
+    <div class="m">${t.players.map(esc).join(', ')}</div><div class="m" style="margin-top:6px">Avg rating change ${chg(0, gain(t.name))}</div></div>`).join('')}</div>` : ''}
+  <h2>${teamOnly ? 'Players (team standings only)' : 'Individual results'}</h2>
+  <div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th>Team</th><th class="num">Rating</th><th class="num">Change</th></tr></thead><tbody>
+  ${d.players.map(p => `<tr><td class="mut">${p.placement ?? '-'}</td><td><a class="who" href="#/player/${p.id}">${avatar(p.name, p.uuid)}${esc(p.name)}</a></td>
+  <td>${p.team ? `<span class="dot" style="--c:${teamColor(p.team)}"></span>${esc(p.team)}` : ''}</td><td class="num rt">${Math.round(p.after)}</td><td class="num">${chg(p.before, p.after)}</td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function chart(history) {
+  const pts = [{ v: 1500, label: 'Start' }, ...history.map(h => ({ v: h.after, label: `${h.name} (${h.date}): ${Math.round(h.after)}` }))];
+  const W = 640, H = 200, L = 40, R = 12, T = 12, B = 22;
+  const lo = Math.floor((Math.min(...pts.map(p => p.v)) - 15) / 10) * 10, hi = Math.ceil((Math.max(...pts.map(p => p.v)) + 15) / 10) * 10;
+  const x = i => L + (i * (W - L - R)) / Math.max(1, pts.length - 1), y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  const line = pts.map((p, i) => `${x(i)},${y(p.v)}`).join(' ');
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--acc)" stop-opacity=".25"/><stop offset="1" stop-color="var(--acc)" stop-opacity="0"/></linearGradient></defs>
+  ${[lo, (lo + hi) / 2, hi].map(v => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--mut)">${Math.round(v)}</text>`).join('')}
+  ${lo < 1500 && hi > 1500 ? `<line x1="${L}" x2="${W - R}" y1="${y(1500)}" y2="${y(1500)}" stroke="var(--mut)" stroke-dasharray="4 4" opacity=".5"/>` : ''}
+  <polygon points="${x(0)},${H - B} ${line} ${x(pts.length - 1)},${H - B}" fill="url(#g)"/>
+  <polyline points="${line}" fill="none" stroke="var(--acc)" stroke-width="2.5" stroke-linejoin="round"/>
+  ${pts.map((p, i) => `<circle cx="${x(i)}" cy="${y(p.v)}" r="4" fill="var(--card)" stroke="var(--acc)" stroke-width="2"><title>${esc(p.label)}</title></circle>`).join('')}</svg>`;
+}
+
+async function player(id) {
+  nav('lb');
+  const { player, history } = await get('/api/players/' + id);
+  const peak = Math.max(1500, ...history.map(h => h.after));
+  const best = history.filter(h => h.placement != null).reduce((m, h) => Math.min(m, h.placement), 999);
+  $.innerHTML = `<div class="head">${avatar(player.name, player.uuid)}<div><h1 style="margin:0">${esc(player.name)}</h1><div class="mut">${player.events} event${player.events === 1 ? "" : "s"} played</div></div></div>
+  <div class="stats">
+    <div class="card stat"><div class="k">Rating</div><div class="v"><span class="tier" style="background:${tier(player.rating)}"></span>${Math.round(player.rating)}</div></div>
+    <div class="card stat"><div class="k">Peak</div><div class="v">${Math.round(peak)}</div></div>
+    <div class="card stat"><div class="k">Events</div><div class="v">${player.events}</div></div>
+    ${best < 999 ? `<div class="card stat"><div class="k">Best placement</div><div class="v">${ord(best)}</div></div>` : ''}
+  </div>
+  <div class="card" style="padding:14px 14px 6px">${chart(history)}</div>
+  <h2>History</h2><div class="card wrap"><table><thead><tr><th>Event</th><th class="hide-s">Date</th><th>Team</th><th class="num">Team #</th><th class="num">Place</th><th class="num">Change</th></tr></thead><tbody>
+  ${history.slice().reverse().map(h => `<tr><td><a href="#/event/${h.event_id}"><b>${esc(h.name)}</b></a></td><td class="mut hide-s">${esc(h.date)}</td>
+  <td>${h.team ? `<span class="dot" style="--c:${teamColor(h.team)}"></span>${esc(h.team)}` : ''}</td><td class="num">${h.team_placement ?? '-'}</td><td class="num">${h.placement ?? '-'}</td><td class="num">${chg(h.before, h.after)}</td></tr>`).join('')}</tbody></table></div>`;
+}
+
+const api = (u, body) => fetch(u, { method: body ? 'POST' : 'GET',
+  headers: { 'x-admin-token': sessionStorage.token || '', 'content-type': 'application/json' },
+  body: body && JSON.stringify(body) }).then(async r => { const d = await r.json(); if (!r.ok) throw new Error(d.error); return d; });
+async function admin() {
+  nav('ad');
+  if (!sessionStorage.token) {
+    $.innerHTML = `<h1>Admin</h1><p class="sub">Enter the admin token you started the server with.</p><div class="adm"><input id="t" type="password" placeholder="Admin token"> <button id="go">Log in</button></div>`;
+    document.getElementById('go').onclick = () => { sessionStorage.token = document.getElementById('t').value; admin(); };
+    return;
+  }
+  let rows;
+  try { rows = await api('/api/unmatched'); } catch (e) { sessionStorage.removeItem('token'); $.innerHTML = `<h1>Admin</h1><p class="pill dn">${esc(e.message)}</p> <a href="#/admin" onclick="setTimeout(admin)">Try again</a>`; return; }
+  $.innerHTML = `<h1>Admin</h1><div class="adm"><button id="ref">Refresh all names from Mojang</button> <span id="msg" class="mut"></span></div>
+  <h2>Players without a UUID (${rows.length})</h2><p class="sub">Search the name on NameMC, paste the UUID, press Link. If that UUID already belongs to another player, the two are merged.</p>
+  <div class="card wrap adm"><table><thead><tr><th>Name</th><th>Events</th><th>NameMC</th><th>UUID</th><th></th></tr></thead><tbody>
+  ${rows.map(p => `<tr><td><b>${esc(p.name)}</b></td><td>${p.events}</td><td><a target="_blank" rel="noopener" href="https://namemc.com/search?q=${encodeURIComponent(p.name)}">search</a></td>
+  <td><input size="34" id="u${p.id}" placeholder="UUID"></td><td><button data-id="${p.id}">Link</button></td></tr>`).join('') || '<tr><td colspan="5" class="mut">Everyone is linked.</td></tr>'}</tbody></table></div>`;
+  const msg = document.getElementById('msg');
+  document.getElementById('ref').onclick = async () => { msg.textContent = 'Working...'; try { const r = await api('/api/refresh-names', {}); msg.textContent = `Checked ${r.checked}, renamed ${r.changed}, failed ${r.failed}`; } catch (e) { msg.textContent = e.message; } };
+  $.querySelectorAll('button[data-id]').forEach(b => b.onclick = async () => {
+    try { await api('/api/link', { player_id: +b.dataset.id, uuid: document.getElementById('u' + b.dataset.id).value }); admin(); }
+    catch (e) { msg.textContent = e.message; }
+  });
+}
+
+function route() {
+  const [, a, b] = location.hash.split('/');
+  window.scrollTo(0, 0);
+  ({ events, admin, event: () => event(b), player: () => player(b) }[a] || leaderboard)();
+}
+addEventListener('hashchange', route); route();
+</script></body></html>

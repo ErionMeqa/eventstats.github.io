@@ -55,7 +55,7 @@ for (const c of starts) {
   const labeled = []; let boardAt = -1, end = rows.length;
   for (let r = hr + 1; r < rows.length; r++) {
     const v = cell(r, c);
-    if (/^INDIVIDUAL BOARD/i.test(v)) { boardAt = r; break; }
+    if (/^INDIVIDUAL (BOARD|LEADERBOARD)/i.test(v)) { boardAt = r; break; }
     if (/^GAMES PLAYED/i.test(v)) { end = r; break; }
     if (labelRe.test(v)) labeled.push(r);
   }
