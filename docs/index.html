@@ -44,9 +44,14 @@ input,button{font:inherit} .adm input{padding:7px 10px;border:1px solid var(--li
 <header><div class="nav"><a class="logo" href="#/">Event<span>Elo</span></a>
 <a class="tab" id="t-lb" href="#/">Leaderboard</a><a class="tab" id="t-ev" href="#/events">Events</a><span class="sp"></span><a class="tab" id="t-ad" href="#/admin">Admin</a></div></header>
 <main id="app">Loading...</main>
+<script>window.STATIC = true;</script>
 <script>
 const $ = document.getElementById('app');
-const get = u => fetch(u).then(r => r.json());
+// On GitHub Pages (static build) the same data comes from JSON files instead of the API.
+const url = u => !window.STATIC ? u : u.replace(/\/api\/events\/(\d+)/, 'data/event-$1.json').replace(/\/api\/players\/(\d+)/, 'data/player-$1.json')
+  .replace('/api/leaderboard', 'data/leaderboard.json').replace('/api/events', 'data/events.json');
+const get = u => fetch(url(u)).then(r => r.json());
+if (window.STATIC) document.getElementById('t-ad').style.display = 'none';
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const hue = s => [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
 const COLORS = { crimson:'#dc2626', hazel:'#b45309', golden:'#eab308', mint:'#10b981', diamond:'#06b6d4', cobalt:'#2563eb', purple:'#9333ea', pink:'#ec4899',
@@ -165,7 +170,7 @@ async function admin() {
 function route() {
   const [, a, b] = location.hash.split('/');
   window.scrollTo(0, 0);
-  ({ events, admin, event: () => event(b), player: () => player(b) }[a] || leaderboard)();
+  ({ events, admin: window.STATIC ? leaderboard : admin, event: () => event(b), player: () => player(b) }[a] || leaderboard)();
 }
 addEventListener('hashchange', route); route();
 </script></body></html>
