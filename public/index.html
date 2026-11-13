@@ -53,9 +53,17 @@ const get = u => fetch(url(u)).then(r => r.json());
 if (window.STATIC) document.getElementById('t-ad').style.display = 'none';
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const hue = s => [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
-const COLORS = { crimson:'#dc2626', hazel:'#b45309', golden:'#eab308', mint:'#10b981', diamond:'#06b6d4', cobalt:'#2563eb', purple:'#9333ea', pink:'#ec4899',
-  red:'#ef4444', orange:'#f97316', yellow:'#ca8a04', lime:'#84cc16', green:'#16a34a', cyan:'#0891b2', aqua:'#14b8a6', blue:'#3b82f6' };
-const teamColor = t => COLORS[String(t).toLowerCase().split(' ')[0]] || `hsl(${hue(t)} 60% 50%)`;
+const COLORS = { crimson:'#dc2626', krimson:'#dc2626', scarlet:'#e11d48', red:'#ef4444', ruby:'#be123c', maroon:'#9f1239', coral:'#fb7185',
+  orange:'#f97316', ginger:'#ea580c', marigold:'#f59e0b', amber:'#f59e0b', hazel:'#b45309', brown:'#92400e', mustard:'#d4a017',
+  golden:'#eab308', gold:'#eab308', yellow:'#ca8a04', topaz:'#fbbf24', daisy:'#facc15', lime:'#84cc16', green:'#16a34a',
+  emerald:'#059669', jade:'#00a86b', mint:'#10b981', cactus:'#4d7c0f', olive:'#65a30d', teal:'#0d9488', aqua:'#14b8a6',
+  aquamarine:'#2dd4bf', turquoise:'#06b6d4', cyan:'#0891b2', diamond:'#06b6d4', cerulean:'#0284c7', blue:'#3b82f6',
+  hydrangea:'#6366f1', sapphire:'#1d4ed8', cobalt:'#2563eb', navy:'#1e3a8a', indigo:'#4f46e5', violet:'#7c3aed',
+  purple:'#9333ea', amethyst:'#9966cc', orchid:'#c026d3', lilac:'#c084fc', lavender:'#a78bfa', fuchsia:'#d946ef',
+  magenta:'#db2777', pink:'#ec4899', rose:'#f43f5e', begonia:'#f472b6', carnation:'#fb7185', tulip:'#e11d48',
+  white:'#e5e7eb', silver:'#94a3b8', gray:'#6b7280', grey:'#6b7280', black:'#374151' };
+// first colour word anywhere in the name ("Team Red", "The Blue Bees"), else a stable hue from the name
+const teamColor = t => { const w = String(t).toLowerCase().split(/[^a-z]+/).find(x => COLORS[x]); return w ? COLORS[w] : `hsl(${hue(t)} 60% 50%)`; };
 const tier = r => r >= 1800 ? '#f59e0b' : r >= 1650 ? '#a855f7' : r >= 1550 ? '#3b82f6' : r >= 1450 ? '#22c55e' : '#9ca3af';
 const sign = d => (d >= 0 ? '+' : '') + d.toFixed(1);
 const chg = (b, a) => { const d = a - b; return `<span class="pill ${d >= 0 ? 'up' : 'dn'}">${sign(d)}</span>`; };
