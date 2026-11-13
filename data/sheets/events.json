@@ -1,0 +1,1559 @@
+[
+  {
+    "file": "mc-championship-1.csv",
+    "name": "MC Championship 1",
+    "date": "2019-11-17",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 1\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-2.csv",
+    "name": "MC Championship 2",
+    "date": "2020-02-09",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 2\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-3.csv",
+    "name": "MC Championship 3",
+    "date": "2020-03-14",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 3\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-4.csv",
+    "name": "MC Championship 4",
+    "date": "2020-04-18",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 4\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-5.csv",
+    "name": "MC Championship 5",
+    "date": "2020-05-16",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 5\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-6.csv",
+    "name": "MC Championship 6",
+    "date": "2020-06-13",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 6\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-7.csv",
+    "name": "MC Championship 7",
+    "date": "2020-07-18",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 7\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-8.csv",
+    "name": "MC Championship 8",
+    "date": "2020-08-15",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 8\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-9.csv",
+    "name": "MC Championship 9",
+    "date": "2020-09-12",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 9\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-10.csv",
+    "name": "MC Championship 10",
+    "date": "2020-09-26",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 10\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-11.csv",
+    "name": "MC Championship 11",
+    "date": "2020-10-24",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 11\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-12.csv",
+    "name": "MC Championship 12",
+    "date": "2020-11-14",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 12\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-jingle-jam.csv",
+    "name": "MC Championship: Jingle Jam",
+    "date": "2020-12-05",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCJJ (NC)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-13.csv",
+    "name": "MC Championship 13",
+    "date": "2020-12-12",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 13\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-14.csv",
+    "name": "MC Championship 14",
+    "date": "2021-05-29",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 14\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-pride-2021.csv",
+    "name": "MC Championship: Pride 2021",
+    "date": "2021-06-26",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP21\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-15.csv",
+    "name": "MC Championship 15",
+    "date": "2021-07-24",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 15\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-16.csv",
+    "name": "MC Championship 16",
+    "date": "2021-08-28",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 16\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-17.csv",
+    "name": "MC Championship 17",
+    "date": "2021-09-18",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 17\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-18.csv",
+    "name": "MC Championship 18",
+    "date": "2021-10-23",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 18\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-all-stars.csv",
+    "name": "MC Championship: All-Stars",
+    "date": "2021-11-13",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCAS\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-19.csv",
+    "name": "MC Championship 19",
+    "date": "2021-12-11",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 19\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-20.csv",
+    "name": "MC Championship 20",
+    "date": "2022-03-26",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 20\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-21.csv",
+    "name": "MC Championship 21",
+    "date": "2022-04-30",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 21\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-22.csv",
+    "name": "MC Championship 22",
+    "date": "2022-05-28",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 22\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-pride-2022.csv",
+    "name": "MC Championship: Pride 2022",
+    "date": "2022-06-18",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP22\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-23.csv",
+    "name": "MC Championship 23",
+    "date": "2022-07-23",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 23\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-24.csv",
+    "name": "MC Championship 24",
+    "date": "2022-08-22",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 24\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-25.csv",
+    "name": "MC Championship 25",
+    "date": "2022-09-24",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 25\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-26.csv",
+    "name": "MC Championship 26",
+    "date": "2022-10-22",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 26\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-27-underdogs.csv",
+    "name": "MC Championship 27: Underdogs",
+    "date": "2022-11-12",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 27 (U)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-1.csv",
+    "name": "Block Wars 1",
+    "date": "2022-11-19",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW1\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-28.csv",
+    "name": "MC Championship 28",
+    "date": "2022-12-03",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 28\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-2.csv",
+    "name": "Block Wars 2",
+    "date": "2022-12-10",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW2\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "block-wars-3.csv",
+    "name": "Block Wars 3",
+    "date": "2023-01-28",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW3\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "block-wars-4.csv",
+    "name": "Block Wars 4",
+    "date": "2023-03-11",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW4\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-29.csv",
+    "name": "MC Championship 29",
+    "date": "2023-03-18",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 29\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-scuffed.csv",
+    "name": "MC Championship: Scuffed",
+    "date": "2023-04-01",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCAF\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-5.csv",
+    "name": "Block Wars 5",
+    "date": "2023-04-15",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW5\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-30.csv",
+    "name": "MC Championship 30",
+    "date": "2023-04-29",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 30\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mayhem-birthday-bonkers-2023.csv",
+    "name": "MC Mayhem Birthday Bonkers 2023",
+    "date": "2023-05-06",
+    "source": "MC Mayhem stats / tab \"MM Birthday\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-6.csv",
+    "name": "Block Wars 6",
+    "date": "2023-05-13",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW6\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-13.csv",
+    "name": "Chillars Championship 13",
+    "date": "2023-05-13",
+    "source": "Main Chillars Event Sheet / tab \"CH^13\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-31.csv",
+    "name": "MC Championship 31",
+    "date": "2023-05-20",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 31\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-pride-2023.csv",
+    "name": "MC Championship: Pride 2023",
+    "date": "2023-06-10",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP23\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-pride-2023.csv",
+    "name": "Block Wars Pride 2023",
+    "date": "2023-06-17",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWP23 (NC)\"; date: estimated",
+    "notes": "DATE ESTIMATED (between Block Wars 6 (2023-05-13) and 7 (2023-07-22); Pride month)",
+    "date_estimated": true
+  },
+  {
+    "file": "chillars-championship-14.csv",
+    "name": "Chillars Championship 14",
+    "date": "2023-06-17",
+    "source": "Main Chillars Event Sheet / tab \"CH^14\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-32.csv",
+    "name": "MC Championship 32",
+    "date": "2023-07-15",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 32\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-7.csv",
+    "name": "Block Wars 7",
+    "date": "2023-07-22",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW7\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-33.csv",
+    "name": "MC Championship 33",
+    "date": "2023-08-05",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 33\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-rookies.csv",
+    "name": "Block Wars Rookies",
+    "date": "2023-08-19",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWR (NC)\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-rising-2.csv",
+    "name": "MC Championship: Rising 2",
+    "date": "2023-08-26",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCR2 (NC)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-34.csv",
+    "name": "MC Championship 34",
+    "date": "2023-09-16",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 34\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "chillars-championship-15.csv",
+    "name": "Chillars Championship 15",
+    "date": "2023-09-23",
+    "source": "Main Chillars Event Sheet / tab \"CH^15\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-mayhem-23.csv",
+    "name": "MC Mayhem 23",
+    "date": "2023-09-30",
+    "source": "MC Mayhem stats / tab \"MM23\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-mayhem-24.csv",
+    "name": "MC Mayhem 24",
+    "date": "2023-10-14",
+    "source": "MC Mayhem stats / tab \"MM24\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-twitch-rivals.csv",
+    "name": "MC Championship: Twitch Rivals",
+    "date": "2023-10-20",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCTR\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-8.csv",
+    "name": "Block Wars 8",
+    "date": "2023-10-28",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW8\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-16.csv",
+    "name": "Chillars Championship 16",
+    "date": "2023-11-04",
+    "source": "Main Chillars Event Sheet / tab \"CH^16\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-party.csv",
+    "name": "MC Championship: Party",
+    "date": "2023-11-11",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-9.csv",
+    "name": "Block Wars 9",
+    "date": "2023-12-02",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW9\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-35.csv",
+    "name": "MC Championship 35",
+    "date": "2023-12-09",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCC 35\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mayhem-25.csv",
+    "name": "MC Mayhem 25",
+    "date": "2023-12-16",
+    "source": "MC Mayhem stats / tab \"MM25\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-mayhem-26.csv",
+    "name": "MC Mayhem 26",
+    "date": "2024-01-13",
+    "source": "MC Mayhem stats / tab \"MM26\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-10.csv",
+    "name": "Block Wars 10",
+    "date": "2024-01-20",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW10\"; date: Overview tab",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-mania-8.csv",
+    "name": "MC Mania 8",
+    "date": "2024-01-20",
+    "source": "MC Mania Stats / tab \"Mania 8\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mania-birthday.csv",
+    "name": "MC Mania Birthday",
+    "date": "2024-02-17",
+    "source": "MC Mania Stats / tab \"Mania Birthday\"; date: estimated",
+    "notes": "DATE ESTIMATED (between MC Mania 8 (2024-01-20) and 9 (2024-03-16))",
+    "date_estimated": true
+  },
+  {
+    "file": "mc-mayhem-27.csv",
+    "name": "MC Mayhem 27",
+    "date": "2024-02-17",
+    "source": "MC Mayhem stats / tab \"MM27\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-rookies-2.csv",
+    "name": "Block Wars Rookies 2",
+    "date": "2024-02-24",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWR2 (NC)\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-mania-9.csv",
+    "name": "MC Mania 9",
+    "date": "2024-03-16",
+    "source": "MC Mania Stats / tab \"Mania 9\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mayhem-28.csv",
+    "name": "MC Mayhem 28",
+    "date": "2024-03-23",
+    "source": "MC Mayhem stats / tab \"MM28\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-mania-womania.csv",
+    "name": "MC Mania: Womania",
+    "date": "2024-03-30",
+    "source": "MC Mania Stats / tab \"Womania\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mayhem-29.csv",
+    "name": "MC Mayhem 29",
+    "date": "2024-04-20",
+    "source": "MC Mayhem stats / tab \"MM29\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-s4-kick-off.csv",
+    "name": "MC Championship: S4 Kick-Off",
+    "date": "2024-05-04",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCS4KO (36)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mayhem-birthday-bonkers-2024.csv",
+    "name": "MC Mayhem Birthday Bonkers 2024",
+    "date": "2024-05-25",
+    "source": "MC Mayhem stats / tab \"MMBB24\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-pride-2024.csv",
+    "name": "MC Championship: Pride 2024",
+    "date": "2024-06-01",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP24\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mania-pride-2024.csv",
+    "name": "MC Mania Pride 2024",
+    "date": "2024-06-15",
+    "source": "MC Mania Stats / tab \"Mania P24\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mayhem-pride-2024.csv",
+    "name": "MC Mayhem Pride 2024",
+    "date": "2024-06-15",
+    "source": "MC Mayhem stats / tab \"MMP24\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-rewind.csv",
+    "name": "Chillars Championship Rewind",
+    "date": "2024-06-22",
+    "source": "Main Chillars Event Sheet / tab \"CH^RE\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-twitch-rivals-2.csv",
+    "name": "MC Championship: Twitch Rivals 2",
+    "date": "2024-06-30",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCTR2\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "blissful-championship-16.csv",
+    "name": "Blissful Championship 16",
+    "date": "2024-07-13",
+    "source": "Blissful Championship Stats / tab \"BC16\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-mayhem-30.csv",
+    "name": "MC Mayhem 30",
+    "date": "2024-07-20",
+    "source": "MC Mayhem stats / tab \"MM30\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-the-ender-cup.csv",
+    "name": "MC Championship: The Ender Cup",
+    "date": "2024-07-27",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCEC\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mania-10.csv",
+    "name": "MC Mania 10",
+    "date": "2024-07-27",
+    "source": "MC Mania Stats / tab \"Mania 10\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-11.csv",
+    "name": "Block Wars 11",
+    "date": "2024-08-10",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW11\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "blissful-championship-17.csv",
+    "name": "Blissful Championship 17",
+    "date": "2024-08-11",
+    "source": "Blissful Championship Stats / tab \"BC17\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "blissful-championship-18.csv",
+    "name": "Blissful Championship 18",
+    "date": "2024-08-31",
+    "source": "Blissful Championship Stats / tab \"BC18\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-17.csv",
+    "name": "Chillars Championship 17",
+    "date": "2024-08-31",
+    "source": "Main Chillars Event Sheet / tab \"CH^17\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-rising-3.csv",
+    "name": "MC Championship: Rising 3",
+    "date": "2024-09-07",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCR3\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-12.csv",
+    "name": "Block Wars 12",
+    "date": "2024-09-14",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW12\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "blissful-championship-19.csv",
+    "name": "Blissful Championship 19",
+    "date": "2024-09-21",
+    "source": "Blissful Championship Stats / tab \"BC19\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-twitch-rivals-3.csv",
+    "name": "MC Championship: Twitch Rivals 3",
+    "date": "2024-09-21",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCTR3\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mania-11.csv",
+    "name": "MC Mania 11",
+    "date": "2024-09-28",
+    "source": "MC Mania Stats / tab \"Mania 11\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-13.csv",
+    "name": "Block Wars 13",
+    "date": "2024-10-12",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW13\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-18.csv",
+    "name": "Chillars Championship 18",
+    "date": "2024-10-12",
+    "source": "Main Chillars Event Sheet / tab \"CH^18\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-haunted-hoedown.csv",
+    "name": "MC Championship: Haunted Hoedown",
+    "date": "2024-10-26",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCHH (37)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "biome-battle-2.csv",
+    "name": "Biome Battle 2",
+    "date": "2024-10-27",
+    "source": "Biome Battle Stats / tab \"BB2\"; date: estimated",
+    "notes": "DATE ESTIMATED (Halloween-themed games; between Biome Battle Mini 1 (2024-09-29) and Mini 2 (2024-11-24))",
+    "date_estimated": true
+  },
+  {
+    "file": "blissful-championship-20.csv",
+    "name": "Blissful Championship 20",
+    "date": "2024-10-27",
+    "source": "Blissful Championship Stats / tab \"BC20\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-rookies-3.csv",
+    "name": "Block Wars Rookies 3",
+    "date": "2024-11-09",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWR3 (NC)\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-19.csv",
+    "name": "Chillars Championship 19",
+    "date": "2024-11-16",
+    "source": "Main Chillars Event Sheet / tab \"CH^19\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "biome-battle-mini-2.csv",
+    "name": "Biome Battle Mini 2",
+    "date": "2024-11-24",
+    "source": "Biome Battle Stats / tab \"BBM2\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-mania-x-insidemc.csv",
+    "name": "MC Mania x InsideMC",
+    "date": "2024-11-24",
+    "source": "MC Mania Stats / tab \"Mania x InsideMC\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-twitch-rivals-charity-challenge.csv",
+    "name": "Block Wars Twitch Rivals Charity Challenge",
+    "date": "2024-12-03",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWCCOTR\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-party-2.csv",
+    "name": "MC Championship: Party 2",
+    "date": "2024-12-07",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP2\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-mania-12.csv",
+    "name": "MC Mania 12",
+    "date": "2024-12-07",
+    "source": "MC Mania Stats / tab \"Mania 12\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "biome-battle-3.csv",
+    "name": "Biome Battle 3",
+    "date": "2024-12-15",
+    "source": "Biome Battle Stats / tab \"BB3\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-20.csv",
+    "name": "Chillars Championship 20",
+    "date": "2024-12-21",
+    "source": "Main Chillars Event Sheet / tab \"CH^20\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "blissful-championship-21.csv",
+    "name": "Blissful Championship 21",
+    "date": "2025-01-25",
+    "source": "Blissful Championship Stats / tab \"BC21\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-14.csv",
+    "name": "Block Wars 14",
+    "date": "2025-01-25",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW14\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-underdogs.csv",
+    "name": "Chillars Championship Underdogs",
+    "date": "2025-02-08",
+    "source": "Main Chillars Event Sheet / tab \"CH^UD\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "block-wars-15.csv",
+    "name": "Block Wars 15",
+    "date": "2025-02-22",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW15\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "biome-battle-4.csv",
+    "name": "Biome Battle 4",
+    "date": "2025-03-09",
+    "source": "Biome Battle Stats / tab \"BB4\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "blissful-championship-22.csv",
+    "name": "Blissful Championship 22",
+    "date": "2025-03-15",
+    "source": "Blissful Championship Stats / tab \"BC22\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "biome-battle-wolfeei-invitational.csv",
+    "name": "Biome Battle Wolfeei Invitational",
+    "date": "2025-03-16",
+    "source": "Biome Battle Stats / tab \"BBWI\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-16.csv",
+    "name": "Block Wars 16",
+    "date": "2025-03-29",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW16\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "biome-battle-x-the-wheel.csv",
+    "name": "Biome Battle x The Wheel",
+    "date": "2025-04-11",
+    "source": "Biome Battle Stats / tab \"BBTW\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-hispano.csv",
+    "name": "Block Wars Hispano",
+    "date": "2025-04-12",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWH (NC)\"; date: estimated",
+    "notes": "DATE ESTIMATED (between Block Wars 16 (2025-03-29) and Rookies 4 (2025-04-26))",
+    "date_estimated": true
+  },
+  {
+    "file": "block-wars-rookies-4.csv",
+    "name": "Block Wars Rookies 4",
+    "date": "2025-04-26",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWR4 (NC)\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "biome-battle-mini-3.csv",
+    "name": "Biome Battle Mini 3",
+    "date": "2025-04-27",
+    "source": "Biome Battle Stats / tab \"BBM3\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-blank-canvas.csv",
+    "name": "MC Championship: Blank Canvas",
+    "date": "2025-05-03",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCBC (38)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-brawl.csv",
+    "name": "Block Wars Brawl",
+    "date": "2025-05-24",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWB (NC)\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-colour-the-world.csv",
+    "name": "MC Championship: Colour The World",
+    "date": "2025-06-01",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCCTW (TR4)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-magenta-etrophy.csv",
+    "name": "MC Championship: Magenta eTrophy",
+    "date": "2025-06-14",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCMET\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "mc-championship-pride-2025.csv",
+    "name": "MC Championship: Pride 2025",
+    "date": "2025-06-28",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP25\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "biome-battle-pride-2025.csv",
+    "name": "Biome Battle Pride 2025",
+    "date": "2025-06-29",
+    "source": "Biome Battle Stats / tab \"BBP25\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "block-wars-17.csv",
+    "name": "Block Wars 17",
+    "date": "2025-08-30",
+    "source": "Block Wars - Event Stats Sheet / tab \"BW17\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-builders-guild.csv",
+    "name": "MC Championship: Builder's Guild",
+    "date": "2025-09-13",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCBG (39)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-x-feinberg.csv",
+    "name": "Block Wars x Feinberg",
+    "date": "2025-09-14",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWFB\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-21.csv",
+    "name": "Chillars Championship 21",
+    "date": "2025-10-04",
+    "source": "Main Chillars Event Sheet / tab \"CH^21\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-bugboi.csv",
+    "name": "Pandora's Box x BugBoi",
+    "date": "2025-10-12",
+    "source": "Pandoras Box Commissioned Events / tab \"PB x BugBoi\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-rookies-5.csv",
+    "name": "Block Wars Rookies 5",
+    "date": "2025-10-18",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWR5 (NC)\"; date: estimated",
+    "notes": "DATE ESTIMATED (between BW x Feinberg (2025-09-14) and BW x Movember (Nov 2025))",
+    "date_estimated": true
+  },
+  {
+    "file": "mc-championship-the-copper-crown.csv",
+    "name": "MC Championship: The Copper Crown",
+    "date": "2025-10-19",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCTCC (TR5)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "pandoras-box-x-group-project.csv",
+    "name": "Pandora's Box x Group Project",
+    "date": "2025-11-08",
+    "source": "Pandoras Box Commissioned Events / tab \"PB x Group Project\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-yo-yo-slime.csv",
+    "name": "Pandora's Box x Yo-Yo Slime",
+    "date": "2025-11-08",
+    "source": "Pandoras Box Commissioned Events / tab \"PB x Yo-Yo Slime\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-mash-up.csv",
+    "name": "MC Championship: Mash-Up",
+    "date": "2025-11-15",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCMU (40)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-x-movember.csv",
+    "name": "Block Wars x Movember",
+    "date": "2025-11-22",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWM (NC)\"; date: estimated",
+    "notes": "DATE ESTIMATED (Movember 2025; between BW x Feinberg (2025-09-14) and Spring Fever (2026-03-28))",
+    "date_estimated": true
+  },
+  {
+    "file": "pandoras-box-x-last-dance.csv",
+    "name": "Pandora's Box x Last Dance",
+    "date": "2025-11-23",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Last Dance\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-cc.csv",
+    "name": "Block Wars CC",
+    "date": "2025-12-06",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWCC (NC)\"; date: estimated",
+    "notes": "DATE ESTIMATED (between BW x Movember (Nov 2025) and Spring Fever (2026-03-28)); individual standings only: the sheet has no team rosters",
+    "date_estimated": true
+  },
+  {
+    "file": "pandoras-box-x-cdawg-thatzred.csv",
+    "name": "Pandora's Box x Cdawg & ThatzRed",
+    "date": "2025-12-06",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X CD & TR\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-snow-down.csv",
+    "name": "MC Championship: Snow Down",
+    "date": "2025-12-13",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCSN (41)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "chillars-championship-22.csv",
+    "name": "Chillars Championship 22",
+    "date": "2025-12-20",
+    "source": "Main Chillars Event Sheet / tab \"CH^22\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-yappertron.csv",
+    "name": "Pandora's Box x Yappertron",
+    "date": "2025-12-20",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Yappertron\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-challengers.csv",
+    "name": "Pandora's Box x Challengers",
+    "date": "2025-12-21",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Challengers\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-slushies.csv",
+    "name": "Pandora's Box x Slushies",
+    "date": "2026-01-02",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Slushies\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-the-world.csv",
+    "name": "Pandora's Box x The World",
+    "date": "2026-01-03",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X The World\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-game-changers.csv",
+    "name": "Pandora's Box x Game Changers",
+    "date": "2026-01-10",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Game Changers\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-islanders.csv",
+    "name": "Pandora's Box x Islanders",
+    "date": "2026-01-17",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Islanders\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-new-beginning.csv",
+    "name": "Pandora's Box x New Beginning",
+    "date": "2026-01-24",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X New Beginning\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ultimate.csv",
+    "name": "Pandora's Box x Ultimate",
+    "date": "2026-01-25",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Ultimate\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-perfect-10.csv",
+    "name": "Pandora's Box x Perfect 10",
+    "date": "2026-01-31",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Perfect 10\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-sgn.csv",
+    "name": "Pandora's Box x SGN",
+    "date": "2026-02-07",
+    "source": "Pandoras Box Commissioned Events / tab \"PB x SGN\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-dmca.csv",
+    "name": "Pandora's Box x DMCA",
+    "date": "2026-02-08",
+    "source": "Pandoras Box Commissioned Events / tab \"PB x DMCA\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-nerf-or-nothin.csv",
+    "name": "Pandora's Box x Nerf or Nothin",
+    "date": "2026-02-13",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Nerf or Nothin\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-double-date.csv",
+    "name": "MC Championship: Double Date",
+    "date": "2026-02-14",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCDD (42)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "pandoras-box-x-game-changers-2.csv",
+    "name": "Pandora's Box x Game Changers 2",
+    "date": "2026-02-14",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Game Changers 2\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ever-grande.csv",
+    "name": "Pandora's Box x Ever Grande",
+    "date": "2026-02-15",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Ever Grande\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-blunt-rotation.csv",
+    "name": "Pandora's Box x Blunt Rotation",
+    "date": "2026-02-22",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Blunt Rotation\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-geode-smp.csv",
+    "name": "Pandora's Box x Geode SMP",
+    "date": "2026-02-28",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Geode SMP\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-aries-birthday.csv",
+    "name": "Pandora's Box x Aries' Birthday",
+    "date": "2026-03-08",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Aries Birthday\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-breadlaz-brawl.csv",
+    "name": "Pandora's Box x Breadlaz Brawl",
+    "date": "2026-03-15",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Breadlaz Brawl\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-swifyz-community.csv",
+    "name": "Pandora's Box x Swifyz Community",
+    "date": "2026-03-15",
+    "source": "Pandoras Box Commissioned Events / tab \"PB x Swifyz Community\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-spell-bound.csv",
+    "name": "MC Championship: Spell Bound",
+    "date": "2026-03-21",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCSB (43)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "pandoras-box-x-ender-league.csv",
+    "name": "Pandora's Box x Ender League",
+    "date": "2026-03-22",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Ender League\"; date: estimated",
+    "notes": "DATE ESTIMATED (between PB x Breadlaz Brawl (2026-03-15) and Cabbit Cup (2026-03-29))",
+    "date_estimated": true
+  },
+  {
+    "file": "block-wars-spring-fever.csv",
+    "name": "Block Wars: Spring Fever",
+    "date": "2026-03-28",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWSF\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-bb.csv",
+    "name": "Chillars Championship BB",
+    "date": "2026-03-28",
+    "source": "Main Chillars Event Sheet / tab \"CH^BB\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-cabbit-cup.csv",
+    "name": "Pandora's Box x Cabbit Cup",
+    "date": "2026-03-29",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Cabbit Cup\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-mosquito-mancave.csv",
+    "name": "Pandora's Box x Mosquito Mancave",
+    "date": "2026-04-05",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Mosquito Mancave\"; date: estimated",
+    "notes": "DATE ESTIMATED (between PB x Cabbit Cup (2026-03-29) and BryTheGuyy (2026-04-26))",
+    "date_estimated": true
+  },
+  {
+    "file": "mc-championship-hermit-takeover.csv",
+    "name": "MC Championship: Hermit Takeover",
+    "date": "2026-04-12",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCHT\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "pandoras-box-x-rat-rampage.csv",
+    "name": "Pandora's Box x Rat Rampage",
+    "date": "2026-04-12",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Rat Rampage\"; date: estimated",
+    "notes": "DATE ESTIMATED (between PB x Cabbit Cup (2026-03-29) and BryTheGuyy (2026-04-26))",
+    "date_estimated": true
+  },
+  {
+    "file": "chillars-championship-23.csv",
+    "name": "Chillars Championship 23",
+    "date": "2026-04-25",
+    "source": "Main Chillars Event Sheet / tab \"CH^23\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-brytheguyy.csv",
+    "name": "Pandora's Box x BryTheGuyy",
+    "date": "2026-04-26",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X BryTheGuyy\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-shinestarcarter.csv",
+    "name": "Pandora's Box x ShineStarCarter",
+    "date": "2026-05-03",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X ShineStarCarter\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ready-or-not-2.csv",
+    "name": "Pandora's Box x Ready or Not 2",
+    "date": "2026-05-10",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Ready or Not 2\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-flower-festival.csv",
+    "name": "Pandora's Box x Flower Festival",
+    "date": "2026-05-17",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Flower Festival\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-rookies-6.csv",
+    "name": "Block Wars Rookies 6",
+    "date": "2026-05-23",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWR6 (NC)\"; date: estimated",
+    "notes": "DATE ESTIMATED (between Spring Fever (2026-03-28) and Summer Breeze (2026-07-25))",
+    "date_estimated": true
+  },
+  {
+    "file": "chillars-championship-24.csv",
+    "name": "Chillars Championship 24",
+    "date": "2026-05-23",
+    "source": "Main Chillars Event Sheet / tab \"CH^24\"; date: Overview tab",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-spoingode.csv",
+    "name": "Pandora's Box x Spoingode",
+    "date": "2026-05-23",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Spoingode\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-project-g-l-o-p.csv",
+    "name": "MC Championship: Project G.L.O.P.",
+    "date": "2026-05-31",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCPG (TR6)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "pandoras-box-x-competitive.csv",
+    "name": "Pandora's Box x Competitive",
+    "date": "2026-06-14",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Competitive\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ready-or-not-3a.csv",
+    "name": "Pandora's Box x Ready or Not 3A",
+    "date": "2026-06-14",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Ready or Not 3A\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ready-or-not-3b.csv",
+    "name": "Pandora's Box x Ready or Not 3B",
+    "date": "2026-06-14",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Ready or Not 3B\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-summer-showdown.csv",
+    "name": "Pandora's Box x Summer Showdown",
+    "date": "2026-06-20",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Summer Showdown\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-pride.csv",
+    "name": "Chillars Championship Pride",
+    "date": "2026-06-27",
+    "source": "Main Chillars Event Sheet / tab \"CH^PR\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "30 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-pride-2026.csv",
+    "name": "MC Championship: Pride 2026",
+    "date": "2026-06-27",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCP26\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "blissful-championship-rebirth.csv",
+    "name": "Blissful Championship Rebirth",
+    "date": "2026-07-04",
+    "source": "Blissful Championship Stats / tab \"BCRB\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-taco-bell.csv",
+    "name": "Pandora's Box x Taco Bell",
+    "date": "2026-07-04",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Taco Bell\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-super-megatron.csv",
+    "name": "Pandora's Box x Super Megatron",
+    "date": "2026-07-05",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Super Megatron\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-x-viddyvidvid.csv",
+    "name": "Chillars Championship x ViddyVidVid",
+    "date": "2026-07-11",
+    "source": "Chillars Championship Commissioned Events / tab \"CH x ViddyVidVid\"; date: estimated",
+    "notes": "DATE ESTIMATED (before CH x Yo-Yo Slime (2026-07-18), first tab in the commissioned sheet); \"Shyri0/Rubyflavoredcat\" was a shared slot; credited to Shyri0",
+    "date_estimated": true
+  },
+  {
+    "file": "pandoras-box-x-c12dawg.csv",
+    "name": "Pandora's Box x C12dawg",
+    "date": "2026-07-11",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X C12dawg\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-star-sighted.csv",
+    "name": "Pandora's Box x Star Sighted",
+    "date": "2026-07-12",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Star Sighted\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-x-yo-yo-slime.csv",
+    "name": "Chillars Championship x Yo-Yo Slime",
+    "date": "2026-07-18",
+    "source": "Chillars Championship Commissioned Events / tab \"CH x Yo-Yo Slime\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-the-last-box.csv",
+    "name": "Pandora's Box x The Last Box",
+    "date": "2026-07-18",
+    "source": "Pandoras Box Commissioned Events / tab \"PB x The Last Box\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-x-the-fellas.csv",
+    "name": "Chillars Championship x The Fellas",
+    "date": "2026-07-19",
+    "source": "Chillars Championship Commissioned Events / tab \"CH x The Fellas\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-malcolm-todd-mayhem.csv",
+    "name": "Pandora's Box x Malcolm Todd Mayhem",
+    "date": "2026-07-19",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Malcolm Todd Mayhem\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-the-glorpening-2.csv",
+    "name": "Pandora's Box x The Glorpening 2",
+    "date": "2026-07-22",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X The Glorpening 2\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-the-movie.csv",
+    "name": "Pandora's Box x The Movie",
+    "date": "2026-07-24",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X The Movie\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "block-wars-summer-breeze.csv",
+    "name": "Block Wars: Summer Breeze",
+    "date": "2026-07-25",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWSB\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-klyx-testers.csv",
+    "name": "Pandora's Box x Klyx Testers",
+    "date": "2026-07-28",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Klyx Testers\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-x-almond-dna.csv",
+    "name": "Chillars Championship x Almond & DNA",
+    "date": "2026-07-31",
+    "source": "Chillars Championship Commissioned Events / tab \"CH x Almond & DNA\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-reddiewars.csv",
+    "name": "Pandora's Box x ReddieWars",
+    "date": "2026-08-01",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X ReddieWars\"; date: estimated",
+    "notes": "DATE ESTIMATED (between PB x Klyx Testers (2026-07-28) and Sunset Showdown (2026-08-08))",
+    "date_estimated": true
+  },
+  {
+    "file": "pandoras-box-x-sunset-showdown.csv",
+    "name": "Pandora's Box x Sunset Showdown",
+    "date": "2026-08-08",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Sunset Showdown\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ready-or-not-4a.csv",
+    "name": "Pandora's Box x Ready or Not 4A",
+    "date": "2026-08-09",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X RoN4A\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ready-or-not-4b.csv",
+    "name": "Pandora's Box x Ready or Not 4B",
+    "date": "2026-08-09",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X RoN4B\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-ready-or-not-4c.csv",
+    "name": "Pandora's Box x Ready or Not 4C",
+    "date": "2026-08-09",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X RoN4C\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-x-starblast.csv",
+    "name": "Chillars Championship x Starblast",
+    "date": "2026-08-16",
+    "source": "Chillars Championship Commissioned Events / tab \"CH^Starblast\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "pandoras-box-x-ice-cold.csv",
+    "name": "Pandora's Box x Ice Cold!",
+    "date": "2026-08-16",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Ice Cold!\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-25.csv",
+    "name": "Chillars Championship 25",
+    "date": "2026-08-22",
+    "source": "Main Chillars Event Sheet / tab \"CH^25\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-hispano.csv",
+    "name": "MC Championship: Hispano",
+    "date": "2026-08-22",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCHS\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "blissful-championship-24.csv",
+    "name": "Blissful Championship 24",
+    "date": "2026-08-23",
+    "source": "Blissful Championship Stats / tab \"BC24\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "mc-championship-fall-stars.csv",
+    "name": "MC Championship: Fall Stars",
+    "date": "2026-09-05",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCFS (44)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "block-wars-fall-fest.csv",
+    "name": "Block Wars: Fall Fest",
+    "date": "2026-09-12",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWFF\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "40 players, 8 teams"
+  },
+  {
+    "file": "pandoras-box-x-goldenrod.csv",
+    "name": "Pandora's Box x Goldenrod",
+    "date": "2026-09-18",
+    "source": "Pandoras Box Commissioned Events / tab \"PB X Goldenrod\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-26.csv",
+    "name": "Chillars Championship 26",
+    "date": "2026-09-26",
+    "source": "Main Chillars Event Sheet / tab \"CH^26\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "chillars-championship-x-prof-pie.csv",
+    "name": "Chillars Championship x Prof Pie",
+    "date": "2026-10-04",
+    "source": "Chillars Championship Commissioned Events / tab \"CH^Prof Pie\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "24 players, 6 teams"
+  },
+  {
+    "file": "mc-championship-bewitched.csv",
+    "name": "MC Championship: Bewitched",
+    "date": "2026-10-10",
+    "source": "MasterGarfs Modern MCC Spreadsheet / tab \"MCCBW (45)\"; date: MC Championship (Wikipedia)",
+    "notes": "40 players, 10 teams"
+  },
+  {
+    "file": "pandoras-box-x-meow-mayhem.csv",
+    "name": "Pandora's Box x Meow Mayhem",
+    "date": "2026-10-16",
+    "source": "Pandoras Box  Meow Mayhem Stats / tab \"PB Meow Mayhem\"; date: minecrafteventelo.vercel.app / event wikis",
+    "notes": "32 players, 8 teams"
+  },
+  {
+    "file": "chillars-championship-oo.csv",
+    "name": "Chillars Championship OO",
+    "date": "2026-10-24",
+    "source": "Main Chillars Event Sheet / tab \"CH^OO\"; date: estimated",
+    "notes": "DATE ESTIMATED (after Chillars Championship 26 (2026-09-26))",
+    "date_estimated": true
+  },
+  {
+    "file": "chillars-championship-x-silliest.csv",
+    "name": "Chillars Championship x Silliest",
+    "date": "2026-10-25",
+    "source": "Chillars Championship Commissioned Events / tab \"CH^Silliest\"; date: estimated",
+    "notes": "DATE ESTIMATED (after CH x Prof Pie (2026-10-04), last tab in the commissioned sheet)",
+    "date_estimated": true
+  },
+  {
+    "file": "block-wars-x-movember-2026.csv",
+    "name": "Block Wars x Movember 2026",
+    "date": "2026-11-07",
+    "source": "Block Wars - Event Stats Sheet / tab \"BWM26\"; date: estimated",
+    "notes": "DATE ESTIMATED (Movember 2026; after Fall Fest (2026-09-12))",
+    "date_estimated": true
+  },
+  {
+    "file": "blissful-championship-25.csv",
+    "name": "Blissful Championship 25",
+    "date": "2026-11-08",
+    "source": "Blissful Championship Stats / tab \"BC25\"; date: estimated",
+    "notes": "DATE ESTIMATED (after Blissful 24 (2026-08-23); Blissful's X bio announced next event for 7/8 November)",
+    "date_estimated": true
+  }
+]
