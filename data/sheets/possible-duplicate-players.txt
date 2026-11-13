@@ -1,22 +1,8 @@
-Noname4297 (1)  <->  Noname4298 (1)
-Owenge_Juice (6)  <->  OwengeJuice (13)  [same apart from _ - .]
-AnthosTV (28)  <->  AnthosTTV (1)
-AnthosTV (28)  <->  AnthosTVV (2)
-Shadoune666 (37)  <->  Shadoune666_ (1)  [same apart from _ - .]
-OogeyWoogey (2)  <->  OoogeyWoogey (1)
-AnthosTTV (1)  <->  AnthosTVV (2)
-ItsNitroTiger (3)  <->  ItsNitroTiger_ (1)  [same apart from _ - .]
-BeyonceFan1 (1)  <->  BeyonceFan2 (1)
-Hashtagie_ (4)  <->  Hashtagie (2)  [same apart from _ - .]
-BigPufferr (1)  <->  BigPufferrr (2)
-WubDub (1)  <->  WubDub_ (7)  [same apart from _ - .]
-misfitclovers (1)  <->  misfitclover (1)
-RuByc0 (1)  <->  Rubyco_ (2)
-Stevesuptic_ (1)  <->  StevenSuptic (2)
-Stevesuptic_ (1)  <->  stevesuptic (2)  [same apart from _ - .]
-IrishPotatooe (5)  <->  IrishPotatoee (1)
-StevenSuptic (2)  <->  stevesuptic (2)
-itmightbe_Vid (8)  <->  ItMightBeVid (4)  [same apart from _ - .]
-Shyri0_ (1)  <->  Shyri0 (4)  [same apart from _ - .]
-Ace_Is_Missing (3)  <->  Ace_is_Mising (1)
-joechris44 (3)  <->  joechris45 (1)
+Merged (spelling variants of the same player, never in the same event):
+  Owenge_Juice -> OwengeJuice; AnthosTTV, AnthosTVV -> AnthosTV; Shadoune666_ -> Shadoune666
+  OoogeyWoogey -> OogeyWoogey; ItsNitroTiger_ -> ItsNitroTiger; Hashtagie -> Hashtagie_
+  BigPufferr -> BigPufferrr; WubDub -> WubDub_; misfitclovers -> misfitclover; RuByc0 -> Rubyco_
+  Stevesuptic_, stevesuptic -> StevenSuptic; IrishPotatoee -> IrishPotatooe
+  ItMightBeVid -> itmightbe_Vid; Shyri0_ -> Shyri0; Ace_is_Mising -> Ace_Is_Missing
+Kept separate (look like different accounts):
+  Noname4297 / Noname4298; BeyonceFan1 / BeyonceFan2; joechris44 / joechris45
