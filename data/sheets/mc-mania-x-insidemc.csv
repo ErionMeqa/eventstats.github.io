@@ -1,41 +1,41 @@
-player,team,team_placement,individual_placement
-MxAero,Chromakopia,1,2
-ScottoAC,Chromakopia,1,3
-ItsEndae,Chromakopia,1,9
-Ginerous,Chromakopia,1,18
-mightybrothers1,Ballon D'Or,2,7
-MCmorganplayz,Ballon D'Or,2,12
-RoryAnimatez,Ballon D'Or,2,15
-Appity,Ballon D'Or,2,20
-Kelawesome,Daisy Dukes,3,1
-Antfrost,Daisy Dukes,3,5
-LynxyLiam,Daisy Dukes,3,31
-_CaptainAJX_,Daisy Dukes,3,33
-notjustin_,Cars 2,4,6
-Jokana_san,Cars 2,4,17
-DebbieMorales,Cars 2,4,22
-RomanRodri,Cars 2,4,23
-Kaelan_,VERY LOUD,5,10
-ubhi,VERY LOUD,5,11
-DIJ0N,VERY LOUD,5,26
-Rubyco_,VERY LOUD,5,30
-WeChokeOnMilk,Scallywag,6,4
-Toph033,Scallywag,6,8
-WadeBox,Scallywag,6,27
-SlidingArchitect,Scallywag,6,37
-Shalomanon,Radiated Rats,7,14
-Maskyzee,Radiated Rats,7,15
-Torteal,Radiated Rats,7,24
-Bluekwyrm,Radiated Rats,7,34
-Beauloon,Marshmallows,8,13
-Dwittyy,Marshmallows,8,19
-SakuraRadio,Marshmallows,8,28
-Melizsa,Marshmallows,8,29
-ImTwiggy,Mandem,9,21
-SlushieVRC,Mandem,9,25
-Vircon,Mandem,9,32
-bumpyJake,Mandem,9,35
-Pyroscythe,Shimmer,10,36
-4CVIT,Shimmer,10,38
-spacebr0wnies,Shimmer,10,39
-TinyCaity,Shimmer,10,40
+player,team,team_placement,individual_placement,points,team_points
+MxAero,Chromakopia,1,2,3637,19949
+ScottoAC,Chromakopia,1,3,3593,19949
+ItsEndae,Chromakopia,1,9,3275,19949
+Ginerous,Chromakopia,1,18,2818,19949
+mightybrothers1,Ballon D'Or,2,7,3345,17869
+MCmorganplayz,Ballon D'Or,2,12,3017,17869
+RoryAnimatez,Ballon D'Or,2,15,2844,17869
+Appity,Ballon D'Or,2,20,2710,17869
+Kelawesome,Daisy Dukes,3,1,3805,17612
+Antfrost,Daisy Dukes,3,5,3391,17612
+LynxyLiam,Daisy Dukes,3,31,2276,17612
+_CaptainAJX_,Daisy Dukes,3,33,2202,17612
+notjustin_,Cars 2,4,6,3369,17122
+Jokana_san,Cars 2,4,17,2835,17122
+DebbieMorales,Cars 2,4,22,2703,17122
+RomanRodri,Cars 2,4,23,2680,17122
+Kaelan_,VERY LOUD,5,10,3138,16805
+ubhi,VERY LOUD,5,11,3068,16805
+DIJ0N,VERY LOUD,5,26,2495,16805
+Rubyco_,VERY LOUD,5,30,2330,16805
+WeChokeOnMilk,Scallywag,6,4,3434,16327
+Toph033,Scallywag,6,8,3315,16327
+WadeBox,Scallywag,6,27,2466,16327
+SlidingArchitect,Scallywag,6,37,1986,16327
+Shalomanon,Radiated Rats,7,14,2847,15722
+Maskyzee,Radiated Rats,7,15,2844,15722
+Torteal,Radiated Rats,7,24,2662,15722
+Bluekwyrm,Radiated Rats,7,34,2182,15722
+Beauloon,Marshmallows,8,13,2926,15496
+Dwittyy,Marshmallows,8,19,2795,15496
+SakuraRadio,Marshmallows,8,28,2423,15496
+Melizsa,Marshmallows,8,29,2415,15496
+ImTwiggy,Mandem,9,21,2708,14302
+SlushieVRC,Mandem,9,25,2644,14302
+Vircon,Mandem,9,32,2252,14302
+bumpyJake,Mandem,9,35,2136,14302
+Pyroscythe,Shimmer,10,36,2036,11214
+4CVIT,Shimmer,10,38,1972,11214
+spacebr0wnies,Shimmer,10,39,1907,11214
+TinyCaity,Shimmer,10,40,1527,11214

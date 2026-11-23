@@ -1,33 +1,33 @@
-player,team,team_placement,individual_placement
-candycanesforu,GIQ,1,3
-Rubanaantje,GIQ,1,6
-InfernodaFox,GIQ,1,15
-KosThePenguin,GIQ,1,17
-Katenlyn,ReiMari,2,2
-MajinEri,ReiMari,2,4
-PartyFreak4Ever,ReiMari,2,10
-applin__,ReiMari,2,26
-Kaiferno,Team Seven,3,1
-bapsyy,Team Seven,3,5
-Hoamie,Team Seven,3,18
-pingprincess,Team Seven,3,27
-CautionTape14,Hi,4,7
-70tuna,Hi,4,8
-Nealice,Hi,4,11
-E0_o,Hi,4,19
-sixspades,Champions,5,9
-DeltaP1xel,Champions,5,13
-brendix67,Champions,5,16
-surfinn,Champions,5,29
-EpicFH,aga,6,12
-BroWo9,aga,6,20
-Beauloon,aga,6,23
-Galaxushii,aga,6,25
-fndp,True Damage,7,21
-Cube1337x,True Damage,7,22
-5pxrky,True Damage,7,28
-Yonn3r,True Damage,7,31
-A_Nubz,DrunkAsShit,8,14
-Doorium,DrunkAsShit,8,24
-Turtleman5252,DrunkAsShit,8,30
-maya_bisky,DrunkAsShit,8,32
+player,team,team_placement,individual_placement,points,team_points
+candycanesforu,GIQ,1,3,3499,16022
+Rubanaantje,GIQ,1,6,3116,16022
+InfernodaFox,GIQ,1,15,2560,16022
+KosThePenguin,GIQ,1,17,2516,16022
+Katenlyn,ReiMari,2,2,3693,15993
+MajinEri,ReiMari,2,4,3278,15993
+PartyFreak4Ever,ReiMari,2,10,2757,15993
+applin__,ReiMari,2,26,1916,15993
+Kaiferno,Team Seven,3,1,3805,15842
+bapsyy,Team Seven,3,5,3253,15842
+Hoamie,Team Seven,3,18,2508,15842
+pingprincess,Team Seven,3,27,1915,15842
+CautionTape14,Hi,4,7,3096,15274
+70tuna,Hi,4,8,3020,15274
+Nealice,Hi,4,11,2725,15274
+E0_o,Hi,4,19,2485,15274
+sixspades,Champions,5,9,2775,13152
+DeltaP1xel,Champions,5,13,2711,13152
+brendix67,Champions,5,16,2541,13152
+surfinn,Champions,5,29,1620,13152
+EpicFH,aga,6,12,2722,12207
+BroWo9,aga,6,20,2296,12207
+Beauloon,aga,6,23,2112,12207
+Galaxushii,aga,6,25,1936,12207
+fndp,True Damage,7,21,2276,10046
+Cube1337x,True Damage,7,22,2167,10046
+5pxrky,True Damage,7,28,1628,10046
+Yonn3r,True Damage,7,31,1340,10046
+A_Nubz,DrunkAsShit,8,14,2638,9840
+Doorium,DrunkAsShit,8,24,2007,9840
+Turtleman5252,DrunkAsShit,8,30,1405,9840
+maya_bisky,DrunkAsShit,8,32,1176,9840

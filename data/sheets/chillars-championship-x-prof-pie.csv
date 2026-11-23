@@ -1,25 +1,25 @@
-player,team,team_placement,individual_placement
-Anderish,:Moyai: RoseFiber,1,1
-Rosefiber,:Moyai: RoseFiber,1,3
-badhelix,:Moyai: RoseFiber,1,12
-ItsCosmoMC,:Moyai: RoseFiber,1,19
-DerGehasste,ThatzTeamName,2,5
-YoYoSlime,ThatzTeamName,2,6
-ThatzRed,ThatzTeamName,2,15
-LGBTQI,ThatzTeamName,2,20
-Rxyalz,The Freaking,3,4
-SimplyAlexiss,The Freaking,3,8
-KubaBabilon,The Freaking,3,10
-itsnuku,The Freaking,3,23
-Sacronix,Moe,4,2
-Typhoono,Moe,4,13
-GalaxyCarter,Moe,4,16
-Mattiri,Moe,4,21
-ProfPie2000,Blub Fan Club,5,7
-VeeStarr,Blub Fan Club,5,14
-Funfum,Blub Fan Club,5,18
-Boxsae,Blub Fan Club,5,22
-GGgamer73,Glorp,6,9
-digibelle_,Glorp,6,11
-applejaxxs,Glorp,6,17
-LovefromNyxMC,Glorp,6,24
+player,team,team_placement,individual_placement,points,team_points
+Anderish,:Moyai: RoseFiber,1,1,3469,10113
+Rosefiber,:Moyai: RoseFiber,1,3,2724,10113
+badhelix,:Moyai: RoseFiber,1,12,2217,10113
+ItsCosmoMC,:Moyai: RoseFiber,1,19,1703,10113
+DerGehasste,ThatzTeamName,2,5,2674,8945
+YoYoSlime,ThatzTeamName,2,6,2567,8945
+ThatzRed,ThatzTeamName,2,15,2009,8945
+LGBTQI,ThatzTeamName,2,20,1695,8945
+Rxyalz,The Freaking,3,4,2707,8920
+SimplyAlexiss,The Freaking,3,8,2454,8920
+KubaBabilon,The Freaking,3,10,2291,8920
+itsnuku,The Freaking,3,23,1468,8920
+Sacronix,Moe,4,2,2907,8604
+Typhoono,Moe,4,13,2135,8604
+GalaxyCarter,Moe,4,16,1913,8604
+Mattiri,Moe,4,21,1649,8604
+ProfPie2000,Blub Fan Club,5,7,2566,8096
+VeeStarr,Blub Fan Club,5,14,2059,8096
+Funfum,Blub Fan Club,5,18,1906,8096
+Boxsae,Blub Fan Club,5,22,1565,8096
+GGgamer73,Glorp,6,9,2451,7606
+digibelle_,Glorp,6,11,2278,7606
+applejaxxs,Glorp,6,17,1912,7606
+LovefromNyxMC,Glorp,6,24,965,7606

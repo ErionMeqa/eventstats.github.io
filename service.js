@@ -61,9 +61,10 @@ async function importEvent(name, date, csvText) {
       const pid = resolve(r, lookups);
       if (seen.has(pid)) throw new Error(`Duplicate player in event: ${r.player}`);
       seen.add(pid);
-      db.prepare('insert into performances(event_id,player_id,team,team_placement,placement) values(?,?,?,?,?)')
+      const num = v => (v === undefined || v === '' || isNaN(+v)) ? null : +v;
+      db.prepare('insert into performances(event_id,player_id,team,team_placement,placement,points,team_points) values(?,?,?,?,?,?,?)')
         .run(id, pid, r.team || null, r.team_placement ? +r.team_placement : null,
-          r.individual_placement ? +r.individual_placement : null);
+          r.individual_placement ? +r.individual_placement : null, num(r.points), num(r.team_points));
     }
     return id;
   })();

@@ -3,7 +3,8 @@
 //        node build-static.js docs --domain eventstats.live
 const fs = require('fs'), path = require('path');
 const q = require('./queries');
-const { db } = require('./db');
+const { db, recalc } = require('./db');
+recalc(); // replays every event so inactivity decay is up to date as of today
 
 const args = process.argv.slice(2);
 const out = args.find(a => !a.startsWith('--')) || 'docs';

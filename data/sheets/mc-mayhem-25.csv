@@ -1,33 +1,33 @@
-player,team,team_placement,individual_placement
-silverrruns,Sapphire Stockings,1,4
-fruitberries,Sapphire Stockings,1,5
-Baablu,Sapphire Stockings,1,8
-JammiL,Sapphire Stockings,1,17
-SandwichLord_,Lime Little Drummer Boys,2,1
-JackCas,Lime Little Drummer Boys,2,12
-Nominalgravy,Lime Little Drummer Boys,2,13
-AvaJC,Lime Little Drummer Boys,2,21
-Standen05,Coral Candy Canes,3,2
-MCBIGMACPLAYZ,Coral Candy Canes,3,15
-ItsNitroTiger,Coral Candy Canes,3,16
-DebbieMorales,Coral Candy Canes,3,26
-FireBreathMan,Scarlet Scarfs,4,6
-Feinberg,Scarlet Scarfs,4,7
-SwbPoundcake,Scarlet Scarfs,4,22
-AnthosTV,Scarlet Scarfs,4,29
-Kaelan_,Yellow Yule Logs,5,3
-iljone,Yellow Yule Logs,5,18
-Pers0nified,Yellow Yule Logs,5,20
-dGc_,Yellow Yule Logs,5,23
-Toph033,Aqua Angels,6,9
-ubhi,Aqua Angels,6,11
-NotTooSwift1,Aqua Angels,6,25
-ThatDarkPhoenix,Aqua Angels,6,30
-LandonLegends,Cyan Cookies,7,10
-CxrtxR,Cyan Cookies,7,14
-Ruwan_,Cyan Cookies,7,24
-Wylbert,Cyan Cookies,7,28
-Antfrost,Magenta Mistletoes,8,19
-Wolfeei,Magenta Mistletoes,8,27
-Catkins,Magenta Mistletoes,8,31
-Greninja,Magenta Mistletoes,8,32
+player,team,team_placement,individual_placement,points,team_points
+silverrruns,Sapphire Stockings,1,4,2827,20576
+fruitberries,Sapphire Stockings,1,5,2792,20576
+Baablu,Sapphire Stockings,1,8,2569,20576
+JammiL,Sapphire Stockings,1,17,1905,20576
+SandwichLord_,Lime Little Drummer Boys,2,1,3388,18983
+JackCas,Lime Little Drummer Boys,2,12,2206,18983
+Nominalgravy,Lime Little Drummer Boys,2,13,2145,18983
+AvaJC,Lime Little Drummer Boys,2,21,1566,18983
+Standen05,Coral Candy Canes,3,2,3231,18025
+MCBIGMACPLAYZ,Coral Candy Canes,3,15,2062,18025
+ItsNitroTiger,Coral Candy Canes,3,16,2042,18025
+DebbieMorales,Coral Candy Canes,3,26,1463,18025
+FireBreathMan,Scarlet Scarfs,4,6,2711,16275
+Feinberg,Scarlet Scarfs,4,7,2616,16275
+SwbPoundcake,Scarlet Scarfs,4,22,1557,16275
+AnthosTV,Scarlet Scarfs,4,29,1272,16275
+Kaelan_,Yellow Yule Logs,5,3,2960,16266
+iljone,Yellow Yule Logs,5,18,1816,16266
+Pers0nified,Yellow Yule Logs,5,20,1674,16266
+dGc_,Yellow Yule Logs,5,23,1511,16266
+Toph033,Aqua Angels,6,9,2489,15384
+ubhi,Aqua Angels,6,11,2286,15384
+NotTooSwift1,Aqua Angels,6,25,1502,15384
+ThatDarkPhoenix,Aqua Angels,6,30,1240,15384
+LandonLegends,Cyan Cookies,7,10,2288,15316
+CxrtxR,Cyan Cookies,7,14,2127,15316
+Ruwan_,Cyan Cookies,7,24,1509,15316
+Wylbert,Cyan Cookies,7,28,1285,15316
+Antfrost,Magenta Mistletoes,8,19,1708,8889
+Wolfeei,Magenta Mistletoes,8,27,1370,8889
+Catkins,Magenta Mistletoes,8,31,995,8889
+Greninja,Magenta Mistletoes,8,32,935,8889

@@ -1,41 +1,41 @@
-player,team,team_placement,individual_placement
-apokuna,Team Purp,1,4
-Nukerii,Team Purp,1,12
-TedsAttic,Team Purp,1,17
-KyleEff,Team Purp,1,19
-animagician,Team Purp,1,29
-acho,Team Blue Dudes,2,6
-zyye,Team Blue Dudes,2,9
-OfficialDelta,Team Blue Dudes,2,15
-Stryxo,Team Blue Dudes,2,18
-hunter_hhhh,Team Blue Dudes,2,23
-Purpled,Team Awesome,3,2
-jojosolos,Team Awesome,3,10
-Michaelmcchill,Team Awesome,3,25
-ghostiefruit,Team Awesome,3,27
-DarkEyebrows,Team Awesome,3,36
-Greninja,Team Golden Goats,4,7
-Krtzy,Team Golden Goats,4,11
-Jvckk_,Team Golden Goats,4,24
-JustKaboodle,Team Golden Goats,4,31
-highkeyhateme,Team Golden Goats,4,32
-Antfrost,Team Diglett,5,8
-HBomb94,Team Diglett,5,13
-RedVelvetCake,Team Diglett,5,22
-Smallant1,Team Diglett,5,28
-ElainaExe,Team Diglett,5,30
-FireBreathMan,Team PPPPP!,6,1
-raddlez,Team PPPPP!,6,16
-heyGraecie,Team PPPPP!,6,26
-The_Eret,Team PPPPP!,6,33
-ShubbleYT,Team PPPPP!,6,34
-Ameston,Team Bottoms,7,3
-mysticat_,Team Bottoms,7,5
-AnthosTV,Team Bottoms,7,35
-AshleyRoboto,Team Bottoms,7,37
-LineChu,Team Bottoms,7,40
-Punz,Team Sussy,8,14
-5uppps,Team Sussy,8,20
-simplyfir,Team Sussy,8,21
-itsllama_a,Team Sussy,8,38
-Caatlyn,Team Sussy,8,39
+player,team,team_placement,individual_placement,points,team_points
+apokuna,Team Purp,1,4,2680,19473
+Nukerii,Team Purp,1,12,2243,19473
+TedsAttic,Team Purp,1,17,2025,19473
+KyleEff,Team Purp,1,19,1952,19473
+animagician,Team Purp,1,29,1481,19473
+acho,Team Blue Dudes,2,6,2460,18857
+zyye,Team Blue Dudes,2,9,2356,18857
+OfficialDelta,Team Blue Dudes,2,15,2049,18857
+Stryxo,Team Blue Dudes,2,18,2007,18857
+hunter_hhhh,Team Blue Dudes,2,23,1701,18857
+Purpled,Team Awesome,3,2,2912,18200
+jojosolos,Team Awesome,3,10,2332,18200
+Michaelmcchill,Team Awesome,3,25,1586,18200
+ghostiefruit,Team Awesome,3,27,1554,18200
+DarkEyebrows,Team Awesome,3,36,1238,18200
+Greninja,Team Golden Goats,4,7,2418,17590
+Krtzy,Team Golden Goats,4,11,2323,17590
+Jvckk_,Team Golden Goats,4,24,1650,17590
+JustKaboodle,Team Golden Goats,4,31,1373,17590
+highkeyhateme,Team Golden Goats,4,32,1332,17590
+Antfrost,Team Diglett,5,8,2402,17118
+HBomb94,Team Diglett,5,13,2220,17118
+RedVelvetCake,Team Diglett,5,22,1827,17118
+Smallant1,Team Diglett,5,28,1551,17118
+ElainaExe,Team Diglett,5,30,1466,17118
+FireBreathMan,Team PPPPP!,6,1,2933,16699
+raddlez,Team PPPPP!,6,16,2047,16699
+heyGraecie,Team PPPPP!,6,26,1562,16699
+The_Eret,Team PPPPP!,6,33,1323,16699
+ShubbleYT,Team PPPPP!,6,34,1275,16699
+Ameston,Team Bottoms,7,3,2743,15528
+mysticat_,Team Bottoms,7,5,2481,15528
+AnthosTV,Team Bottoms,7,35,1247,15528
+AshleyRoboto,Team Bottoms,7,37,1212,15528
+LineChu,Team Bottoms,7,40,1153,15528
+Punz,Team Sussy,8,14,2160,14859
+5uppps,Team Sussy,8,20,1944,14859
+simplyfir,Team Sussy,8,21,1915,14859
+itsllama_a,Team Sussy,8,38,1210,14859
+Caatlyn,Team Sussy,8,39,1166,14859

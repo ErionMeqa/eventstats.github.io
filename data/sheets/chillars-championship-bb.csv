@@ -1,25 +1,25 @@
-player,team,team_placement,individual_placement
-MajinEri,Pawsome,1,1
-Migztery,Pawsome,1,5
-k_tie,Pawsome,1,8
-Nealice,Pawsome,1,12
-Standen05,meow :3,2,3
-oGarfield,meow :3,2,6
-NotSouls,meow :3,2,15
-Wylbert,meow :3,2,19
-sixspades,Flight,3,4
-brendix67,Flight,3,10
-AbbyArtemiss,Flight,3,16
-maispice,Flight,3,20
-OhSoWow,ReClover,4,11
-BoboRozo,ReClover,4,14
-A_Nubz,ReClover,4,17
-fndp,ReClover,4,18
-sillyfishgirl,Rango,5,2
-isola2021,Rango,5,13
-wrait,Rango,5,21
-TonyBoring,Rango,5,22
-bapsyy,Ming,6,7
-CxrtxR,Ming,6,9
-sfaia,Ming,6,23
-aillee,Ming,6,24
+player,team,team_placement,individual_placement,points,team_points
+MajinEri,Pawsome,1,1,3126,10715
+Migztery,Pawsome,1,5,2726,10715
+k_tie,Pawsome,1,8,2487,10715
+Nealice,Pawsome,1,12,2376,10715
+Standen05,meow :3,2,3,2866,9501
+oGarfield,meow :3,2,6,2573,9501
+NotSouls,meow :3,2,15,2201,9501
+Wylbert,meow :3,2,19,1861,9501
+sixspades,Flight,3,4,2818,9099
+brendix67,Flight,3,10,2451,9099
+AbbyArtemiss,Flight,3,16,2061,9099
+maispice,Flight,3,20,1769,9099
+OhSoWow,ReClover,4,11,2433,8538
+BoboRozo,ReClover,4,14,2212,8538
+A_Nubz,ReClover,4,17,1973,8538
+fndp,ReClover,4,18,1920,8538
+sillyfishgirl,Rango,5,2,3047,8428
+isola2021,Rango,5,13,2253,8428
+wrait,Rango,5,21,1745,8428
+TonyBoring,Rango,5,22,1383,8428
+bapsyy,Ming,6,7,2563,7143
+CxrtxR,Ming,6,9,2458,7143
+sfaia,Ming,6,23,1253,7143
+aillee,Ming,6,24,869,7143

@@ -1,41 +1,41 @@
-player,team,team_placement,individual_placement
-hannahxxrose,Red Reindeer,1,1
-Pangi,Red Reindeer,1,2
-Legundo,Red Reindeer,1,6
-infinitedrift,Red Reindeer,1,14
-Antfrost,Sapphire Santas,2,3
-5uppps,Sapphire Santas,2,4
-xRizzBars,Sapphire Santas,2,15
-StevenSuptic,Sapphire Santas,2,22
-OwengeJuice,Teal Turkeys,3,9
-apokuna,Teal Turkeys,3,10
-Smajor1995,Teal Turkeys,3,13
-AvidMc_,Teal Turkeys,3,19
-jojosolos,Mint Mistletoes,4,7
-Sneegsnag,Mint Mistletoes,4,12
-falsesymmetry,Mint Mistletoes,4,23
-ElainaExe,Mint Mistletoes,4,24
-Couriway,Emerald Elves,5,5
-Cambam010,Emerald Elves,5,16
-vGumiho,Emerald Elves,5,18
-Tubbo_,Emerald Elves,5,20
-Shadoune666,Purple Penguins,6,8
-TapL,Purple Penguins,6,21
-KaraCorvus,Purple Penguins,6,31
-soupforeloise,Purple Penguins,6,34
-PeteZahHutt,Yellow Yetis,7,17
-Ph1LzA,Yellow Yetis,7,27
-GoodTimeWithScar,Yellow Yetis,7,33
-ShubbleYT,Yellow Yetis,7,38
-Grian,Pink Presents,8,25
-bekyamon,Pink Presents,8,29
-Pyroscythe,Pink Presents,8,30
-aimsey,Pink Presents,8,32
-Purpled,Cerulean Candy Canes,9,11
-CaptainSparklez,Cerulean Candy Canes,9,26
-heyGraecie,Cerulean Candy Canes,9,36
-Roscumber,Cerulean Candy Canes,9,39
-InTheLittleWood,Ginger Breadmen,10,28
-OrionSound,Ginger Breadmen,10,35
-ish13c,Ginger Breadmen,10,36
-Snifferish,Ginger Breadmen,10,40
+player,team,team_placement,individual_placement,points,team_points
+hannahxxrose,Red Reindeer,1,1,3126,20787
+Pangi,Red Reindeer,1,2,2971,20787
+Legundo,Red Reindeer,1,6,2580,20787
+infinitedrift,Red Reindeer,1,14,2157,20787
+Antfrost,Sapphire Santas,2,3,2872,19666
+5uppps,Sapphire Santas,2,4,2756,19666
+xRizzBars,Sapphire Santas,2,15,2147,19666
+StevenSuptic,Sapphire Santas,2,22,1891,19666
+OwengeJuice,Teal Turkeys,3,9,2405,18052
+apokuna,Teal Turkeys,3,10,2268,18052
+Smajor1995,Teal Turkeys,3,13,2229,18052
+AvidMc_,Teal Turkeys,3,19,2022,18052
+jojosolos,Mint Mistletoes,4,7,2514,17715
+Sneegsnag,Mint Mistletoes,4,12,2236,17715
+falsesymmetry,Mint Mistletoes,4,23,1883,17715
+ElainaExe,Mint Mistletoes,4,24,1817,17715
+Couriway,Emerald Elves,5,5,2682,17059
+Cambam010,Emerald Elves,5,16,2076,17059
+vGumiho,Emerald Elves,5,18,2045,17059
+Tubbo_,Emerald Elves,5,20,1938,17059
+Shadoune666,Purple Penguins,6,8,2484,13488
+TapL,Purple Penguins,6,21,1914,13488
+KaraCorvus,Purple Penguins,6,31,1486,13488
+soupforeloise,Purple Penguins,6,34,1404,13488
+PeteZahHutt,Yellow Yetis,7,17,2060,12917
+Ph1LzA,Yellow Yetis,7,27,1589,12917
+GoodTimeWithScar,Yellow Yetis,7,33,1424,12917
+ShubbleYT,Yellow Yetis,7,38,1263,12917
+Grian,Pink Presents,8,25,1661,12351
+bekyamon,Pink Presents,8,29,1557,12351
+Pyroscythe,Pink Presents,8,30,1534,12351
+aimsey,Pink Presents,8,32,1479,12351
+Purpled,Cerulean Candy Canes,9,11,2249,12130
+CaptainSparklez,Cerulean Candy Canes,9,26,1632,12130
+heyGraecie,Cerulean Candy Canes,9,36,1331,12130
+Roscumber,Cerulean Candy Canes,9,39,1232,12130
+InTheLittleWood,Ginger Breadmen,10,28,1580,11021
+OrionSound,Ginger Breadmen,10,35,1342,11021
+ish13c,Ginger Breadmen,10,36,1331,11021
+Snifferish,Ginger Breadmen,10,40,1087,11021

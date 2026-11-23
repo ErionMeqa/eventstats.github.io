@@ -1,25 +1,25 @@
-player,team,team_placement,individual_placement
-Rosefiber,Twink Luvrs,1,5
-ClutchSalt,Twink Luvrs,1,8
-YoYoSlime,Twink Luvrs,1,9
-Ravencl4w,Twink Luvrs,1,10
-dnaameow,L'manburg,2,1
-CursedArrow,L'manburg,2,2
-GalaxyCarter,L'manburg,2,21
-bunnynoise,L'manburg,2,23
-fndp,Garfield,3,3
-AlmondX3,Garfield,3,7
-Canarica,Garfield,3,11
-GarnetGemm,Garfield,3,20
-itmightbe_Vid,Goblin,4,4
-rain_betwixt,Goblin,4,13
-IluvCobblestone,Goblin,4,16
-Eastical_,Goblin,4,17
-aotumn,Froggies,5,6
-relayss,Froggies,5,14
-bmewo,Froggies,5,15
-MrGremlinss,Froggies,5,18
-ChromaLive,Moban Hate Party,6,12
-KingDixie,Moban Hate Party,6,19
-esrowan,Moban Hate Party,6,22
-ceilozz,Moban Hate Party,6,24
+player,team,team_placement,individual_placement,points,team_points
+Rosefiber,Twink Luvrs,1,5,2625,9605
+ClutchSalt,Twink Luvrs,1,8,2377,9605
+YoYoSlime,Twink Luvrs,1,9,2312,9605
+Ravencl4w,Twink Luvrs,1,10,2291,9605
+dnaameow,L'manburg,2,1,3007,9304
+CursedArrow,L'manburg,2,2,2884,9304
+GalaxyCarter,L'manburg,2,21,1800,9304
+bunnynoise,L'manburg,2,23,1613,9304
+fndp,Garfield,3,3,2664,9147
+AlmondX3,Garfield,3,7,2413,9147
+Canarica,Garfield,3,11,2230,9147
+GarnetGemm,Garfield,3,20,1840,9147
+itmightbe_Vid,Goblin,4,4,2662,8843
+rain_betwixt,Goblin,4,13,2136,8843
+IluvCobblestone,Goblin,4,16,2058,8843
+Eastical_,Goblin,4,17,1987,8843
+aotumn,Froggies,5,6,2535,8676
+relayss,Froggies,5,14,2086,8676
+bmewo,Froggies,5,15,2084,8676
+MrGremlinss,Froggies,5,18,1971,8676
+ChromaLive,Moban Hate Party,6,12,2182,7520
+KingDixie,Moban Hate Party,6,19,1933,7520
+esrowan,Moban Hate Party,6,22,1798,7520
+ceilozz,Moban Hate Party,6,24,1607,7520

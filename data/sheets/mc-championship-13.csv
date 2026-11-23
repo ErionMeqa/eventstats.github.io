@@ -1,41 +1,41 @@
-player,team,team_placement,individual_placement
-Illumina,Teal Turkeys,1,5
-Krinios,Teal Turkeys,1,10
-Punz,Teal Turkeys,1,11
-The_Eret,Teal Turkeys,1,26
-PeteZahHutt,Purple Penguins,2,1
-falsesymmetry,Purple Penguins,2,16
-Grian,Purple Penguins,2,18
-KaraCorvus,Purple Penguins,2,29
-Dream,Pink Presents,3,7
-Smajor1995,Pink Presents,3,14
-CaptainSparklez,Pink Presents,3,15
-ShubbleYT,Pink Presents,3,25
-Krtzy,Coral Carollers,4,3
-Sapnap,Coral Carollers,4,4
-DanTDM,Coral Carollers,4,20
-Wisp,Coral Carollers,4,24
-Tubbo_,Emerald Elves,5,9
-TommyInnit,Emerald Elves,5,17
-Seapeekay,Emerald Elves,5,23
-F1NN5TER,Emerald Elves,5,30
-Ph1LzA,Cyan Candy Canes,6,6
-Fundy,Cyan Candy Canes,6,12
-WilburSoot,Cyan Candy Canes,6,27
-Quackity,Cyan Candy Canes,6,35
-HBomb94,Yellow Yetis,7,8
-Smallishbeans,Yellow Yetis,7,22
-OrionSound,Yellow Yetis,7,28
-sylvee_,Yellow Yetis,7,31
-fruitberries,Mint Mistletoes,8,2
-GeorgeNotFound,Mint Mistletoes,8,19
-KarlJacobs,Mint Mistletoes,8,32
-ludwigahgren,Mint Mistletoes,8,34
-Quig,Red Reindeer,9,13
-Mefs,Red Reindeer,9,21
-katherineeliz,Red Reindeer,9,33
-LDShadowLady,Red Reindeer,9,36
-KryticZeuZ,Sapphire Santas,10,37
-JamesTurner,Sapphire Santas,10,38
-Vixella,Sapphire Santas,10,39
-Drgluon,Sapphire Santas,10,40
+player,team,team_placement,individual_placement,points,team_points
+Illumina,Teal Turkeys,1,5,2849,19495
+Krinios,Teal Turkeys,1,10,2680,19495
+Punz,Teal Turkeys,1,11,2649,19495
+The_Eret,Teal Turkeys,1,26,1998,19495
+PeteZahHutt,Purple Penguins,2,1,3164,19355
+falsesymmetry,Purple Penguins,2,16,2347,19355
+Grian,Purple Penguins,2,18,2308,19355
+KaraCorvus,Purple Penguins,2,29,1806,19355
+Dream,Pink Presents,3,7,2833,19056
+Smajor1995,Pink Presents,3,14,2403,19056
+CaptainSparklez,Pink Presents,3,15,2374,19056
+ShubbleYT,Pink Presents,3,25,2001,19056
+Krtzy,Coral Carollers,4,3,3049,18869
+Sapnap,Coral Carollers,4,4,2886,18869
+DanTDM,Coral Carollers,4,20,2114,18869
+Wisp,Coral Carollers,4,24,2048,18869
+Tubbo_,Emerald Elves,5,9,2688,16886
+TommyInnit,Emerald Elves,5,17,2338,16886
+Seapeekay,Emerald Elves,5,23,2063,16886
+F1NN5TER,Emerald Elves,5,30,1725,16886
+Ph1LzA,Cyan Candy Canes,6,6,2839,16738
+Fundy,Cyan Candy Canes,6,12,2474,16738
+WilburSoot,Cyan Candy Canes,6,27,1967,16738
+Quackity,Cyan Candy Canes,6,35,1365,16738
+HBomb94,Yellow Yetis,7,8,2821,16388
+Smallishbeans,Yellow Yetis,7,22,2066,16388
+OrionSound,Yellow Yetis,7,28,1814,16388
+sylvee_,Yellow Yetis,7,31,1641,16388
+fruitberries,Mint Mistletoes,8,2,3079,14912
+GeorgeNotFound,Mint Mistletoes,8,19,2127,14912
+KarlJacobs,Mint Mistletoes,8,32,1487,14912
+ludwigahgren,Mint Mistletoes,8,34,1371,14912
+Quig,Red Reindeer,9,13,2471,14501
+Mefs,Red Reindeer,9,21,2069,14501
+katherineeliz,Red Reindeer,9,33,1430,14501
+LDShadowLady,Red Reindeer,9,36,1364,14501
+KryticZeuZ,Sapphire Santas,10,37,1217,6310
+JamesTurner,Sapphire Santas,10,38,734,6310
+Vixella,Sapphire Santas,10,39,564,6310
+Drgluon,Sapphire Santas,10,40,456,6310

@@ -1,0 +1,6 @@
+# Banned players: one Minecraft name per line. They keep their event history and their games still count
+# for everyone else's rating, but they are left off the leaderboard and show "Banned" instead of a rank.
+# Matches eventelo.live, where these players show rank #-1.
+Toph033
+Rxyalz
+EGCGlow

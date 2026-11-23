@@ -1,5 +1,5 @@
 const { DatabaseSync } = require('node:sqlite');
-const { computeEvent, CFG } = require('./rating');
+const { computeEvent, speed, decay, CFG } = require('./rating');
 const db = new DatabaseSync(process.env.DB || 'elo.db');
 
 const transaction = fn => (...a) => {
@@ -16,6 +16,7 @@ create table if not exists performances(id integer primary key, event_id integer
   team text, team_placement integer, placement integer, before real, after real);
 `);
 try { db.exec('alter table players add column uuid text'); } catch {} // already there
+for (const c of ['points real', 'team_points real']) { try { db.exec('alter table performances add column ' + c); } catch {} } // event points, optional
 db.exec('create unique index if not exists idx_players_uuid on players(uuid)');
 
 // Minimal CSV parser (supports quoted fields).
@@ -35,21 +36,27 @@ function parseCsv(text) {
 }
 
 // Replays every event in date order so history stays consistent.
-function recalc() {
+function recalc(today = new Date().toISOString().slice(0, 10)) {
+  const idle = (a, b) => (new Date(b) - new Date(a)) / 864e5;
   transaction(() => {
-    const rating = new Map(), count = new Map();
+    const rating = new Map(), count = new Map(), last = new Map();
     db.prepare('select id from players').all().forEach(p => rating.set(p.id, CFG.START));
     const upd = db.prepare('update performances set before=?, after=? where id=?');
-    for (const e of db.prepare('select id from events order by date, id').all()) {
+    for (const e of db.prepare('select id,date from events order by date, id').all()) {
       const perfs = db.prepare('select * from performances where event_id=?').all(e.id);
+      // inactivity decay since each player's previous event
+      perfs.forEach(p => { if (last.has(p.player_id)) rating.set(p.player_id, decay(rating.get(p.player_id), idle(last.get(p.player_id), e.date))); });
       const ch = computeEvent(perfs.map(p => ({ ...p, rating: rating.get(p.player_id) })));
       perfs.forEach((p, i) => {
-        const b = rating.get(p.player_id), a = b + ch[i];
+        const n = count.get(p.player_id) || 0;
+        const b = rating.get(p.player_id), a = b + ch[i] * speed(n);
         rating.set(p.player_id, a);
-        count.set(p.player_id, (count.get(p.player_id) || 0) + 1);
+        count.set(p.player_id, n + 1); last.set(p.player_id, e.date);
         upd.run(b, a, p.id);
       });
     }
+    // decay up to today for anyone who has been away
+    last.forEach((d, id) => rating.set(id, decay(rating.get(id), idle(d, today))));
     const up = db.prepare('update players set rating=?, events=? where id=?');
     rating.forEach((r, id) => up.run(r, count.get(id) || 0, id));
   })();

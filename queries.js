@@ -1,7 +1,12 @@
 // Read-only queries shared by the server and the static site builder.
 const { db } = require('./db');
+const fs = require('fs'), path = require('path');
+// data/banned.txt: names hidden from the leaderboard (read on every call so edits apply without a restart)
+const banned = () => { const f = path.join(__dirname, 'data', 'banned.txt');
+  return new Set(fs.existsSync(f) ? fs.readFileSync(f, 'utf8').split(/\r?\n/).map(s => s.trim().toLowerCase()).filter(s => s && !s.startsWith('#')) : []); };
 
 function leaderboard() {
+  const BAN = banned();
   const rows = db.prepare(`select id,name,uuid,rating,events,
     (select max(after) from performances where player_id=players.id) peak,
     (select after-before from performances p join events e on e.id=p.event_id where p.player_id=players.id
@@ -10,7 +15,7 @@ function leaderboard() {
     (select count(*) from performances where player_id=players.id and placement<=3) top3,
     (select count(*) from performances where player_id=players.id and placement<=5) top5,
     (select count(*) from performances where player_id=players.id and placement<=10) top10
-    from players where events>0 order by rating desc`).all();
+    from players where events>0 order by rating desc`).all().filter(r => !BAN.has(r.name.toLowerCase()));
   // rank before the most recent event, for the up/down arrows
   const last = db.prepare('select id from events order by date desc, id desc limit 1').get();
   const before = new Map(last ? db.prepare('select player_id,before from performances where event_id=?').all(last.id).map(r => [r.player_id, r.before]) : []);
@@ -23,6 +28,15 @@ function leaderboard() {
   const rec = db.prepare(`select coalesce(p.placement, p.team_placement) v from performances p join events e on e.id=p.event_id
     where p.player_id=? order by e.date desc, e.id desc limit 5`);
   rows.forEach(r => { r.recent = rec.all(r.id).map(x => x.v); });
+  // dominance: average points above the event's average, in standard deviations of that event's scores
+  const dom = new Map();
+  for (const e of db.prepare('select id from events').all()) {
+    const ps = db.prepare('select player_id,points from performances where event_id=? and points is not null').all(e.id);
+    if (ps.length < 4) continue;
+    const m = ps.reduce((s, p) => s + p.points, 0) / ps.length, sd = Math.sqrt(ps.reduce((s, p) => s + (p.points - m) ** 2, 0) / ps.length) || 1;
+    ps.forEach(p => { const d = dom.get(p.player_id) || dom.set(p.player_id, [0, 0]).get(p.player_id); d[0] += (p.points - m) / sd; d[1]++; });
+  }
+  rows.forEach(r => { const d = dom.get(r.id); r.margin = d ? +(d[0] / d[1]).toFixed(2) : null; });
   return rows;
 }
 
@@ -45,6 +59,7 @@ function player(id) {
   if (!pl) return null;
   const history = db.prepare(`select e.id event_id,e.name,e.date,p.team,p.team_placement,p.placement,p.before,p.after
     from performances p join events e on e.id=p.event_id where p.player_id=? order by e.date,e.id`).all(pl.id);
+  if (banned().has(pl.name.toLowerCase())) pl.banned = true;
   return { player: pl, history };
 }
 

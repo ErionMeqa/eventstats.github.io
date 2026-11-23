@@ -1,41 +1,41 @@
-player,team,team_placement,individual_placement
-SolidarityGaming,Simon's Angels,1,1
-InTheLittleWood,Simon's Angels,1,3
-Honeydew,Simon's Angels,1,10
-Xephos,Simon's Angels,1,13
-Smajor1995,Dodgy Doodlers,2,2
-QuirkyFace,Dodgy Doodlers,2,7
-Leozaur,Dodgy Doodlers,2,18
-NinaSerena,Dodgy Doodlers,2,23
-Ravsu,Rick Astley's Shorts,3,8
-Breeh,Rick Astley's Shorts,3,11
-Daltos,Rick Astley's Shorts,3,19
-drsimonclark,Rick Astley's Shorts,3,30
-Magistrex,Power Bottoms,4,5
-TheSpiffingBrit,Power Bottoms,4,6
-_M4NG0_,Power Bottoms,4,29
-Alex_The_Rambler,Power Bottoms,4,32
-SB737,BEEEEEEEES,5,4
-Zylush,BEEEEEEEES,5,24
-Mousie_Mouse,BEEEEEEEES,5,26
-BobaWitch,BEEEEEEEES,5,31
-Amadeus_Fink,Not the Red Team,6,9
-Weeannon,Not the Red Team,6,20
-SherlockHulmes,Not the Red Team,6,21
-CraigMeUp,Not the Red Team,6,25
-LividCoffee,What the Flux?!,7,12
-SteveCP,What the Flux?!,7,15
-NanoSounds,What the Flux?!,7,27
-Bedgar_,What the Flux?!,7,28
-PedguinTV,The Goblins,8,16
-ChippyGaming_,The Goblins,8,22
-Bekkiboom,The Goblins,8,34
-Geestargames,The Goblins,8,35
-BrryHrry,UH OH CHONKY,9,14
-osiefish,UH OH CHONKY,9,36
-bouphe,UH OH CHONKY,9,37
-BigLyds,UH OH CHONKY,9,39
-Zoeya,G.O.A.T,10,17
-Rythian,G.O.A.T,10,33
-brionykay,G.O.A.T,10,38
-Fiona_McGoats,G.O.A.T,10,40
+player,team,team_placement,individual_placement,points,team_points
+SolidarityGaming,Simon's Angels,1,1,4103,21740
+InTheLittleWood,Simon's Angels,1,3,3272,21740
+Honeydew,Simon's Angels,1,10,2170,21740
+Xephos,Simon's Angels,1,13,2014,21740
+Smajor1995,Dodgy Doodlers,2,2,3917,18486
+QuirkyFace,Dodgy Doodlers,2,7,2509,18486
+Leozaur,Dodgy Doodlers,2,18,1694,18486
+NinaSerena,Dodgy Doodlers,2,23,1445,18486
+Ravsu,Rick Astley's Shorts,3,8,2415,15581
+Breeh,Rick Astley's Shorts,3,11,2065,15581
+Daltos,Rick Astley's Shorts,3,19,1677,15581
+drsimonclark,Rick Astley's Shorts,3,30,1172,15581
+Magistrex,Power Bottoms,4,5,2606,15140
+TheSpiffingBrit,Power Bottoms,4,6,2599,15140
+_M4NG0_,Power Bottoms,4,29,1222,15140
+Alex_The_Rambler,Power Bottoms,4,32,1154,15140
+SB737,BEEEEEEEES,5,4,3005,13239
+Zylush,BEEEEEEEES,5,24,1434,13239
+Mousie_Mouse,BEEEEEEEES,5,26,1340,13239
+BobaWitch,BEEEEEEEES,5,31,1158,13239
+Amadeus_Fink,Not the Red Team,6,9,2393,12822
+Weeannon,Not the Red Team,6,20,1618,12822
+SherlockHulmes,Not the Red Team,6,21,1537,12822
+CraigMeUp,Not the Red Team,6,25,1380,12822
+LividCoffee,What the Flux?!,7,12,2037,12075
+SteveCP,What the Flux?!,7,15,1879,12075
+NanoSounds,What the Flux?!,7,27,1287,12075
+Bedgar_,What the Flux?!,7,28,1239,12075
+PedguinTV,The Goblins,8,16,1775,10698
+ChippyGaming_,The Goblins,8,22,1478,10698
+Bekkiboom,The Goblins,8,34,994,10698
+Geestargames,The Goblins,8,35,900,10698
+BrryHrry,UH OH CHONKY,9,14,1889,8111
+osiefish,UH OH CHONKY,9,36,871,8111
+bouphe,UH OH CHONKY,9,37,791,8111
+BigLyds,UH OH CHONKY,9,39,692,8111
+Zoeya,G.O.A.T,10,17,1773,7611
+Rythian,G.O.A.T,10,33,1114,7611
+brionykay,G.O.A.T,10,38,709,7611
+Fiona_McGoats,G.O.A.T,10,40,439,7611

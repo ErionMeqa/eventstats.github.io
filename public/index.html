@@ -39,6 +39,7 @@ th{font:600 12px var(--sans);color:var(--mut);background:var(--bg2)} td.r,th.r{t
 .blocks i.p1{background:var(--gold);color:#2b2100} .blocks i.p2{background:var(--silver);color:#1d2228} .blocks i.p3{background:var(--bronze);color:#2a1606}
 .chg{font:600 13px var(--mono)} .chg.up{color:var(--up)} .chg.dn{color:var(--dn)}
 .mv{font:600 11px var(--mono);margin-left:6px} .mv.up{color:var(--up)} .mv.dn{color:var(--dn)}
+.ban{display:inline-block;padding:1px 8px;border-radius:6px;background:#5a1d1d;color:#ffb4b4;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
 .rank{font:800 18px var(--disp);color:var(--dim);width:1%} .rank.p1{color:var(--gold)} .rank.p2{color:var(--silver)} .rank.p3{color:var(--bronze)}
 .dot{display:inline-block;width:10px;height:10px;margin-right:8px;background:var(--c);border-radius:2px;vertical-align:-1px}
 /* home */
@@ -72,10 +73,10 @@ th{font:600 12px var(--sans);color:var(--mut);background:var(--bg2)} td.r,th.r{t
 .st .m a{color:var(--fg)} .st .m a:hover{color:var(--xp)}
 /* player */
 .ph{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding:24px;margin-bottom:18px}
-.ph .av{width:84px;height:84px;font-size:36px} .ph h1{margin:0 0 6px;word-break:break-all}
+.ph .av{width:84px;height:84px;font-size:36px} .skin{display:block;width:72px;height:173px;margin:-6px 0} .skin img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 8px 14px rgba(0,0,0,.5))} .ph h1{margin:0 0 6px;word-break:break-all}
 .ph .big{text-align:right} .ph .big div{font:800 52px/1 var(--disp)} .ph .big span{font-size:12px;color:var(--mut)}
 .prog{grid-column:1/-1} .prog .l{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:6px}
-.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px}
+.tiles{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-bottom:18px}
 .tile{padding:14px} .tile .k{font-size:12px;color:var(--mut)} .tile .v{font:800 24px var(--disp);margin-top:2px}
 .chartc{padding:18px 18px 8px} svg.chart{width:100%;height:auto;display:block} svg.chart text{font:10px var(--mono);fill:var(--dim)}
 .tl{display:grid;gap:6px}
@@ -171,14 +172,14 @@ async function home() {
 async function leaderboard() {
   nav('lb');
   const rows = await board(), PER = 50; let page = 0, list = rows;
-  $.innerHTML = `<h1>Leaderboard</h1><p class="sub">${rows.length.toLocaleString()} players. Arrows show rank movement since the most recent event; blocks are each player's last five finishes.</p>
+  $.innerHTML = `<h1>Leaderboard</h1><p class="sub">${rows.length.toLocaleString()} players. Arrows show rank movement since the most recent event; blocks are each player's last five finishes; margin is how far above the field they score on average.</p>
   <div class="tools"><input id="q" placeholder="Filter players…"></div><div id="tbl"></div>`;
   let q = ''; const filt = () => { list = rows.filter(p => p.name.toLowerCase().includes(q) ); draw(); };
   const draw = () => {
     const pages = Math.max(1, Math.ceil(list.length / PER)); page = Math.min(page, pages - 1);
-    document.getElementById('tbl').innerHTML = `<div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th class="hide-s">Last 5</th><th class="r hide-s">Wins</th><th class="r hide-s">Top 3</th><th class="r hide-s">Events</th><th class="r">Rating</th></tr></thead><tbody>
+    document.getElementById('tbl').innerHTML = `<div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th class="hide-s">Last 5</th><th class="r hide-s" title="Average points above the event average, in standard deviations">Margin</th><th class="r hide-s">Wins</th><th class="r hide-s">Top 3</th><th class="r hide-s">Events</th><th class="r">Rating</th></tr></thead><tbody>
     ${list.slice(page * PER, page * PER + PER).map(p => `<tr><td class="rank ${rankCls(p.rank)}">${p.rank}</td><td>${who(p)}</td><td class="hide-s">${blocks(p.recent || [])}</td>
-    <td class="r num hide-s">${p.wins ?? ''}</td><td class="r num hide-s">${p.top3 ?? ''}</td><td class="r num dim hide-s">${p.events}</td><td class="r num" style="font-weight:600">${R(p.rating)}${move(p)}</td></tr>`).join('') || '<tr><td colspan="8" class="mut">No players found.</td></tr>'}</tbody></table></div>
+    <td class="r num hide-s">${p.margin == null ? '–' : (p.margin > 0 ? '+' : '') + p.margin.toFixed(2)}</td><td class="r num hide-s">${p.wins ?? ''}</td><td class="r num hide-s">${p.top3 ?? ''}</td><td class="r num dim hide-s">${p.events}</td><td class="r num" style="font-weight:600">${R(p.rating)}${move(p)}</td></tr>`).join('') || '<tr><td colspan="8" class="mut">No players found.</td></tr>'}</tbody></table></div>
     <div class="pager"><span>Page ${page + 1} of ${pages} · ${list.length.toLocaleString()} players</span><span><button id="pv" ${page ? '' : 'disabled'}>Previous</button> <button id="nx" ${page < pages - 1 ? '' : 'disabled'}>Next</button></span></div>`;
     document.getElementById('pv').onclick = () => { page--; draw(); scrollTo(0, 0); }; document.getElementById('nx').onclick = () => { page++; draw(); scrollTo(0, 0); };
   };
@@ -237,15 +238,16 @@ async function player(id) {
   const me = lb.find(r => r.id === player.id) || {}, pct = me.rank ? Math.max(1, Math.ceil(100 * me.rank / lb.length)) : null;
   const ip = history.filter(h => h.placement != null), avg = ip.length ? ip.reduce((s, h) => s + h.placement, 0) / ip.length : null;
   const peak = Math.max(1500, ...history.map(h => h.after));
-  $.innerHTML = `<div class="card ph">${avatar(player.name, player.uuid)}<div><h1>${esc(player.name)}</h1><span class="mut">Rank #${me.rank ?? '–'} of ${lb.length.toLocaleString()}${move(me)}${pct ? ` · top ${pct}%` : ''}</span></div>
-    <div class="big"><div>${R(player.rating)}</div><span>rating</span></div></div>
+  $.innerHTML = `<div class="card ph"><span class="skin"><img alt="${esc(player.name)}" src="https://mc-heads.net/body/${encodeURIComponent(player.uuid || player.name)}/120" onerror="this.parentNode.outerHTML=avatar(this.alt)"></span><div><h1>${esc(player.name)}</h1><span class="mut">${player.banned ? '<span class="ban">Banned</span> · not ranked' : `Rank #${me.rank ?? '–'} of ${lb.length.toLocaleString()}${move(me)}${pct ? ` · top ${pct}%` : ''}`}</span></div>
+    <div class="big"><div>${R(player.rating)}</div><span>rating${history.length && history[history.length - 1].after - player.rating >= 1 ? ` · −${R(history[history.length - 1].after - player.rating)} inactivity decay` : ''}</span></div></div>
   <div class="tiles">
     <div class="card tile"><div class="k">Peak</div><div class="v">${R(peak)}</div></div>
     <div class="card tile"><div class="k">Events</div><div class="v">${player.events}</div></div>
     <div class="card tile"><div class="k">1st places</div><div class="v">${ip.filter(h => h.placement === 1).length}</div></div>
     <div class="card tile"><div class="k">Top 3</div><div class="v">${ip.filter(h => h.placement <= 3).length}</div></div>
     <div class="card tile"><div class="k">Team wins</div><div class="v">${history.filter(h => h.team_placement === 1).length}</div></div>
-    <div class="card tile"><div class="k">Avg place</div><div class="v">${avg == null ? '–' : avg.toFixed(1)}</div></div></div>
+    <div class="card tile"><div class="k">Avg place</div><div class="v">${avg == null ? '–' : avg.toFixed(1)}</div></div>
+    <div class="card tile" title="Average points above the event average, in standard deviations of that event's scores"><div class="k">Points margin</div><div class="v">${me.margin == null ? '–' : (me.margin > 0 ? '+' : '') + me.margin.toFixed(2)}</div></div></div>
   <div class="card chartc">${chart(history)}</div>
   <h2>Event timeline <small>${history.length} events · newest first · coloured by team</small></h2>
   <div class="tl">${history.slice().reverse().map(h => `<a class="card tr" href="#/event/${h.event_id}" style="--c:${h.color || (h.team ? teamColor(h.team) : 'var(--line)')}">

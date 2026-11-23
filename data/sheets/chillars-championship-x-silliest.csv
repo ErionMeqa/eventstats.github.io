@@ -1,25 +1,25 @@
-player,team,team_placement,individual_placement
-Gcrt,Fat Little Chuds,1,2
-Rdaug,Fat Little Chuds,1,8
-Ceilozz,Fat Little Chuds,1,12
-MutantSabretooth,Fat Little Chuds,1,16
-JJKALANI,Blub,2,5
-UshMC,Blub,2,6
-BeastPlays_,Blub,2,15
-PrabsSSP,Blub,2,18
-ClutchSalt,The Chosen Ones,3,7
-Zenllow,The Chosen Ones,3,11
-vibesnek,The Chosen Ones,3,14
-ObiWanKenobi68,The Chosen Ones,3,19
-forbiee,Kraggle,4,4
-KingDixie,Kraggle,4,10
-ItsYureii,Kraggle,4,17
-LargeEpicMan,Kraggle,4,21
-candycanesforu,Monster High,5,3
-Astrayics,Monster High,5,13
-fruityautumn,Monster High,5,20
-evaxl,Monster High,5,22
-CursedArrow,Gubby,6,1
-sdiuqs,Gubby,6,9
-Ace_Is_Missing,Gubby,6,23
-WoodenBrick_,Gubby,6,24
+player,team,team_placement,individual_placement,points,team_points
+Gcrt,Fat Little Chuds,1,2,3067,9942
+Rdaug,Fat Little Chuds,1,8,2506,9942
+Ceilozz,Fat Little Chuds,1,12,2401,9942
+MutantSabretooth,Fat Little Chuds,1,16,1968,9942
+JJKALANI,Blub,2,5,2781,9170
+UshMC,Blub,2,6,2759,9170
+BeastPlays_,Blub,2,15,2006,9170
+PrabsSSP,Blub,2,18,1624,9170
+ClutchSalt,The Chosen Ones,3,7,2606,8756
+Zenllow,The Chosen Ones,3,11,2427,8756
+vibesnek,The Chosen Ones,3,14,2198,8756
+ObiWanKenobi68,The Chosen Ones,3,19,1525,8756
+forbiee,Kraggle,4,4,2878,8532
+KingDixie,Kraggle,4,10,2471,8532
+ItsYureii,Kraggle,4,17,1848,8532
+LargeEpicMan,Kraggle,4,21,1335,8532
+candycanesforu,Monster High,5,3,3061,8094
+Astrayics,Monster High,5,13,2385,8094
+fruityautumn,Monster High,5,20,1342,8094
+evaxl,Monster High,5,22,1306,8094
+CursedArrow,Gubby,6,1,3074,7950
+sdiuqs,Gubby,6,9,2478,7950
+Ace_Is_Missing,Gubby,6,23,1236,7950
+WoodenBrick_,Gubby,6,24,1162,7950
