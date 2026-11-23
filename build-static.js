@@ -17,8 +17,21 @@ const write = (f, d) => fs.writeFileSync(path.join(out, 'data', f), JSON.stringi
 write('leaderboard.json', q.leaderboard());
 write('events.json', q.events());
 const eids = db.prepare('select id from events').all(), pids = db.prepare('select id from players where events>0').all();
-eids.forEach(e => write(`event-${e.id}.json`, q.event(e.id)));
-pids.forEach(p => write(`player-${p.id}.json`, q.player(p.id)));
+// real team colours per event (data/team-colors.json, read from the stats sheets); the page falls back to guessing from the name
+const colorsFile = path.join(__dirname, 'data', 'team-colors.json');
+const COLORS = fs.existsSync(colorsFile) ? JSON.parse(fs.readFileSync(colorsFile, 'utf8')) : {};
+const colorOf = (event, team) => (team && COLORS[event] && COLORS[event][team]) || undefined;
+eids.forEach(e => {
+  const d = q.event(e.id);
+  (d.teams || []).forEach(t => { t.color = colorOf(d.event.name, t.name); });
+  (d.players || []).forEach(p => { p.color = colorOf(d.event.name, p.team); });
+  write(`event-${e.id}.json`, d);
+});
+pids.forEach(p => {
+  const d = q.player(p.id);
+  (d.history || []).forEach(h => { h.color = colorOf(h.name, h.team); });
+  write(`player-${p.id}.json`, d);
+});
 
 let html = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
 html = html.replace('<script>', '<script>window.STATIC = true;</script>\n<script>');

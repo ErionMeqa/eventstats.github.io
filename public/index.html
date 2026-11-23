@@ -107,13 +107,13 @@ async function event(id) {
   const teamOnly = d.players.every(p => p.placement == null);
   const gain = (name) => d.players.filter(p => p.team === name).reduce((s, p) => s + (p.after - p.before), 0) / Math.max(1, d.players.filter(p => p.team === name).length);
   $.innerHTML = `<h1>${esc(d.event.name)}</h1><p class="sub">${esc(d.event.date)} · ${d.players.length} players${d.teams.length ? ' · ' + d.teams.length + ' teams' : ''}</p>
-  ${d.teams.length ? `<h2>Team standings</h2><div class="teams">${d.teams.map(t => `<div class="card team" style="--c:${teamColor(t.name)}">
+  ${d.teams.length ? `<h2>Team standings</h2><div class="teams">${d.teams.map(t => `<div class="card team" style="--c:${t.color || teamColor(t.name)}">
     <div class="top"><b>${esc(t.name)}</b><span class="pl">${ord(t.placement)}</span></div>
     <div class="m">${t.players.map(esc).join(', ')}</div><div class="m" style="margin-top:6px">Avg rating change ${chg(0, gain(t.name))}</div></div>`).join('')}</div>` : ''}
   <h2>${teamOnly ? 'Players (team standings only)' : 'Individual results'}</h2>
   <div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th>Team</th><th class="num">Rating</th><th class="num">Change</th></tr></thead><tbody>
   ${d.players.map(p => `<tr><td class="mut">${p.placement ?? '-'}</td><td><a class="who" href="#/player/${p.id}">${avatar(p.name, p.uuid)}${esc(p.name)}</a></td>
-  <td>${p.team ? `<span class="dot" style="--c:${teamColor(p.team)}"></span>${esc(p.team)}` : ''}</td><td class="num rt">${Math.round(p.after)}</td><td class="num">${chg(p.before, p.after)}</td></tr>`).join('')}</tbody></table></div>`;
+  <td>${p.team ? `<span class="dot" style="--c:${p.color || teamColor(p.team)}"></span>${esc(p.team)}` : ''}</td><td class="num rt">${Math.round(p.after)}</td><td class="num">${chg(p.before, p.after)}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
 function chart(history) {
@@ -146,7 +146,7 @@ async function player(id) {
   <div class="card" style="padding:14px 14px 6px">${chart(history)}</div>
   <h2>History</h2><div class="card wrap"><table><thead><tr><th>Event</th><th class="hide-s">Date</th><th>Team</th><th class="num">Team #</th><th class="num">Place</th><th class="num">Change</th></tr></thead><tbody>
   ${history.slice().reverse().map(h => `<tr><td><a href="#/event/${h.event_id}"><b>${esc(h.name)}</b></a></td><td class="mut hide-s">${esc(h.date)}</td>
-  <td>${h.team ? `<span class="dot" style="--c:${teamColor(h.team)}"></span>${esc(h.team)}` : ''}</td><td class="num">${h.team_placement ?? '-'}</td><td class="num">${h.placement ?? '-'}</td><td class="num">${chg(h.before, h.after)}</td></tr>`).join('')}</tbody></table></div>`;
+  <td>${h.team ? `<span class="dot" style="--c:${h.color || teamColor(h.team)}"></span>${esc(h.team)}` : ''}</td><td class="num">${h.team_placement ?? '-'}</td><td class="num">${h.placement ?? '-'}</td><td class="num">${chg(h.before, h.after)}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
 const api = (u, body) => fetch(u, { method: body ? 'POST' : 'GET',
