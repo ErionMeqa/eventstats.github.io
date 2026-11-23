@@ -1,0 +1,44 @@
+[
+  {
+    "file": "mc-mayhem-20.csv",
+    "name": "MC Mayhem 20",
+    "date": "2023-01-28",
+    "source": "Minecraft Mayhem Statsheet / tab \"Mayhem 20\"; date: tab",
+    "notes": "32 players"
+  },
+  {
+    "file": "mc-mayhem-21.csv",
+    "name": "MC Mayhem 21",
+    "date": "2023-03-04",
+    "source": "Minecraft Mayhem Statsheet / tab \"Mayhem 21\"; date: tab",
+    "notes": "32 players"
+  },
+  {
+    "file": "mc-mayhem-22.csv",
+    "name": "MC Mayhem 22",
+    "date": "2023-04-01",
+    "source": "Minecraft Mayhem Statsheet / tab \"Mayhem 22\"; date: tab",
+    "notes": "32 players"
+  },
+  {
+    "file": "mc-mayhem-all-stars.csv",
+    "name": "MC Mayhem All-Stars",
+    "date": "2023-05-27",
+    "source": "Minecraft Mayhem Statsheet / tab \"Mayhem AS\"; date: tab",
+    "notes": "32 players"
+  },
+  {
+    "file": "mc-mayhem-pride-2023.csv",
+    "name": "MC Mayhem Pride 2023",
+    "date": "2023-06-24",
+    "source": "Minecraft Mayhem Statsheet / tab \"Mayhem P23\"; date: tab",
+    "notes": "32 players"
+  },
+  {
+    "file": "mc-mayhem-ignite.csv",
+    "name": "MC Mayhem Ignite",
+    "date": "2024-09-14",
+    "source": "Minecraft Mayhem Statsheet / tab \"Mayhem I\"; date: tab",
+    "notes": "32 players"
+  }
+]

@@ -2497,5 +2497,479 @@
   "Cobalt Centaurs": "#5454ff",
   "Purple Phoenixes": "#aa00aa",
   "Pink Pegasi": "#ff54ff"
+ },
+ "Block Wars Origins 1": {
+  "Team Dots": "#ffaa00",
+  "Team Team": "#54ff54",
+  "Team Boat": "#54ffff",
+  "Team Puff": "#aa00aa"
+ },
+ "Block Wars Origins 2": {
+  "Team Meow": "#ffaa00",
+  "Team Pogs": "#54ff54",
+  "Team Gogy": "#54ffff",
+  "Team Bind": "#aa00aa"
+ },
+ "Block Wars Origins 3": {
+  "Team Maid": "#ffaa00",
+  "Team Clap": "#54ff54",
+  "Team Bats": "#54ffff",
+  "Team Cuhg": "#aa00aa"
+ },
+ "Block Wars Origins 4": {
+  "Team Name": "#ffaa00",
+  "Team Bolt": "#54ff54",
+  "Team Funk": "#54ffff",
+  "Team Weed": "#aa00aa"
+ },
+ "Block Wars Origins 5": {
+  "Team Moon": "#ffaa00",
+  "Team Cash": "#54ff54",
+  "Team Swag": "#54ffff",
+  "Team Star": "#aa00aa"
+ },
+ "Block Wars Origins 6": {
+  "Team Rune": "#ffaa00",
+  "Team Ring": "#54ff54",
+  "Team Kong": "#54ffff",
+  "Team Stab": "#aa00aa"
+ },
+ "Block Wars Origins 7": {
+  "Team Riot": "#ffaa00",
+  "Team Pain": "#54ff54",
+  "Team Doki": "#54ffff",
+  "Team Snow": "#aa00aa"
+ },
+ "Block Wars Origins 8": {
+  "Team Gold": "#ffaa00",
+  "Team Rick": "#54ff54",
+  "Team Rats": "#54ffff",
+  "Team King": "#aa00aa"
+ },
+ "Block Wars Origins 9": {
+  "Team Sova": "#ffaa00",
+  "Team Dark": "#54ff54",
+  "Team Bozo": "#54ffff",
+  "Team Grim": "#aa00aa"
+ },
+ "Block Wars Origins All-Stars": {
+  "Team Name": "#ff5454",
+  "Team Boat": "#ffaa00",
+  "Team Bind": "#ffff54",
+  "Team Swag": "#54ff54",
+  "Team Sova": "#54ffff",
+  "Team Bats": "#5454ff",
+  "Team Rune": "#aa00aa",
+  "Team Maid": "#ff54ff"
+ },
+ "Block Wars Origins 11": {
+  "Team Duck": "#ff5454",
+  "Team Crypt": "#ffaa00",
+  "Team Band": "#ffff54",
+  "Team Lads": "#54ff54",
+  "Team AAAAA": "#54ffff",
+  "Team Lisa": "#5454ff",
+  "Team Afton": "#aa00aa",
+  "Team Ditto": "#ff54ff"
+ },
+ "Block Wars Origins 12": {
+  "Team Cupid": "#ff5454",
+  "Team NoDub": "#ffaa00",
+  "Team Wario": "#ffff54",
+  "Team Yoshi": "#54ff54",
+  "Team Bugs": "#54ffff",
+  "Team Perry": "#5454ff",
+  "Team Tubby": "#aa00aa",
+  "Team Kirby": "#ff54ff"
+ },
+ "Block Wars Origins 13": {
+  "Team Joker": "#ff5454",
+  "Team Allay": "#ffaa00",
+  "Team Dojo": "#ffff54",
+  "Team Flora": "#54ff54",
+  "Team Plush": "#54ffff",
+  "Team Eevee": "#5454ff",
+  "Team Last": "#aa00aa",
+  "Team Fire": "#ff54ff"
+ },
+ "Block Wars Origins 14": {
+  "Team Work": "#ff5454",
+  "Team Chair": "#ffaa00",
+  "Team Monke": "#ffff54",
+  "Team Legos": "#54ff54",
+  "Team Lotad": "#54ffff",
+  "Team Beach": "#5454ff",
+  "Team Chef": "#aa00aa",
+  "Team Party": "#ff54ff"
+ },
+ "Block Wars Origins 15": {
+  "Team Witch": "#ff5454",
+  "Team ATMCC": "#ffaa00",
+  "Team Skull": "#ffff54",
+  "Team Trick": "#54ff54",
+  "Team Sans": "#54ffff",
+  "Team Mummy": "#5454ff",
+  "Team Treat": "#aa00aa",
+  "Team Plank": "#ff54ff"
+ },
+ "Block Wars Origins 16": {
+  "Team Error": "#ff5454",
+  "Team Rizz": "#ffaa00",
+  "Team Weep": "#ffff54",
+  "Team Pollo": "#54ff54",
+  "Team Storm": "#54ffff",
+  "Team Berry": "#5454ff",
+  "Team Royal": "#aa00aa",
+  "Team Panda": "#ff54ff"
+ },
+ "Block Wars Origins 17": {
+  "Team Fuzzy": "#ff5454",
+  "Team Comet": "#ffaa00",
+  "Team Bells": "#ffff54",
+  "Team Frost": "#54ff54",
+  "Team Cold": "#54ffff",
+  "Team Chill": "#5454ff",
+  "Team Cream": "#aa00aa",
+  "Team Carey": "#ff54ff"
+ },
+ "Block Wars Origins 18": {
+  "Team Devil": "#ff5454",
+  "Team Annoy": "#ffaa00",
+  "Team Titan": "#ffff54",
+  "Team Silly": "#54ff54",
+  "Team Falls": "#54ffff",
+  "Team Smurf": "#5454ff",
+  "Team Nova": "#aa00aa",
+  "Team Goofy": "#ff54ff"
+ },
+ "Block Wars Origins 19": {
+  "Team Mates": "#ff5454",
+  "Team Juice": "#ffaa00",
+  "Team Soup": "#ffff54",
+  "Team Frog": "#54ff54",
+  "Team Drown": "#54ffff",
+  "Team Clues": "#5454ff",
+  "Team GOAT": "#aa00aa",
+  "Team Pixel": "#ff54ff"
+ },
+ "Block Wars Origins 20": {
+  "Team Mice": "#ff5454",
+  "Team Cook": "#ffaa00",
+  "Team Flare": "#ffff54",
+  "Team Lemon": "#54ff54",
+  "Team Magic": "#54ffff",
+  "Team Skies": "#5454ff",
+  "Team Wish": "#aa00aa",
+  "Team Faze": "#ff54ff"
+ },
+ "Block Wars Origins 21": {
+  "Team Crime": "#ff5454",
+  "Team Honey": "#ffaa00",
+  "Team Rift": "#ffff54",
+  "Team X-Ray": "#54ff54",
+  "Team Kaiju": "#54ffff",
+  "Team Lock": "#5454ff",
+  "Team POTUS": "#aa00aa",
+  "Team Fairy": "#ff54ff"
+ },
+ "Block Wars Origins 22": {
+  "Team Venom": "#ff5454",
+  "Team Fluid": "#ffaa00",
+  "Team Dyson": "#ffff54",
+  "Team Paint": "#54ff54",
+  "Team Trans": "#54ffff",
+  "Team Flirt": "#5454ff",
+  "Team Bread": "#aa00aa",
+  "Team Pride": "#ff54ff"
+ },
+ "Block Wars Origins 23": {
+  "Team Beast": "#ff5454",
+  "Team Demon": "#ffaa00",
+  "Team NPCs": "#ffff54",
+  "Team Mafia": "#54ff54",
+  "Team Aqua": "#54ffff",
+  "Team Aloha": "#5454ff",
+  "Team Boba": "#aa00aa",
+  "Team Krill": "#ff54ff"
+ },
+ "Block Wars Origins G2023": {
+  "Team Name": "#ff5454",
+  "Team Boat": "#ffaa00",
+  "Team Bind": "#ffff54",
+  "Team Swag": "#54ff54",
+  "Team Sova": "#54ffff",
+  "Team Bats": "#5454ff",
+  "Team Rune": "#aa00aa",
+  "Team Maid": "#ff54ff"
+ },
+ "Block Wars Origins 24": {
+  "Team Cats": "#ff5454",
+  "Team Goopy": "#ffaa00",
+  "Team Hex": "#ffff54",
+  "Team Curse": "#54ff54",
+  "Team Gwen": "#54ffff",
+  "Team SWMG": "#5454ff",
+  "Team Scooby": "#aa00aa",
+  "Team Haunt": "#ff54ff"
+ },
+ "Block Wars Origins 25": {
+  "Team Slay": "#ff5454",
+  "Team TTW": "#ffaa00",
+  "Team Fetch": "#ffff54",
+  "Team Jolly": "#54ff54",
+  "Team Frosty": "#54ffff",
+  "Team NoHoHo": "#5454ff",
+  "Team Cocoa": "#aa00aa",
+  "Team Stupid": "#ff54ff"
+ },
+ "Block Wars Origins 27": {
+  "Team Eepy": "#ff5454",
+  "Team Meme": "#ffaa00",
+  "Team YeeHaw": "#ffff54",
+  "Team Dunk": "#54ff54",
+  "Team Arcane": "#54ffff",
+  "Team Rocket": "#5454ff",
+  "Team Yippee": "#aa00aa",
+  "Team Burr": "#ff54ff"
+ },
+ "Block Wars Origins Rookies": {
+  "Team Ohio": "#ff5454",
+  "Team Ramsay": "#ffaa00",
+  "Team Spoons": "#ffff54",
+  "Team Salad": "#54ff54",
+  "Team Shinx": "#54ffff",
+  "Team Booyah": "#5454ff",
+  "Team Bingle": "#aa00aa",
+  "Team Yapper": "#ff54ff"
+ },
+ "Block Wars Origins 28": {
+  "Team MCC": "#ff5454",
+  "Team Aura": "#ffaa00",
+  "Team Cinema": "#ffff54",
+  "Team Surf": "#54ff54",
+  "Team Jump": "#54ffff",
+  "Team Mario": "#5454ff",
+  "Team Galaxy": "#aa00aa",
+  "Team Slayer": "#ff54ff"
+ },
+ "Block Wars Origins 29": {
+  "Team Drones": "#ff5454",
+  "Team Chubhi": "#ffaa00",
+  "Team Sonic": "#ffff54",
+  "Team Pookie": "#54ff54",
+  "Team Mythic": "#54ffff",
+  "Team Bolts": "#5454ff",
+  "Team Shake": "#aa00aa",
+  "Team Wonder": "#ff54ff"
+ },
+ "Block Wars Origins 30": {
+  "Team Clown": "#ff5454",
+  "Team Analog": "#ffaa00",
+  "Team Reaper": "#ffff54",
+  "Team Alien": "#54ff54",
+  "Team Freddy": "#54ffff",
+  "Team Boom": "#5454ff",
+  "Team Boys": "#aa00aa",
+  "Team Skins": "#ff54ff"
+ },
+ "Block Wars Origins Rookies 2": {
+  "Team Tiny": "#ff5454",
+  "Team Nyan": "#ffaa00",
+  "Team Four": "#ffff54",
+  "Team Citrus": "#54ff54",
+  "Team Evil": "#54ffff",
+  "Team Mana": "#5454ff",
+  "Team Whimsy": "#aa00aa",
+  "Team Sus": "#ff54ff"
+ },
+ "Block Wars Origins 31": {
+  "Team Spheal": "#ff5454",
+  "Team Arson": "#ffaa00",
+  "Team Polar": "#ffff54",
+  "Team Treble": "#54ff54",
+  "Team Elves": "#54ffff",
+  "Team Arctic": "#5454ff",
+  "Team Asia": "#aa00aa",
+  "Team Wuh": "#ff54ff"
+ },
+ "Block Wars Origins 32": {
+  "Team Cutie": "#ff5454",
+  "Team Lethal": "#ffaa00",
+  "Team Rave": "#ffff54",
+  "Team Skibidi": "#54ff54",
+  "Team Cluck": "#54ffff",
+  "Team Mutants": "#5454ff",
+  "Team Wasted": "#aa00aa",
+  "Team Pokemon": "#ff54ff"
+ },
+ "Block Wars Origins 33": {
+  "Team Martini": "#ff5454",
+  "Team Rivals": "#ffaa00",
+  "Team Perfect": "#ffff54",
+  "Team OrderUp": "#54ff54",
+  "Team Oomf": "#54ffff",
+  "Team Boxic": "#5454ff",
+  "Team Zen": "#aa00aa",
+  "Team Thwomp": "#ff54ff"
+ },
+ "Block Wars Origins 34": {
+  "Team Lebron": "#ff5454",
+  "Team Plink": "#ffaa00",
+  "Team Bee": "#ffff54",
+  "Team Ghast": "#54ff54",
+  "Team Gato": "#54ffff",
+  "Team Biome": "#5454ff",
+  "Team Bugsnax": "#aa00aa",
+  "Team Flower": "#ff54ff"
+ },
+ "Block Wars Origins 35": {
+  "Team Woke": "#ff5454",
+  "Team Sweet": "#ffaa00",
+  "Team Sponge": "#ffff54",
+  "Team HRT": "#54ff54",
+  "Team Gaydar": "#54ffff",
+  "Team Evolve": "#5454ff",
+  "Team Muffin": "#aa00aa",
+  "Team Barbie": "#ff54ff"
+ },
+ "Block Wars Origins 36": {
+  "Team Bait": "#ff5454",
+  "Team Mwah": "#ffaa00",
+  "Team Unc": "#ffff54",
+  "Team Peak": "#54ff54",
+  "Team Arceus": "#54ffff",
+  "Team Tyler": "#5454ff",
+  "Team Brick": "#aa00aa",
+  "Team Tatum": "#ff54ff"
+ },
+ "Block Wars Origins Brawl": {
+  "Team Bang": "#ff5454",
+  "Team Hashira": "#ffaa00",
+  "Team Locked": "#ffff54",
+  "Team Six": "#54ff54",
+  "Team Seven": "#54ffff",
+  "Team Ping": "#5454ff",
+  "Team Fraud": "#aa00aa",
+  "Team Labubu": "#ff54ff"
+ },
+ "Block Wars Origins 37": {
+  "Team Pasta": "#ff5454",
+  "Team Depot": "#ffaa00",
+  "Team Coconut": "#ffff54",
+  "Team Glorp": "#54ff54",
+  "Team Meshi": "#54ffff",
+  "Team Bedtime": "#5454ff",
+  "Team Pearl": "#aa00aa",
+  "Team Chungus": "#ff54ff"
+ },
+ "Block Wars Origins 38": {
+  "Team Cartoon": "#ff5454",
+  "Team Bench": "#ffaa00",
+  "Team Hummer": "#ffff54",
+  "Team Math": "#54ff54",
+  "Team Odyssey": "#54ffff",
+  "Team Sahur": "#5454ff",
+  "Team Sparkly": "#aa00aa",
+  "Team Tinker": "#ff54ff"
+ },
+ "Block Wars Origins Reloaded": {
+  "Team Bonita": "#ff5454",
+  "Team Cursed": "#ffaa00",
+  "Team Shine": "#ffff54",
+  "Team Purr": "#54ff54",
+  "Team Fries": "#54ffff",
+  "Team Shades": "#5454ff",
+  "Team Barney": "#aa00aa",
+  "Team Rat": "#ff54ff"
+ },
+ "Block Wars Origins 39": {
+  "Team Morgan": "#ff5454",
+  "Team HardHat": "#ffaa00",
+  "Team Banana": "#ffff54",
+  "Team Larp": "#54ff54",
+  "Team Jirachi": "#54ffff",
+  "Team Thanos": "#5454ff",
+  "Team DtMF": "#aa00aa",
+  "Team Guppies": "#ff54ff"
+ },
+ "Block Wars Origins Brawl 2": {
+  "Team Halo": "#ff5454",
+  "Team Fieri": "#ffaa00",
+  "Team Miracle": "#ffff54",
+  "Team Ninjago": "#54ff54",
+  "Team Glazers": "#54ffff",
+  "Team Spoingi": "#5454ff",
+  "Team Cryptid": "#aa00aa",
+  "Team Money": "#ff54ff"
+ },
+ "Block Wars Origins 40 (All-Stars 2)": {
+  "Team Oomf": "#ff5454",
+  "Team Chubhi": "#ffaa00",
+  "Team Cinema": "#ffff54",
+  "Team NoHoHo": "#54ff54",
+  "Team Flirt": "#54ffff",
+  "Team Mates": "#5454ff",
+  "Team Comet": "#aa00aa",
+  "Team Party": "#ff54ff"
+ },
+ "MC Mayhem 20": {
+  "Pink Peaches": "#ff54ff",
+  "Red Radishes": "#ff5454",
+  "Sangrian Strawberries": "#cc0000",
+  "Mustard Mangos": "#ffaa00",
+  "Lime Lemons": "#54ff54",
+  "Cyan Cucumbers": "#00aaaa",
+  "Aqua Apples": "#54ffff",
+  "Golden Grapefruit": "#ffff54"
+ },
+ "MC Mayhem 21": {
+  "Pink Peaches": "#ff54ff",
+  "Red Radishes": "#ff5454",
+  "Sangrian Strawberries": "#cc0000",
+  "Mustard Mangos": "#ffaa00",
+  "Lime Lemons": "#54ff54",
+  "Cyan Cucumbers": "#00aaaa",
+  "Aqua Apples": "#54ffff",
+  "Golden Grapefruit": "#ffff54"
+ },
+ "MC Mayhem 22": {
+  "Pink Peaches": "#ff54ff",
+  "Red Radishes": "#ff5454",
+  "Sangrian Strawberries": "#cc0000",
+  "Mustard Mangos": "#ffaa00",
+  "Lime Lemons": "#54ff54",
+  "Cyan Cucumbers": "#00aaaa",
+  "Aqua Apples": "#54ffff",
+  "Golden Grapefruit": "#ffff54"
+ },
+ "MC Mayhem All-Stars": {
+  "Pink Peaches": "#ff54ff",
+  "Red Radishes": "#ff5454",
+  "Blue Berries": "#5454ff",
+  "Mustard Mangos": "#ffaa00",
+  "Lime Lemons": "#54ff54",
+  "Cyan Cucumbers": "#00aaaa",
+  "Aqua Apples": "#54ffff",
+  "Golden Grapefruit": "#ffff54"
+ },
+ "MC Mayhem Pride 2023": {
+  "Pink Peaches": "#ff54ff",
+  "Blue Berries": "#5454ff",
+  "Red Radishes": "#ff5454",
+  "Mustard Mangos": "#ffaa00",
+  "Lime Lemons": "#54ff54",
+  "Cyan Cucumbers": "#00aaaa",
+  "Aqua Apples": "#54ffff",
+  "Golden Grapefruit": "#ffff54"
+ },
+ "MC Mayhem Ignite": {
+  "Pink Peaches": "#ff54ff",
+  "Red Radishes": "#ff5454",
+  "Blue Berries": "#5454ff",
+  "Mustard Mangos": "#ffaa00",
+  "Lime Lemons": "#54ff54",
+  "Cyan Cucumbers": "#00aaaa",
+  "Aqua Apples": "#54ffff",
+  "Golden Grapefruit": "#ffff54"
  }
 }
