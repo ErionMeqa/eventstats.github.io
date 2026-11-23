@@ -2,55 +2,106 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Event Elo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--fg:#14171c;--mut:#6b7280;--line:#e5e7eb;--acc:#3b82f6;--up:#16a34a;--dn:#dc2626;--chip:#eef2f7;--shadow:0 1px 2px rgba(0,0,0,.05)}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--fg:#eceef2;--mut:#98a0ad;--line:#262b33;--acc:#6aa6ff;--up:#4ade80;--dn:#f87171;--chip:#212630;--shadow:none}}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:inherit;text-decoration:none} a:hover{color:var(--acc)}
-header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
-.nav{max-width:980px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:6px}
-.logo{font-weight:800;font-size:18px;margin-right:14px;letter-spacing:-.3px} .logo span{color:var(--acc)}
-.nav a.tab{padding:6px 12px;border-radius:8px;color:var(--mut);font-weight:600} .nav a.tab.on{background:var(--chip);color:var(--fg)} .sp{flex:1}
-main{max-width:980px;margin:0 auto;padding:22px 18px 60px}
-h1{font-size:26px;margin:0 0 4px;letter-spacing:-.4px} h2{font-size:17px;margin:28px 0 10px} .sub{color:var(--mut);margin:0 0 18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+:root{--bg:#101412;--bg2:#151a17;--card:#1a201c;--card2:#202722;--fg:#ecefe6;--mut:#97a196;--dim:#636c62;--line:#2a322c;
+--xp:#b8f04a;--xpd:#5d7d1f;--up:#b8f04a;--dn:#ff8a73;--gold:#ffd23f;--silver:#d8dde3;--bronze:#e6955a;
+--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--sans)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(#000,transparent 420px)}
+a{color:inherit;text-decoration:none} a:hover{color:var(--xp)}
+header{position:sticky;top:0;z-index:5;background:rgba(16,20,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:0 auto;padding:10px 22px;display:flex;align-items:center;gap:6px}
+.logo{display:flex;align-items:center;gap:10px;font:800 21px var(--disp);letter-spacing:-.5px;margin-right:16px} .logo:hover{color:var(--fg)}
+.logo i{width:22px;height:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px} .logo i b{background:var(--xp)} .logo i b:nth-child(2n){background:var(--xpd)}
+.nav a.tab{padding:6px 12px;border-radius:6px;color:var(--mut);font-weight:500} .nav a.tab.on{color:var(--fg);background:var(--card2)} .sp{flex:1}
+.find{position:relative} .find input{width:220px;padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg2);color:var(--fg);font:14px var(--sans)}
+.find input:focus{outline:none;border-color:var(--xpd)}
+.find ul{position:absolute;right:0;top:115%;width:270px;margin:0;padding:4px;list-style:none;background:var(--card);border:1px solid var(--line);border-radius:8px;display:none;max-height:340px;overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.find ul.on{display:block} .find li a{display:flex;gap:10px;align-items:center;padding:6px 8px;border-radius:5px} .find li a:hover{background:var(--card2);color:var(--fg)}
+main{max-width:1120px;margin:0 auto;padding:36px 22px 80px;position:relative}
+h1{font:800 clamp(32px,5vw,52px)/1.02 var(--disp);letter-spacing:-1.5px;margin:0 0 8px}
+h2{font:800 22px var(--disp);letter-spacing:-.4px;margin:44px 0 14px;display:flex;align-items:baseline;gap:10px} h2 small{font:500 13px var(--sans);color:var(--mut)}
+.sub{color:var(--mut);margin:0 0 26px} .mut{color:var(--mut)} .dim{color:var(--dim)} .num,.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px}
 .wrap{overflow-x:auto} table{width:100%;border-collapse:collapse}
-th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap} tr:last-child td{border-bottom:0}
-th{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);font-weight:700} td.num,th.num{text-align:right}
-tbody tr:hover{background:var(--chip)}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap} tr:last-child td{border-bottom:0}
+th{font:600 12px var(--sans);color:var(--mut);background:var(--bg2)} td.r,th.r{text-align:right} tbody tr:hover{background:var(--card2)}
 .who{display:flex;align-items:center;gap:10px;font-weight:600}
-.av{width:30px;height:30px;border-radius:8px;flex:none;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px;overflow:hidden;image-rendering:pixelated}
-.av img{width:100%;height:100%;display:block}
-.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-weight:700;font-size:13px;background:var(--chip)}
-.pill.up{color:var(--up);background:color-mix(in srgb,var(--up) 14%,transparent)} .pill.dn{color:var(--dn);background:color-mix(in srgb,var(--dn) 14%,transparent)}
-.rt{font-weight:800;font-variant-numeric:tabular-nums} .tier{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
-.mut{color:var(--mut)} .medal{font-weight:800}
-.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
-.pod{padding:16px;text-align:center;border-top:4px solid var(--c)} .pod .av{width:56px;height:56px;margin:0 auto 8px;border-radius:12px;font-size:22px}
-.pod .n{font-weight:700} .pod .r{font-size:24px;font-weight:800;margin-top:2px} .pod .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
-input.search{width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:inherit;margin-bottom:14px}
-.teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
-.team{padding:14px;border-left:5px solid var(--c)} .team .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
-.team b{font-size:15px} .team .pl{font-size:20px;font-weight:800;color:var(--c)} .team .m{color:var(--mut);font-size:13px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:14px 0}
-.stat{padding:14px 16px} .stat .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;font-weight:700} .stat .v{font-size:24px;font-weight:800;margin-top:2px}
-.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;background:var(--c)}
-.head{display:flex;align-items:center;gap:14px;margin-bottom:6px} .head .av{width:56px;height:56px;border-radius:12px;font-size:22px}
-svg.chart{width:100%;height:auto;display:block} .tag{font-size:12px;padding:2px 8px;border-radius:6px;background:var(--chip);color:var(--mut);font-weight:600;margin-left:8px}
-input,button{font:inherit} .adm input{padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
-.adm button{padding:7px 14px;border:0;border-radius:8px;background:var(--acc);color:#fff;font-weight:600;cursor:pointer}
-@media(max-width:560px){.podium{grid-template-columns:1fr}.hide-s{display:none}}
+.av{width:28px;height:28px;flex:none;display:grid;place-items:center;font:800 13px var(--disp);color:#fff;position:relative;overflow:hidden;image-rendering:pixelated;border-radius:3px}
+.av img{position:absolute;inset:0;width:100%;height:100%}
+.ore{display:inline-flex;align-items:center;gap:6px;font:600 12px var(--sans);color:var(--c)}
+.ore::before{content:"";width:10px;height:10px;background:var(--c);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.xp{display:flex;gap:2px;height:7px} .xp i{flex:1;background:#26302a;border-radius:1px} .xp i.f{background:linear-gradient(180deg,var(--xp),#86c22a)}
+.blocks{display:inline-flex;gap:3px} .blocks i{width:20px;height:20px;display:grid;place-items:center;font:600 10px var(--mono);font-style:normal;border-radius:3px;background:#26302a;color:var(--mut)}
+.blocks i.p1{background:var(--gold);color:#2b2100} .blocks i.p2{background:var(--silver);color:#1d2228} .blocks i.p3{background:var(--bronze);color:#2a1606}
+.chg{font:600 13px var(--mono)} .chg.up{color:var(--up)} .chg.dn{color:var(--dn)}
+.mv{font:600 11px var(--mono);margin-left:6px} .mv.up{color:var(--up)} .mv.dn{color:var(--dn)}
+.rank{font:800 18px var(--disp);color:var(--dim);width:1%} .rank.p1{color:var(--gold)} .rank.p2{color:var(--silver)} .rank.p3{color:var(--bronze)}
+.dot{display:inline-block;width:10px;height:10px;margin-right:8px;background:var(--c);border-radius:2px;vertical-align:-1px}
+/* home */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:stretch;margin-bottom:10px}
+.hero .lead{font-size:17px;color:var(--mut);max-width:520px;margin:14px 0 22px}
+.facts{display:flex;gap:28px;flex-wrap:wrap} .facts div{font:800 28px var(--disp)} .facts span{display:block;font:500 12px var(--sans);color:var(--mut);letter-spacing:.3px}
+.spot{padding:22px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.spot .tag{font:600 12px var(--sans);color:var(--gold)} .spot .top{display:flex;gap:16px;align-items:center}
+.spot .av{width:64px;height:64px;font-size:28px} .spot .nm{font:800 26px var(--disp);letter-spacing:-.5px}
+.spot .rt{font:800 44px/1 var(--disp)} .spot .rt small{font:500 13px var(--sans);color:var(--mut);margin-left:6px}
+.latest{padding:0;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr 1fr}
+.latest > div{padding:20px 22px;border-right:1px solid var(--line)} .latest > div:last-child{border:0}
+.latest .win{background:linear-gradient(135deg,color-mix(in srgb,var(--c) 28%,transparent),transparent 70%);border-top:4px solid var(--c)}
+.latest h4{margin:0 0 10px;font:600 12px var(--sans);color:var(--mut)} .latest .tn{font:800 24px var(--disp);color:var(--c);margin:2px 0 8px}
+.latest ol{margin:0;padding:0;list-style:none} .latest li{display:flex;align-items:center;gap:10px;padding:5px 0} .latest li .sp{flex:1}
+.series{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.ser{padding:16px 18px;border-left:4px solid var(--c)} .ser b{font:800 18px var(--disp)} .ser .n{font:600 12px var(--mono);color:var(--mut);float:right;margin-top:4px}
+.ser .l{font-size:13px;color:var(--mut);margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* lists */
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px} .tools input{flex:1;min-width:200px;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg2);color:var(--fg);font:14px var(--sans)}
+.tools input:focus{outline:none;border-color:var(--xpd)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px} .chip{padding:6px 12px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--mut);font:500 13px var(--sans);cursor:pointer}
+.chip:hover{color:var(--fg)} .chip.on{background:var(--xp);border-color:var(--xp);color:#16210a;font-weight:600}
+.pager{display:flex;justify-content:space-between;align-items:center;margin:14px 0;color:var(--mut);font-size:13px}
+.pager button{padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--fg);cursor:pointer;font:500 13px var(--sans)} .pager button:disabled{opacity:.35;cursor:default}
+/* event */
+.standings{display:grid;gap:8px}
+.st{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:16px;padding:12px 16px;border-left:6px solid var(--c);
+  background:linear-gradient(90deg,color-mix(in srgb,var(--c) 14%,var(--card)),var(--card) 45%)}
+.st .p{font:800 30px var(--disp);color:var(--c)} .st b{font:800 18px var(--disp)} .st .m{font-size:13px;color:var(--mut);margin-top:2px}
+.st .m a{color:var(--fg)} .st .m a:hover{color:var(--xp)}
+/* player */
+.ph{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding:24px;margin-bottom:18px}
+.ph .av{width:84px;height:84px;font-size:36px} .ph h1{margin:0 0 6px;word-break:break-all}
+.ph .big{text-align:right} .ph .big div{font:800 52px/1 var(--disp)} .ph .big span{font-size:12px;color:var(--mut)}
+.prog{grid-column:1/-1} .prog .l{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:6px}
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px}
+.tile{padding:14px} .tile .k{font-size:12px;color:var(--mut)} .tile .v{font:800 24px var(--disp);margin-top:2px}
+.chartc{padding:18px 18px 8px} svg.chart{width:100%;height:auto;display:block} svg.chart text{font:10px var(--mono);fill:var(--dim)}
+.tl{display:grid;gap:6px}
+.tr{display:grid;grid-template-columns:96px 1fr 180px 70px 70px 64px;align-items:center;gap:12px;padding:10px 14px;border-left:4px solid var(--c)}
+.tr .d{font:500 12px var(--mono);color:var(--dim)} .tr .e{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tr .t{font-size:13px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap} .tr .r{text-align:right}
+input,button{font:inherit} .adm input{padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg2);color:var(--fg)}
+.adm button{padding:7px 14px;border:0;border-radius:6px;background:var(--xp);color:#16210a;font-weight:600;cursor:pointer}
+footer{max-width:1120px;margin:0 auto;padding:0 22px 40px;color:var(--dim);font-size:13px}
+@media(max-width:900px){.hero,.latest{grid-template-columns:1fr}.latest > div{border-right:0;border-bottom:1px solid var(--line)}.tiles{grid-template-columns:repeat(3,1fr)}
+  .tr{grid-template-columns:80px 1fr 60px 60px}.tr .t,.tr .hide{display:none}.hide-s{display:none}.ph{grid-template-columns:auto 1fr}.ph .big{grid-column:1/-1;text-align:left}}
+@media(max-width:600px){.find{display:none}.nav{padding:10px 14px}main{padding:26px 14px 60px}.tiles{grid-template-columns:repeat(2,1fr)}}
 </style></head><body>
-<header><div class="nav"><a class="logo" href="#/">Event<span>Elo</span></a>
-<a class="tab" id="t-lb" href="#/">Leaderboard</a><a class="tab" id="t-ev" href="#/events">Events</a><span class="sp"></span><a class="tab" id="t-ad" href="#/admin">Admin</a></div></header>
-<main id="app">Loading...</main>
+<header><div class="nav"><a class="logo" href="#/"><i><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></i>Event Elo</a>
+<a class="tab" id="t-lb" href="#/leaderboard">Leaderboard</a><a class="tab" id="t-ev" href="#/events">Events</a><span class="sp"></span>
+<div class="find"><input id="gs" placeholder="Find a player…" autocomplete="off"><ul id="gr"></ul></div>
+<a class="tab" id="t-ad" href="#/admin">Admin</a></div></header>
+<main id="app"><p class="sub">Loading…</p></main>
+<footer>Event Elo · ratings move with every team and individual placement · everyone starts at 1500</footer>
 <script>window.STATIC = true;</script>
 <script>
 const $ = document.getElementById('app');
 // On GitHub Pages (static build) the same data comes from JSON files instead of the API.
 const url = u => !window.STATIC ? u : u.replace(/\/api\/events\/(\d+)/, 'data/event-$1.json').replace(/\/api\/players\/(\d+)/, 'data/player-$1.json')
   .replace('/api/leaderboard', 'data/leaderboard.json').replace('/api/events', 'data/events.json');
-const get = u => fetch(url(u)).then(r => r.json());
+const cache = {}; const get = u => cache[u] ||= fetch(url(u)).then(r => r.json());
 if (window.STATIC) document.getElementById('t-ad').style.display = 'none';
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const hue = s => [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
@@ -65,89 +116,142 @@ const COLORS = { crimson:'#dc2626', krimson:'#dc2626', scarlet:'#e11d48', red:'#
   white:'#e5e7eb', silver:'#94a3b8', gray:'#6b7280', grey:'#6b7280', black:'#374151' };
 // first colour word anywhere in the name ("Team Red", "The Blue Bees"), else a stable hue from the name
 const teamColor = t => { const w = String(t).toLowerCase().split(/[^a-z]+/).find(x => COLORS[x]); return w ? COLORS[w] : `hsl(${hue(t)} 60% 50%)`; };
-const tier = r => r >= 1800 ? '#f59e0b' : r >= 1650 ? '#a855f7' : r >= 1550 ? '#3b82f6' : r >= 1450 ? '#22c55e' : '#9ca3af';
-const sign = d => (d >= 0 ? '+' : '') + d.toFixed(1);
-const chg = (b, a) => { const d = a - b; return `<span class="pill ${d >= 0 ? 'up' : 'dn'}">${sign(d)}</span>`; };
+const R = v => Math.round(v);
 const ord = n => n + (['th','st','nd','rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : (n % 10 < 4 ? n % 10 : 0)]);
-const avatar = (name, uuid, cls = '') => uuid
-  ? `<div class="av ${cls}" style="background:hsl(${hue(name)} 55% 45%)"><img alt="" src="https://mc-heads.net/avatar/${uuid}/64" onerror="this.remove()">${esc(name[0] || '?')}</div>`
-  : `<div class="av ${cls}" style="background:hsl(${hue(name)} 55% 45%)">${esc((name[0] || '?').toUpperCase())}</div>`;
+const chg = (b, a) => { const d = R(a - b); return `<span class="chg ${d > 0 ? 'up' : d < 0 ? 'dn' : 'mut'}">${d > 0 ? '+' + d : d < 0 ? '−' + -d : '±0'}</span>`; };
+const blocks = arr => `<span class="blocks">${arr.map(v => `<i class="${v <= 3 ? 'p' + v : ''}">${v ?? '–'}</i>`).join('')}</span>`;
+// Minecraft head by UUID, or by name until UUIDs are linked; the letter shows if the head can't load
+const avatar = (name, uuid) => `<span class="av" style="background:hsl(${hue(name)} 30% 30%)">${esc((name[0] || '?').toUpperCase())}<img alt="" loading="lazy" src="https://mc-heads.net/avatar/${encodeURIComponent(uuid || name)}/64" onerror="this.remove()"></span>`;
+const who = p => `<a class="who" href="#/player/${p.id}">${avatar(p.name, p.uuid)}${esc(p.name)}</a>`;
+const teamDot = (team, color) => team ? `<span class="dot" style="--c:${color || teamColor(team)}"></span>${esc(team)}` : '';
 const nav = id => ['lb','ev','ad'].forEach(k => document.getElementById('t-' + k).classList.toggle('on', k === id));
+const SERIES = [['MC Championship','MC Championship','#f0a030'],['Block Wars','Block Wars','#e5484d'],["Pandora's Box","Pandora's Box",'#a97cf8'],['Chillars','Chillars','#4cc3ff'],
+  ['MC Mayhem','MC Mayhem','#ff6b9a'],['MC Mania','MC Mania','#ffd23f'],['Blissful','Blissful','#7ee0b0'],['Biome Battle','Biome Battle','#8bd94a']];
+const seriesOf = n => (SERIES.find(([p]) => n.startsWith(p)) || [0, 'Other', '#8f988e']);
+const board = async () => { const r = await get('/api/leaderboard'); r.forEach((p, i) => p.rank = i + 1); return r; };
+const move = p => p.prev_rank == null ? '' : p.prev_rank > p.rank ? `<span class="mv up">▲${p.prev_rank - p.rank}</span>` : p.prev_rank < p.rank ? `<span class="mv dn">▼${p.rank - p.prev_rank}</span>` : '';
+const rankCls = n => n <= 3 ? 'p' + n : '';
+
+(async () => { // header search
+  const lb = await board(), gs = document.getElementById('gs'), gr = document.getElementById('gr');
+  gs.oninput = () => { const q = gs.value.trim().toLowerCase(); const m = q ? lb.filter(p => p.name.toLowerCase().includes(q)).slice(0, 8) : [];
+    gr.innerHTML = m.map(p => `<li><a href="#/player/${p.id}">${avatar(p.name, p.uuid)}${esc(p.name)}<span class="sp"></span><span class="num mut">${R(p.rating)}</span></a></li>`).join(''); gr.classList.toggle('on', m.length > 0); };
+  gs.onkeydown = e => { if (e.key === 'Enter' && gr.querySelector('a')) gr.querySelector('a').click(); };
+  gr.onclick = () => { gs.value = ''; gr.classList.remove('on'); };
+  document.addEventListener('click', e => { if (!e.target.closest('.find')) gr.classList.remove('on'); });
+})();
+
+async function home() {
+  nav('');
+  const [lb, ev] = await Promise.all([board(), get('/api/events')]);
+  const last = ev[0] ? await get('/api/events/' + ev[0].id) : null, top = lb[0];
+  const perf = ev.reduce((s, e) => s + e.players, 0);
+  let latest = '';
+  if (last) {
+    const w = last.teams[0], climbers = last.players.slice().sort((a, b) => (b.after - b.before) - (a.after - a.before)).slice(0, 5);
+    const tops = last.players.filter(p => p.placement != null).slice(0, 5);
+    latest = `<h2>Latest event <small>${esc(last.event.date)}</small></h2><a class="card latest" href="#/event/${last.event.id}" style="display:grid">
+      <div class="win" style="--c:${w ? (w.color || teamColor(w.name)) : 'var(--xp)'}"><h4>${esc(last.event.name)}</h4>${w ? `<div class="mut" style="font-size:13px">Winning team</div><div class="tn">${esc(w.name)}</div><div class="mut" style="font-size:13px">${w.players.map(esc).join(' · ')}</div>` : ''}</div>
+      <div><h4>Top players</h4><ol>${tops.map(p => `<li><span class="rank ${rankCls(p.placement)}" style="font-size:15px;width:22px">${p.placement}</span>${avatar(p.name, p.uuid)}<span>${esc(p.name)}</span><span class="sp"></span>${chg(p.before, p.after)}</li>`).join('')}</ol></div>
+      <div><h4>Biggest climbers</h4><ol>${climbers.map(p => `<li>${avatar(p.name, p.uuid)}<span>${esc(p.name)}</span><span class="sp"></span>${chg(p.before, p.after)}</li>`).join('')}</ol></div></a>`;
+  }
+  const ser = SERIES.map(([p, n, c]) => { const es = ev.filter(e => e.name.startsWith(p)); return es.length ? { n, c, es } : null; }).filter(Boolean);
+  $.innerHTML = `<div class="hero"><div><h1>Who's actually the best at Minecraft events?</h1>
+    <p class="lead">One rating for every player across MC Championship, Block Wars, Pandora's Box and more, updated from every team and individual finish.</p>
+    <div class="facts"><div>${lb.length.toLocaleString()}<span>players rated</span></div><div>${ev.length}<span>events</span></div><div>${perf.toLocaleString()}<span>performances</span></div></div></div>
+    ${top ? `<a class="card spot" href="#/player/${top.id}"><div class="tag">#1 right now</div>
+      <div class="top">${avatar(top.name, top.uuid)}<div><div class="nm">${esc(top.name)}</div><span class="mut" style="font-size:13px">${top.wins ?? 0} wins · ${top.top3 ?? 0} top-3 finishes</span></div></div>
+      <div><div class="rt">${R(top.rating)}<small>rating · ${top.events} events</small></div><div style="margin-top:12px">${blocks(top.recent || [])}</div></div></a>` : ''}</div>
+  ${latest}
+  <h2>Top 10 <small><a href="#/leaderboard">full leaderboard →</a></small></h2>
+  <div class="card wrap"><table><tbody>${lb.slice(0, 10).map(p => `<tr><td class="rank ${rankCls(p.rank)}">${p.rank}</td><td>${who(p)}</td><td class="hide-s">${blocks(p.recent || [])}</td><td class="r num hide-s dim">${p.events} events</td><td class="r num" style="font-weight:600">${R(p.rating)}${move(p)}</td></tr>`).join('')}</tbody></table></div>
+  <h2>Series</h2><div class="series">${ser.map(s => `<a class="card ser" style="--c:${s.c}" href="#/events/${encodeURIComponent(s.n)}"><b>${esc(s.n)}</b><span class="n">${s.es.length} events</span>
+    <div class="l">Latest: ${esc(s.es[0].name)} · ${esc(s.es[0].date)}</div></a>`).join('')}</div>`;
+}
 
 async function leaderboard() {
   nav('lb');
-  const rows = await get('/api/leaderboard');
-  const medal = i => ['#f59e0b', '#9ca3af', '#b45309'][i];
-  const table = list => `<div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th class="num">Rating</th><th class="num hide-s">Last event</th><th class="num hide-s">Peak</th><th class="num hide-s">Events</th></tr></thead><tbody>
-  ${list.map(p => `<tr><td class="mut">${p.rank}</td><td><a class="who" href="#/player/${p.id}">${avatar(p.name, p.uuid)}${esc(p.name)}</a></td>
-  <td class="num rt"><span class="tier" style="background:${tier(p.rating)}"></span>${Math.round(p.rating)}</td>
-  <td class="num hide-s">${p.last_change == null ? '' : `<span class="pill ${p.last_change >= 0 ? 'up' : 'dn'}">${sign(p.last_change)}</span>`}</td>
-  <td class="num hide-s mut">${Math.round(p.peak)}</td><td class="num hide-s mut">${p.events}</td></tr>`).join('') || '<tr><td colspan="6" class="mut">No players found.</td></tr>'}</tbody></table></div>`;
-  rows.forEach((p, i) => p.rank = i + 1);
-  $.innerHTML = `<h1>Leaderboard</h1><p class="sub">${rows.length} players rated across all events</p>
-  <div class="podium">${rows.slice(0, 3).map((p, i) => `<a class="card pod" style="--c:${medal(i)}" href="#/player/${p.id}">${avatar(p.name, p.uuid)}<div class="k">${ord(i + 1)}</div><div class="n">${esc(p.name)}</div><div class="r">${Math.round(p.rating)}</div></a>`).join('')}</div>
-  <input class="search" id="q" placeholder="Search players..."><div id="tbl">${table(rows)}</div>`;
-  document.getElementById('q').oninput = e => {
-    const q = e.target.value.toLowerCase();
-    document.getElementById('tbl').innerHTML = table(rows.filter(p => p.name.toLowerCase().includes(q)));
+  const rows = await board(), PER = 50; let page = 0, list = rows;
+  $.innerHTML = `<h1>Leaderboard</h1><p class="sub">${rows.length.toLocaleString()} players. Arrows show rank movement since the most recent event; blocks are each player's last five finishes.</p>
+  <div class="tools"><input id="q" placeholder="Filter players…"></div><div id="tbl"></div>`;
+  let q = ''; const filt = () => { list = rows.filter(p => p.name.toLowerCase().includes(q) ); draw(); };
+  const draw = () => {
+    const pages = Math.max(1, Math.ceil(list.length / PER)); page = Math.min(page, pages - 1);
+    document.getElementById('tbl').innerHTML = `<div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th class="hide-s">Last 5</th><th class="r hide-s">Wins</th><th class="r hide-s">Top 3</th><th class="r hide-s">Events</th><th class="r">Rating</th></tr></thead><tbody>
+    ${list.slice(page * PER, page * PER + PER).map(p => `<tr><td class="rank ${rankCls(p.rank)}">${p.rank}</td><td>${who(p)}</td><td class="hide-s">${blocks(p.recent || [])}</td>
+    <td class="r num hide-s">${p.wins ?? ''}</td><td class="r num hide-s">${p.top3 ?? ''}</td><td class="r num dim hide-s">${p.events}</td><td class="r num" style="font-weight:600">${R(p.rating)}${move(p)}</td></tr>`).join('') || '<tr><td colspan="8" class="mut">No players found.</td></tr>'}</tbody></table></div>
+    <div class="pager"><span>Page ${page + 1} of ${pages} · ${list.length.toLocaleString()} players</span><span><button id="pv" ${page ? '' : 'disabled'}>Previous</button> <button id="nx" ${page < pages - 1 ? '' : 'disabled'}>Next</button></span></div>`;
+    document.getElementById('pv').onclick = () => { page--; draw(); scrollTo(0, 0); }; document.getElementById('nx').onclick = () => { page++; draw(); scrollTo(0, 0); };
   };
+  filt();
+  document.getElementById('q').oninput = e => { q = e.target.value.toLowerCase(); page = 0; filt(); };
 }
 
-async function events() {
+async function events(pre) {
   nav('ev');
-  const rows = await get('/api/events');
-  const byYear = {};
-  rows.forEach(e => (byYear[String(e.date).slice(0, 4)] ||= []).push(e));
-  $.innerHTML = `<h1>Events</h1><p class="sub">${rows.length} events</p>` + Object.keys(byYear).sort().reverse().map(y => `<h2>${y}</h2>
-  <div class="card wrap"><table><tbody>${byYear[y].map(e => `<tr><td><a href="#/event/${e.id}"><b>${esc(e.name)}</b></a></td><td class="mut">${esc(e.date)}</td><td class="num mut">${e.players} players</td></tr>`).join('')}</tbody></table></div>`).join('');
+  const rows = await get('/api/events'); let ser = pre ? decodeURIComponent(pre) : 'All', q = '';
+  const counts = {}; rows.forEach(e => { const s = seriesOf(e.name)[1]; counts[s] = (counts[s] || 0) + 1; });
+  const names = ['All', ...SERIES.map(s => s[1]).filter(s => counts[s]), ...(counts.Other ? ['Other'] : [])];
+  $.innerHTML = `<h1>Events</h1><p class="sub">${rows.length} events across ${names.length - 1} series.</p><div class="tools"><input id="q" placeholder="Filter events…"></div><div class="chips" id="ch"></div><div id="lst"></div>`;
+  const draw = () => {
+    document.getElementById('ch').innerHTML = names.map(n => `<button class="chip ${n === ser ? 'on' : ''}" data-s="${esc(n)}">${esc(n)} · ${n === 'All' ? rows.length : counts[n]}</button>`).join('');
+    document.querySelectorAll('.chip').forEach(b => b.onclick = () => { ser = b.dataset.s; draw(); });
+    const list = rows.filter(e => (ser === 'All' || seriesOf(e.name)[1] === ser) && e.name.toLowerCase().includes(q));
+    const byYear = {}; list.forEach(e => (byYear[String(e.date).slice(0, 4)] ||= []).push(e));
+    document.getElementById('lst').innerHTML = Object.keys(byYear).sort().reverse().map(y => `<h2>${y} <small>${byYear[y].length} events</small></h2><div class="card wrap"><table><tbody>
+    ${byYear[y].map(e => { const s = seriesOf(e.name); return `<tr><td style="width:100%"><span class="dot" style="--c:${s[2]}"></span><a href="#/event/${e.id}" style="font-weight:600">${esc(e.name)}</a></td>
+    <td class="mut hide-s">${esc(s[1])}</td><td class="r num mut">${e.players} players</td><td class="r num dim">${esc(e.date)}</td></tr>`; }).join('')}</tbody></table></div>`).join('') || '<p class="mut">No events found.</p>';
+  };
+  draw(); document.getElementById('q').oninput = e => { q = e.target.value.toLowerCase(); draw(); };
 }
 
 async function event(id) {
   nav('ev');
   const d = await get('/api/events/' + id);
-  const teamOnly = d.players.every(p => p.placement == null);
-  const gain = (name) => d.players.filter(p => p.team === name).reduce((s, p) => s + (p.after - p.before), 0) / Math.max(1, d.players.filter(p => p.team === name).length);
-  $.innerHTML = `<h1>${esc(d.event.name)}</h1><p class="sub">${esc(d.event.date)} · ${d.players.length} players${d.teams.length ? ' · ' + d.teams.length + ' teams' : ''}</p>
-  ${d.teams.length ? `<h2>Team standings</h2><div class="teams">${d.teams.map(t => `<div class="card team" style="--c:${t.color || teamColor(t.name)}">
-    <div class="top"><b>${esc(t.name)}</b><span class="pl">${ord(t.placement)}</span></div>
-    <div class="m">${t.players.map(esc).join(', ')}</div><div class="m" style="margin-top:6px">Avg rating change ${chg(0, gain(t.name))}</div></div>`).join('')}</div>` : ''}
-  <h2>${teamOnly ? 'Players (team standings only)' : 'Individual results'}</h2>
-  <div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th>Team</th><th class="num">Rating</th><th class="num">Change</th></tr></thead><tbody>
-  ${d.players.map(p => `<tr><td class="mut">${p.placement ?? '-'}</td><td><a class="who" href="#/player/${p.id}">${avatar(p.name, p.uuid)}${esc(p.name)}</a></td>
-  <td>${p.team ? `<span class="dot" style="--c:${p.color || teamColor(p.team)}"></span>${esc(p.team)}` : ''}</td><td class="num rt">${Math.round(p.after)}</td><td class="num">${chg(p.before, p.after)}</td></tr>`).join('')}</tbody></table></div>`;
+  const mem = name => d.players.filter(p => p.team === name), s = seriesOf(d.event.name);
+  $.innerHTML = `<p class="sub" style="margin-bottom:6px"><span class="dot" style="--c:${s[2]}"></span>${esc(s[1])} · ${esc(d.event.date)}</p><h1>${esc(d.event.name)}</h1>
+  <p class="sub">${d.players.length} players${d.teams.length ? ' in ' + d.teams.length + ' teams' : ''}</p>
+  ${d.teams.length ? `<h2>Final standings</h2><div class="standings">${d.teams.map(t => { const m = mem(t.name), g = m.reduce((s, p) => s + p.after - p.before, 0) / Math.max(1, m.length);
+    return `<div class="card st" style="--c:${t.color || teamColor(t.name)}"><div class="p">${ord(t.placement)}</div><div><b>${esc(t.name)}</b>
+    <div class="m">${m.map(p => `<a href="#/player/${p.id}">${esc(p.name)}</a>${p.placement != null ? ` <span class="dim">#${p.placement}</span>` : ''}`).join(' &nbsp;·&nbsp; ')}</div></div><div class="r">${chg(0, g)}<div class="dim" style="font-size:11px">avg</div></div></div>`; }).join('')}</div>` : ''}
+  <h2>Every player</h2><div class="card wrap"><table><thead><tr><th>#</th><th>Player</th><th class="hide-s">Team</th><th class="r">Before</th><th class="r">After</th><th class="r">Change</th></tr></thead><tbody>
+  ${d.players.map(p => `<tr><td class="rank ${rankCls(p.placement)}">${p.placement ?? '–'}</td><td>${who(p)}</td><td class="hide-s">${teamDot(p.team, p.color)}</td><td class="r num dim">${R(p.before)}</td><td class="r num" style="font-weight:600">${R(p.after)}</td><td class="r">${chg(p.before, p.after)}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
 function chart(history) {
-  const pts = [{ v: 1500, label: 'Start' }, ...history.map(h => ({ v: h.after, label: `${h.name} (${h.date}): ${Math.round(h.after)}` }))];
-  const W = 640, H = 200, L = 40, R = 12, T = 12, B = 22;
+  const pts = [{ v: 1500, label: 'Start: 1500' }, ...history.map(h => ({ v: h.after, label: `${h.name} (${h.date}): ${R(h.after)}`, c: h.color || (h.team ? teamColor(h.team) : '#8f988e') }))];
+  const W = 960, H = 260, L = 46, Rt = 10, T = 12, B = 18;
   const lo = Math.floor((Math.min(...pts.map(p => p.v)) - 15) / 10) * 10, hi = Math.ceil((Math.max(...pts.map(p => p.v)) + 15) / 10) * 10;
-  const x = i => L + (i * (W - L - R)) / Math.max(1, pts.length - 1), y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  const x = i => L + (i * (W - L - Rt)) / Math.max(1, pts.length - 1), y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  const st = [10, 20, 25, 50, 100, 200].find(v => (hi - lo) / v <= 5) || 250, grid = []; for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) grid.push(v);
   const line = pts.map((p, i) => `${x(i)},${y(p.v)}`).join(' ');
-  return `<svg class="chart" viewBox="0 0 ${W} ${H}">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--acc)" stop-opacity=".25"/><stop offset="1" stop-color="var(--acc)" stop-opacity="0"/></linearGradient></defs>
-  ${[lo, (lo + hi) / 2, hi].map(v => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--mut)">${Math.round(v)}</text>`).join('')}
-  ${lo < 1500 && hi > 1500 ? `<line x1="${L}" x2="${W - R}" y1="${y(1500)}" y2="${y(1500)}" stroke="var(--mut)" stroke-dasharray="4 4" opacity=".5"/>` : ''}
-  <polygon points="${x(0)},${H - B} ${line} ${x(pts.length - 1)},${H - B}" fill="url(#g)"/>
-  <polyline points="${line}" fill="none" stroke="var(--acc)" stroke-width="2.5" stroke-linejoin="round"/>
-  ${pts.map((p, i) => `<circle cx="${x(i)}" cy="${y(p.v)}" r="4" fill="var(--card)" stroke="var(--acc)" stroke-width="2"><title>${esc(p.label)}</title></circle>`).join('')}</svg>`;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8f04a" stop-opacity=".22"/><stop offset="1" stop-color="#b8f04a" stop-opacity="0"/></linearGradient></defs>
+  ${grid.map(v => `<line x1="${L}" x2="${W - Rt}" y1="${y(v)}" y2="${y(v)}" stroke="#2a322c"/><text x="${L - 8}" y="${y(v) + 3}" text-anchor="end">${v}</text>`).join('')}
+  ${lo < 1500 && hi > 1500 ? `<line x1="${L}" x2="${W - Rt}" y1="${y(1500)}" y2="${y(1500)}" stroke="#97a196" stroke-dasharray="2 6" opacity=".6"/><text x="${W - Rt}" y="${y(1500) - 4}" text-anchor="end">start 1500</text>` : ''}
+  <polygon points="${x(0)},${H - B} ${line} ${x(pts.length - 1)},${H - B}" fill="url(#g)"/><polyline points="${line}" fill="none" stroke="#b8f04a" stroke-width="2.2" stroke-linejoin="round"/>
+  ${pts.map((p, i) => `<rect x="${x(i) - 3.5}" y="${y(p.v) - 3.5}" width="7" height="7" fill="${p.c || '#b8f04a'}" stroke="#101412" stroke-width="1.5"><title>${esc(p.label)}</title></rect>`).join('')}</svg>`;
 }
 
 async function player(id) {
   nav('lb');
-  const { player, history } = await get('/api/players/' + id);
+  const [{ player, history }, lb] = await Promise.all([get('/api/players/' + id), board()]);
+  const me = lb.find(r => r.id === player.id) || {}, pct = me.rank ? Math.max(1, Math.ceil(100 * me.rank / lb.length)) : null;
+  const ip = history.filter(h => h.placement != null), avg = ip.length ? ip.reduce((s, h) => s + h.placement, 0) / ip.length : null;
   const peak = Math.max(1500, ...history.map(h => h.after));
-  const best = history.filter(h => h.placement != null).reduce((m, h) => Math.min(m, h.placement), 999);
-  $.innerHTML = `<div class="head">${avatar(player.name, player.uuid)}<div><h1 style="margin:0">${esc(player.name)}</h1><div class="mut">${player.events} event${player.events === 1 ? "" : "s"} played</div></div></div>
-  <div class="stats">
-    <div class="card stat"><div class="k">Rating</div><div class="v"><span class="tier" style="background:${tier(player.rating)}"></span>${Math.round(player.rating)}</div></div>
-    <div class="card stat"><div class="k">Peak</div><div class="v">${Math.round(peak)}</div></div>
-    <div class="card stat"><div class="k">Events</div><div class="v">${player.events}</div></div>
-    ${best < 999 ? `<div class="card stat"><div class="k">Best placement</div><div class="v">${ord(best)}</div></div>` : ''}
-  </div>
-  <div class="card" style="padding:14px 14px 6px">${chart(history)}</div>
-  <h2>History</h2><div class="card wrap"><table><thead><tr><th>Event</th><th class="hide-s">Date</th><th>Team</th><th class="num">Team #</th><th class="num">Place</th><th class="num">Change</th></tr></thead><tbody>
-  ${history.slice().reverse().map(h => `<tr><td><a href="#/event/${h.event_id}"><b>${esc(h.name)}</b></a></td><td class="mut hide-s">${esc(h.date)}</td>
-  <td>${h.team ? `<span class="dot" style="--c:${h.color || teamColor(h.team)}"></span>${esc(h.team)}` : ''}</td><td class="num">${h.team_placement ?? '-'}</td><td class="num">${h.placement ?? '-'}</td><td class="num">${chg(h.before, h.after)}</td></tr>`).join('')}</tbody></table></div>`;
+  $.innerHTML = `<div class="card ph">${avatar(player.name, player.uuid)}<div><h1>${esc(player.name)}</h1><span class="mut">Rank #${me.rank ?? '–'} of ${lb.length.toLocaleString()}${move(me)}${pct ? ` · top ${pct}%` : ''}</span></div>
+    <div class="big"><div>${R(player.rating)}</div><span>rating</span></div></div>
+  <div class="tiles">
+    <div class="card tile"><div class="k">Peak</div><div class="v">${R(peak)}</div></div>
+    <div class="card tile"><div class="k">Events</div><div class="v">${player.events}</div></div>
+    <div class="card tile"><div class="k">1st places</div><div class="v">${ip.filter(h => h.placement === 1).length}</div></div>
+    <div class="card tile"><div class="k">Top 3</div><div class="v">${ip.filter(h => h.placement <= 3).length}</div></div>
+    <div class="card tile"><div class="k">Team wins</div><div class="v">${history.filter(h => h.team_placement === 1).length}</div></div>
+    <div class="card tile"><div class="k">Avg place</div><div class="v">${avg == null ? '–' : avg.toFixed(1)}</div></div></div>
+  <div class="card chartc">${chart(history)}</div>
+  <h2>Event timeline <small>${history.length} events · newest first · coloured by team</small></h2>
+  <div class="tl">${history.slice().reverse().map(h => `<a class="card tr" href="#/event/${h.event_id}" style="--c:${h.color || (h.team ? teamColor(h.team) : 'var(--line)')}">
+    <span class="d">${esc(h.date)}</span><span class="e">${esc(h.name)}</span><span class="t">${esc(h.team || '')}${h.team_placement ? ` · ${ord(h.team_placement)}` : ''}</span>
+    <span class="r num">${h.placement != null ? '#' + h.placement : '–'}</span><span class="r num hide">${R(h.after)}</span><span class="r">${chg(h.before, h.after)}</span></a>`).join('')}</div>`;
 }
 
 const api = (u, body) => fetch(u, { method: body ? 'POST' : 'GET',
@@ -178,7 +282,7 @@ async function admin() {
 function route() {
   const [, a, b] = location.hash.split('/');
   window.scrollTo(0, 0);
-  ({ events, admin: window.STATIC ? leaderboard : admin, event: () => event(b), player: () => player(b) }[a] || leaderboard)();
+  ({ leaderboard, events: () => events(b), admin: window.STATIC ? home : admin, event: () => event(b), player: () => player(b) }[a] || home)();
 }
 addEventListener('hashchange', route); route();
 </script></body></html>
