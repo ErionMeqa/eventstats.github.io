@@ -1,6 +1,6 @@
 // Rating model. Tune these numbers to taste.
 const CFG = {
-  START: 1500,
+  START: 1100,
   K: 200,       // overall rating speed: a bad night costs roughly what it does on eventelo.live
   W: 0.75,       // weight of individual part (team part gets 1 - W)
   CARRY: 12,    // bonus/penalty for beating/trailing your own teammates
@@ -24,6 +24,9 @@ const CFG = {
   SHIELD: 0,    // 0 = off
   // Most one event can move a rating, up or down.
   CAP: 120,
+  // Situational team scoring (see computeEvent). When on, W and SHIELD are not used.
+  SITUATIONAL: true,
+  TEAM: 0.25,
 };
 
 const speed = eventsPlayed => 1 + CFG.BOOST * Math.max(0, CFG.PROVISIONAL - eventsPlayed) / CFG.PROVISIONAL;
@@ -86,6 +89,15 @@ function computeEvent(perfs) {
     const carry = !mates.length ? 0 : usePts
       ? Math.tanh((p.points - mates.reduce((s, j) => s + perfs[j].points, 0) / mates.length) / (CFG.SOFT * spread))
       : pct(p) - mates.reduce((s, j) => s + pct(perfs[j]), 0) / mates.length;
+    if (CFG.SITUATIONAL) {
+      // Your own result is the rating. The team result only joins in when it's fair:
+      //   team did well and you pulled your weight -> share of the team's gain
+      //   team did badly and you were carried       -> share of the team's loss
+      // A carry on a bad team, or a passenger on a good one, is rated on their own result alone.
+      const pulled = carry >= 0;
+      const team = (t.delta > 0 && pulled) || (t.delta < 0 && !pulled) ? CFG.TEAM * t.delta : 0;
+      return forgive(indiv[i] + team + CFG.CARRY * carry);
+    }
     const d = CFG.W * indiv[i] + (1 - CFG.W) * t.delta + CFG.CARRY * carry;
     return t.delta > 0 ? clamp(Math.max(forgive(d), CFG.SHIELD * t.delta)) : forgive(d);
   });

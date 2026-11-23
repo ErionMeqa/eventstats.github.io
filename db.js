@@ -9,7 +9,7 @@ const transaction = fn => (...a) => {
 };
 
 db.exec(`
-create table if not exists players(id integer primary key, name text unique collate nocase, rating real default 1500, events integer default 0);
+create table if not exists players(id integer primary key, name text unique collate nocase, rating real default 1100, events integer default 0);
 create table if not exists aliases(alias text primary key collate nocase, player_id integer);
 create table if not exists events(id integer primary key, name text, date text);
 create table if not exists performances(id integer primary key, event_id integer, player_id integer,

@@ -95,8 +95,9 @@ footer{max-width:1120px;margin:0 auto;padding:0 22px 40px;color:var(--dim);font-
 <div class="find"><input id="gs" placeholder="Find a player…" autocomplete="off"><ul id="gr"></ul></div>
 <a class="tab" id="t-ad" href="#/admin">Admin</a></div></header>
 <main id="app"><p class="sub">Loading…</p></main>
-<footer>Event Elo · ratings move with every team and individual placement · everyone starts at 1500</footer>
+<footer>Event Elo · ratings move with every team and individual placement · everyone starts at 1100</footer>
 <script>
+const START = 1100; // must match START in rating.js
 const $ = document.getElementById('app');
 // On GitHub Pages (static build) the same data comes from JSON files instead of the API.
 const url = u => !window.STATIC ? u : u.replace(/\/api\/events\/(\d+)/, 'data/event-$1.json').replace(/\/api\/players\/(\d+)/, 'data/player-$1.json')
@@ -219,7 +220,7 @@ async function event(id) {
 }
 
 function chart(history) {
-  const pts = [{ v: 1500, label: 'Start: 1500' }, ...history.map(h => ({ v: h.after, label: `${h.name} (${h.date}): ${R(h.after)}`, c: h.color || (h.team ? teamColor(h.team) : '#8f988e') }))];
+  const pts = [{ v: START, label: 'Start: ' + START }, ...history.map(h => ({ v: h.after, label: `${h.name} (${h.date}): ${R(h.after)}`, c: h.color || (h.team ? teamColor(h.team) : '#8f988e') }))];
   const W = 960, H = 260, L = 46, Rt = 10, T = 12, B = 18;
   const lo = Math.floor((Math.min(...pts.map(p => p.v)) - 15) / 10) * 10, hi = Math.ceil((Math.max(...pts.map(p => p.v)) + 15) / 10) * 10;
   const x = i => L + (i * (W - L - Rt)) / Math.max(1, pts.length - 1), y = v => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
@@ -227,7 +228,7 @@ function chart(history) {
   const line = pts.map((p, i) => `${x(i)},${y(p.v)}`).join(' ');
   return `<svg class="chart" viewBox="0 0 ${W} ${H}"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8f04a" stop-opacity=".22"/><stop offset="1" stop-color="#b8f04a" stop-opacity="0"/></linearGradient></defs>
   ${grid.map(v => `<line x1="${L}" x2="${W - Rt}" y1="${y(v)}" y2="${y(v)}" stroke="#2a322c"/><text x="${L - 8}" y="${y(v) + 3}" text-anchor="end">${v}</text>`).join('')}
-  ${lo < 1500 && hi > 1500 ? `<line x1="${L}" x2="${W - Rt}" y1="${y(1500)}" y2="${y(1500)}" stroke="#97a196" stroke-dasharray="2 6" opacity=".6"/><text x="${W - Rt}" y="${y(1500) - 4}" text-anchor="end">start 1500</text>` : ''}
+  ${lo < START && hi > START ? `<line x1="${L}" x2="${W - Rt}" y1="${y(START)}" y2="${y(START)}" stroke="#97a196" stroke-dasharray="2 6" opacity=".6"/><text x="${W - Rt}" y="${y(START) - 4}" text-anchor="end">start ${START}</text>` : ''}
   <polygon points="${x(0)},${H - B} ${line} ${x(pts.length - 1)},${H - B}" fill="url(#g)"/><polyline points="${line}" fill="none" stroke="#b8f04a" stroke-width="2.2" stroke-linejoin="round"/>
   ${pts.map((p, i) => `<rect x="${x(i) - 3.5}" y="${y(p.v) - 3.5}" width="7" height="7" fill="${p.c || '#b8f04a'}" stroke="#101412" stroke-width="1.5"><title>${esc(p.label)}</title></rect>`).join('')}</svg>`;
 }
@@ -237,7 +238,7 @@ async function player(id) {
   const [{ player, history }, lb] = await Promise.all([get('/api/players/' + id), board()]);
   const me = lb.find(r => r.id === player.id) || {}, pct = me.rank ? Math.max(1, Math.ceil(100 * me.rank / lb.length)) : null;
   const ip = history.filter(h => h.placement != null), avg = ip.length ? ip.reduce((s, h) => s + h.placement, 0) / ip.length : null;
-  const peak = Math.max(1500, ...history.map(h => h.after));
+  const peak = Math.max(START, ...history.map(h => h.after));
   $.innerHTML = `<div class="card ph"><span class="skin"><img alt="${esc(player.name)}" src="https://mc-heads.net/body/${encodeURIComponent(player.uuid || player.name)}/120" onerror="this.parentNode.outerHTML=avatar(this.alt)"></span><div><h1>${esc(player.name)}</h1><span class="mut">${player.banned ? '<span class="ban">Banned</span> · not ranked' : `Rank #${me.rank ?? '–'} of ${lb.length.toLocaleString()}${move(me)}${pct ? ` · top ${pct}%` : ''}`}</span></div>
     <div class="big"><div>${R(player.rating)}</div><span>rating${history.length && history[history.length - 1].after - player.rating >= 1 ? ` · −${R(history[history.length - 1].after - player.rating)} inactivity decay` : ''}</span></div></div>
   <div class="tiles">
