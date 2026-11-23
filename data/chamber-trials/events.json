@@ -1,0 +1,94 @@
+[
+  {
+    "file": "chamber-trials-1.csv",
+    "name": "Chamber Trials 1",
+    "date": "2024-06-15",
+    "source": "Chamber Trials Stats / tab \"CT1\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-2.csv",
+    "name": "Chamber Trials 2",
+    "date": "2024-08-10",
+    "source": "Chamber Trials Stats / tab \"CT2\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-3.csv",
+    "name": "Chamber Trials 3",
+    "date": "2024-10-27",
+    "source": "Chamber Trials Stats / tab \"CT3\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-4.csv",
+    "name": "Chamber Trials 4",
+    "date": "2024-12-21",
+    "source": "Chamber Trials Stats / tab \"CT4\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-5.csv",
+    "name": "Chamber Trials 5",
+    "date": "2025-02-02",
+    "source": "Chamber Trials Stats / tab \"CT5\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-6.csv",
+    "name": "Chamber Trials 6",
+    "date": "2025-04-27",
+    "source": "Chamber Trials Stats / tab \"CT6\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-7.csv",
+    "name": "Chamber Trials 7",
+    "date": "2025-06-29",
+    "source": "Chamber Trials Stats / tab \"CT7\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-8.csv",
+    "name": "Chamber Trials 8",
+    "date": "2025-08-10",
+    "source": "Chamber Trials Stats / tab \"CT8\"; date: eventelo.live",
+    "notes": "one player has no name in the sheet and is left out (31 players)"
+  },
+  {
+    "file": "chamber-trials-9.csv",
+    "name": "Chamber Trials 9",
+    "date": "2025-10-26",
+    "source": "Chamber Trials Stats / tab \"CT9\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-10.csv",
+    "name": "Chamber Trials 10",
+    "date": "2025-12-21",
+    "source": "Chamber Trials Stats / tab \"CT10\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chungus-trials.csv",
+    "name": "Chungus Trials",
+    "date": "2026-01-25",
+    "source": "Chamber Trials Stats / tab \"CHT\"; date: eventelo.live",
+    "notes": "40 players"
+  },
+  {
+    "file": "chamber-trials-11.csv",
+    "name": "Chamber Trials 11",
+    "date": "2026-06-13",
+    "source": "Chamber Trials Stats / tab \"CT11\"; date: eventelo.live",
+    "notes": "32 players"
+  },
+  {
+    "file": "chamber-trials-12.csv",
+    "name": "Chamber Trials 12",
+    "date": "2026-09-12",
+    "source": "Chamber Trials Stats / tab \"CT12\"; date: estimated",
+    "notes": "DATE ESTIMATED (after CT11 in the sheet)",
+    "date_estimated": true
+  }
+]
