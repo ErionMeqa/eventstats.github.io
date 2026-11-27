@@ -5,19 +5,26 @@ const fs = require('fs'), path = require('path');
 const banned = () => { const f = path.join(__dirname, 'data', 'banned.txt');
   return new Set(fs.existsSync(f) ? fs.readFileSync(f, 'utf8').split(/\r?\n/).map(s => s.trim().toLowerCase()).filter(s => s && !s.startsWith('#')) : []); };
 
-function leaderboard() {
+// non-canon events (data/noncanon.txt, one event name per line)
+const noncanonIds = () => { const f = path.join(__dirname, 'data', 'noncanon.txt');
+  const names = new Set(fs.existsSync(f) ? fs.readFileSync(f, 'utf8').split(/\r?\n/).map(s => s.trim().toLowerCase()).filter(s => s && !s.startsWith('#')) : []);
+  return new Set(db.prepare('select id,name from events').all().filter(e => names.has(e.name.toLowerCase())).map(e => e.id)); };
+
+// skip: Set of event ids to leave out (canon-only leaderboard). Ratings must already be recalculated the same way.
+function leaderboard(skip = null) {
   const BAN = banned();
+  const X = skip && skip.size ? ` and event_id not in (${[...skip].map(Number).join(',')})` : '';
   const rows = db.prepare(`select id,name,uuid,rating,events,
-    (select max(after) from performances where player_id=players.id) peak,
-    (select after-before from performances p join events e on e.id=p.event_id where p.player_id=players.id
+    (select max(after) from performances where player_id=players.id${X}) peak,
+    (select after-before from performances p join events e on e.id=p.event_id where p.player_id=players.id${X}
        order by e.date desc, e.id desc limit 1) last_change,
-    (select count(*) from performances where player_id=players.id and placement=1) wins,
-    (select count(*) from performances where player_id=players.id and placement<=3) top3,
-    (select count(*) from performances where player_id=players.id and placement<=5) top5,
-    (select count(*) from performances where player_id=players.id and placement<=10) top10
+    (select count(*) from performances where player_id=players.id and placement=1${X}) wins,
+    (select count(*) from performances where player_id=players.id and placement<=3${X}) top3,
+    (select count(*) from performances where player_id=players.id and placement<=5${X}) top5,
+    (select count(*) from performances where player_id=players.id and placement<=10${X}) top10
     from players where events>0 order by rating desc`).all().filter(r => !BAN.has(r.name.toLowerCase()));
   // rank before the most recent event, for the up/down arrows
-  const last = db.prepare('select id from events order by date desc, id desc limit 1').get();
+  const last = db.prepare(`select id from events where 1=1${X.replace('event_id', 'id')} order by date desc, id desc limit 1`).get();
   const before = new Map(last ? db.prepare('select player_id,before from performances where event_id=?').all(last.id).map(r => [r.player_id, r.before]) : []);
   const prev = rows.map(r => ({ id: r.id, v: before.has(r.id) ? before.get(r.id) : r.rating }))
     .filter(r => !(before.has(r.id) && rows.find(x => x.id === r.id).events === 1)) // first event: had no rank before
@@ -26,11 +33,11 @@ function leaderboard() {
   rows.forEach(r => { r.prev_rank = prevRank.get(r.id) ?? null; });
   // last five finishes (individual place, else team place), newest first
   const rec = db.prepare(`select coalesce(p.placement, p.team_placement) v from performances p join events e on e.id=p.event_id
-    where p.player_id=? order by e.date desc, e.id desc limit 5`);
+    where p.player_id=?${X.replace('event_id', 'p.event_id')} order by e.date desc, e.id desc limit 5`);
   rows.forEach(r => { r.recent = rec.all(r.id).map(x => x.v); });
   // dominance: average points above the event's average, in standard deviations of that event's scores
   const dom = new Map();
-  for (const e of db.prepare('select id from events').all()) {
+  for (const e of db.prepare('select id from events').all().filter(e => !(skip && skip.has(e.id)))) {
     const ps = db.prepare('select player_id,points from performances where event_id=? and points is not null').all(e.id);
     if (ps.length < 4) continue;
     const m = ps.reduce((s, p) => s + p.points, 0) / ps.length, sd = Math.sqrt(ps.reduce((s, p) => s + (p.points - m) ** 2, 0) / ps.length) || 1;
@@ -63,4 +70,4 @@ function player(id) {
   return { player: pl, history };
 }
 
-module.exports = { leaderboard, events, event, player };
+module.exports = { leaderboard, events, event, player, noncanonIds };

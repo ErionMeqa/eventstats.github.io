@@ -36,7 +36,8 @@ function parseCsv(text) {
 }
 
 // Replays every event in date order so history stays consistent.
-function recalc(today = new Date().toISOString().slice(0, 10)) {
+// skip: optional Set of event ids that are replayed without changing anyone's rating (non-canon events).
+function recalc(today = new Date().toISOString().slice(0, 10), skip = null) {
   const idle = (a, b) => (new Date(b) - new Date(a)) / 864e5;
   transaction(() => {
     const rating = new Map(), count = new Map(), last = new Map();
@@ -44,6 +45,7 @@ function recalc(today = new Date().toISOString().slice(0, 10)) {
     const upd = db.prepare('update performances set before=?, after=? where id=?');
     for (const e of db.prepare('select id,date from events order by date, id').all()) {
       const perfs = db.prepare('select * from performances where event_id=?').all(e.id);
+      if (skip && skip.has(e.id)) { perfs.forEach(p => { const r = rating.get(p.player_id); upd.run(r, r, p.id); }); continue; }
       // inactivity decay since each player's previous event
       perfs.forEach(p => { if (last.has(p.player_id)) rating.set(p.player_id, decay(rating.get(p.player_id), idle(last.get(p.player_id), e.date))); });
       const ch = computeEvent(perfs.map(p => ({ ...p, rating: rating.get(p.player_id) })));

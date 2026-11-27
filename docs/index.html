@@ -61,6 +61,11 @@ th{font:600 12px var(--sans);color:var(--mut);background:var(--bg2)} td.r,th.r{t
 /* lists */
 .tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px} .tools input{flex:1;min-width:200px;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg2);color:var(--fg);font:14px var(--sans)}
 .tools input:focus{outline:none;border-color:var(--xpd)}
+.mode{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden;margin-right:10px;flex:none}
+.mode button{background:var(--bg2);color:var(--mut);border:0;padding:6px 10px;font:500 12px var(--sans);cursor:pointer}
+.mode button.on{background:var(--xp);color:#16210a;font-weight:600}
+.nc{display:inline-block;margin-left:8px;padding:1px 6px;border-radius:5px;border:1px solid var(--line);color:var(--mut);font:600 10px var(--mono);letter-spacing:.04em;vertical-align:middle}
+.tr.off{opacity:.45}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px} .chip{padding:6px 12px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--mut);font:500 13px var(--sans);cursor:pointer}
 .chip:hover{color:var(--fg)} .chip.on{background:var(--xp);border-color:var(--xp);color:#16210a;font-weight:600}
 .pager{display:flex;justify-content:space-between;align-items:center;margin:14px 0;color:var(--mut);font-size:13px}
@@ -92,6 +97,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 22px 40px;color:var(--dim);font-
 </style></head><body>
 <header><div class="nav"><a class="logo" href="#/"><i><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></i>Event Elo</a>
 <a class="tab" id="t-lb" href="#/leaderboard">Leaderboard</a><a class="tab" id="t-ev" href="#/events">Events</a><span class="sp"></span>
+<div class="mode" title="Non-canon events (commissioned, NC) can be left out of the ratings"><button data-m="all">All events</button><button data-m="canon">Canon only</button></div>
 <div class="find"><input id="gs" placeholder="Find a player…" autocomplete="off"><ul id="gr"></ul></div>
 <a class="tab" id="t-ad" href="#/admin">Admin</a></div></header>
 <main id="app"><p class="sub">Loading…</p></main>
@@ -101,10 +107,17 @@ footer{max-width:1120px;margin:0 auto;padding:0 22px 40px;color:var(--dim);font-
 const START = 1100; // must match START in rating.js
 const $ = document.getElementById('app');
 // On GitHub Pages (static build) the same data comes from JSON files instead of the API.
-const url = u => !window.STATIC ? u : u.replace(/\/api\/events\/(\d+)/, 'data/event-$1.json').replace(/\/api\/players\/(\d+)/, 'data/player-$1.json')
+let MODE = 'all'; try { MODE = localStorage.getItem('mode') === 'canon' ? 'canon' : 'all'; } catch (e) {}
+const CANON = () => MODE === 'canon';
+// pick the canon or all-events numbers from an event/history row
+const cv = o => CANON() && o.canon_before != null ? { ...o, before: o.canon_before, after: o.canon_after } : o;
+const url = u => !window.STATIC ? u : u.replace('/api/leaderboard-canon', 'data/leaderboard-canon.json').replace(/\/api\/events\/(\d+)/, 'data/event-$1.json').replace(/\/api\/players\/(\d+)/, 'data/player-$1.json')
   .replace('/api/leaderboard', 'data/leaderboard.json').replace('/api/events', 'data/events.json');
 const cache = {}; const get = u => cache[u] ||= fetch(url(u)).then(r => r.json());
 if (window.STATIC) document.getElementById('t-ad').style.display = 'none';
+const modeBtns = () => document.querySelectorAll('.mode button').forEach(b => b.classList.toggle('on', b.dataset.m === MODE));
+document.querySelectorAll('.mode button').forEach(b => b.onclick = () => { MODE = b.dataset.m; try { localStorage.setItem('mode', MODE); } catch (e) {} modeBtns(); route(); });
+modeBtns();
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const hue = s => [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
 const COLORS = { crimson:'#dc2626', krimson:'#dc2626', scarlet:'#e11d48', red:'#ef4444', ruby:'#be123c', maroon:'#9f1239', coral:'#fb7185',
@@ -130,7 +143,7 @@ const nav = id => ['lb','ev','ad'].forEach(k => document.getElementById('t-' + k
 const SERIES = [['MC Championship','MC Championship','#f0a030'],['Block Wars','Block Wars','#e5484d'],["Pandora's Box","Pandora's Box",'#a97cf8'],['Chillars','Chillars','#4cc3ff'],
   ['MC Mayhem','MC Mayhem','#ff6b9a'],['MC Mania','MC Mania','#ffd23f'],['Blissful','Blissful','#7ee0b0'],['Biome Battle','Biome Battle','#8bd94a']];
 const seriesOf = n => (SERIES.find(([p]) => n.startsWith(p)) || [0, 'Other', '#8f988e']);
-const board = async () => { const r = await get('/api/leaderboard'); r.forEach((p, i) => p.rank = i + 1); return r; };
+const board = async () => { const r = (await get(CANON() ? '/api/leaderboard-canon' : '/api/leaderboard')).map(p => ({ ...p })); r.forEach((p, i) => p.rank = i + 1); return r; };
 const move = p => p.prev_rank == null ? '' : p.prev_rank > p.rank ? `<span class="mv up">▲${p.prev_rank - p.rank}</span>` : p.prev_rank < p.rank ? `<span class="mv dn">▼${p.rank - p.prev_rank}</span>` : '';
 const rankCls = n => n <= 3 ? 'p' + n : '';
 
@@ -145,8 +158,10 @@ const rankCls = n => n <= 3 ? 'p' + n : '';
 
 async function home() {
   nav('');
-  const [lb, ev] = await Promise.all([board(), get('/api/events')]);
-  const last = ev[0] ? await get('/api/events/' + ev[0].id) : null, top = lb[0];
+  const [lb, ev0] = await Promise.all([board(), get('/api/events')]);
+  const ev = CANON() ? ev0.filter(e => !e.noncanon) : ev0;
+  const last0 = ev[0] ? await get('/api/events/' + ev[0].id) : null, top = lb[0];
+  const last = last0 && { ...last0, players: last0.players.map(cv) };
   const perf = ev.reduce((s, e) => s + e.players, 0);
   let latest = '';
   if (last) {
@@ -159,7 +174,7 @@ async function home() {
   }
   const ser = SERIES.map(([p, n, c]) => { const es = ev.filter(e => e.name.startsWith(p)); return es.length ? { n, c, es } : null; }).filter(Boolean);
   $.innerHTML = `<div class="hero"><div><h1>Who's actually the best at Minecraft events?</h1>
-    <p class="lead">One rating for every player across MC Championship, Block Wars, Pandora's Box and more, updated from every team and individual finish.</p>
+    <p class="lead">One rating for every player across MC Championship, Block Wars, Pandora's Box and more, updated from every team and individual finish.${CANON() ? ' Showing canon events only.' : ''}</p>
     <div class="facts"><div>${lb.length.toLocaleString()}<span>players rated</span></div><div>${ev.length}<span>events</span></div><div>${perf.toLocaleString()}<span>performances</span></div></div></div>
     ${top ? `<a class="card spot" href="#/player/${top.id}"><div class="tag">#1 right now</div>
       <div class="top">${avatar(top.name, top.uuid)}<div><div class="nm">${esc(top.name)}</div><span class="mut" style="font-size:13px">${top.wins ?? 0} wins · ${top.top3 ?? 0} top-3 finishes</span></div></div>
@@ -174,7 +189,7 @@ async function home() {
 async function leaderboard() {
   nav('lb');
   const rows = await board(), PER = 50; let page = 0, list = rows;
-  $.innerHTML = `<h1>Leaderboard</h1><p class="sub">${rows.length.toLocaleString()} players. Arrows show rank movement since the most recent event; blocks are each player's last five finishes; margin is how far above the field they score on average.</p>
+  $.innerHTML = `<h1>Leaderboard</h1><p class="sub">${rows.length.toLocaleString()} players${CANON() ? ', canon events only (non-canon events don\'t count)' : ', all events'}. Arrows show rank movement since the most recent event; blocks are each player's last five finishes; margin is how far above the field they score on average.</p>
   <div class="tools"><input id="q" placeholder="Filter players…"></div><div id="tbl"></div>`;
   let q = ''; const filt = () => { list = rows.filter(p => p.name.toLowerCase().includes(q) ); draw(); };
   const draw = () => {
@@ -201,7 +216,7 @@ async function events(pre) {
     const list = rows.filter(e => (ser === 'All' || seriesOf(e.name)[1] === ser) && e.name.toLowerCase().includes(q));
     const byYear = {}; list.forEach(e => (byYear[String(e.date).slice(0, 4)] ||= []).push(e));
     document.getElementById('lst').innerHTML = Object.keys(byYear).sort().reverse().map(y => `<h2>${y} <small>${byYear[y].length} events</small></h2><div class="card wrap"><table><tbody>
-    ${byYear[y].map(e => { const s = seriesOf(e.name); return `<tr><td style="width:100%"><span class="dot" style="--c:${s[2]}"></span><a href="#/event/${e.id}" style="font-weight:600">${esc(e.name)}</a></td>
+    ${byYear[y].map(e => { const s = seriesOf(e.name); return `<tr><td style="width:100%"><span class="dot" style="--c:${s[2]}"></span><a href="#/event/${e.id}" style="font-weight:600">${esc(e.name)}</a>${e.noncanon ? '<span class="nc" title="Non-canon: left out of the Canon only ratings">NC</span>' : ''}</td>
     <td class="mut hide-s">${esc(s[1])}</td><td class="r num mut">${e.players} players</td><td class="r num dim">${esc(e.date)}</td></tr>`; }).join('')}</tbody></table></div>`).join('') || '<p class="mut">No events found.</p>';
   };
   draw(); document.getElementById('q').oninput = e => { q = e.target.value.toLowerCase(); draw(); };
@@ -209,10 +224,10 @@ async function events(pre) {
 
 async function event(id) {
   nav('ev');
-  const d = await get('/api/events/' + id);
+  const d0 = await get('/api/events/' + id), d = { ...d0, players: d0.players.map(cv) };
   const mem = name => d.players.filter(p => p.team === name), s = seriesOf(d.event.name);
-  $.innerHTML = `<p class="sub" style="margin-bottom:6px"><span class="dot" style="--c:${s[2]}"></span>${esc(s[1])} · ${esc(d.event.date)}</p><h1>${esc(d.event.name)}</h1>
-  <p class="sub">${d.players.length} players${d.teams.length ? ' in ' + d.teams.length + ' teams' : ''}</p>
+  $.innerHTML = `<p class="sub" style="margin-bottom:6px"><span class="dot" style="--c:${s[2]}"></span>${esc(s[1])} · ${esc(d.event.date)}</p><h1>${esc(d.event.name)}${d.event.noncanon ? '<span class="nc">NON-CANON</span>' : ''}</h1>
+  <p class="sub">${d.players.length} players${d.teams.length ? ' in ' + d.teams.length + ' teams' : ''}${d.event.noncanon ? (CANON() ? ' · not counted while "Canon only" is on' : ' · counted only in "All events"') : ''}</p>
   ${d.teams.length ? `<h2>Final standings</h2><div class="standings">${d.teams.map(t => { const m = mem(t.name), g = m.reduce((s, p) => s + p.after - p.before, 0) / Math.max(1, m.length);
     return `<div class="card st" style="--c:${t.color || teamColor(t.name)}"><div class="p">${ord(t.placement)}</div><div><b>${esc(t.name)}</b>
     <div class="m">${m.map(p => `<a href="#/player/${p.id}">${esc(p.name)}</a>${p.placement != null ? ` <span class="dim">#${p.placement}</span>` : ''}`).join(' &nbsp;·&nbsp; ')}</div></div><div class="r">${chg(0, g)}<div class="dim" style="font-size:11px">avg</div></div></div>`; }).join('')}</div>` : ''}
@@ -236,7 +251,9 @@ function chart(history) {
 
 async function player(id) {
   nav('lb');
-  const [{ player, history }, lb] = await Promise.all([get('/api/players/' + id), board()]);
+  const [pd, lb] = await Promise.all([get('/api/players/' + id), board()]);
+  const player = CANON() && pd.player.canon_rating != null ? { ...pd.player, rating: pd.player.canon_rating, events: pd.player.canon_events } : pd.player;
+  const all = pd.history.map(cv), history = CANON() ? all.filter(h => !h.noncanon) : all;
   const me = lb.find(r => r.id === player.id) || {}, pct = me.rank ? Math.max(1, Math.ceil(100 * me.rank / lb.length)) : null;
   const ip = history.filter(h => h.placement != null), avg = ip.length ? ip.reduce((s, h) => s + h.placement, 0) / ip.length : null;
   const peak = Math.max(START, ...history.map(h => h.after));
@@ -250,11 +267,11 @@ async function player(id) {
     <div class="card tile"><div class="k">Team wins</div><div class="v">${history.filter(h => h.team_placement === 1).length}</div></div>
     <div class="card tile"><div class="k">Avg place</div><div class="v">${avg == null ? '–' : avg.toFixed(1)}</div></div>
     <div class="card tile" title="Average points above the event average, in standard deviations of that event's scores"><div class="k">Points margin</div><div class="v">${me.margin == null ? '–' : (me.margin > 0 ? '+' : '') + me.margin.toFixed(2)}</div></div></div>
-  <div class="card chartc">${chart(history)}</div>
-  <h2>Event timeline <small>${history.length} events · newest first · coloured by team</small></h2>
-  <div class="tl">${history.slice().reverse().map(h => `<a class="card tr" href="#/event/${h.event_id}" style="--c:${h.color || (h.team ? teamColor(h.team) : 'var(--line)')}">
+  <div class="card chartc">${history.length ? chart(history) : '<p class="mut">No canon events yet.</p>'}</div>
+  <h2>Event timeline <small>${history.length} events${CANON() && all.length > history.length ? ` · ${all.length - history.length} non-canon shown faded` : ''} · newest first · coloured by team</small></h2>
+  <div class="tl">${all.slice().reverse().map(h => `<a class="card tr${CANON() && h.noncanon ? ' off' : ''}" href="#/event/${h.event_id}" style="--c:${h.color || (h.team ? teamColor(h.team) : 'var(--line)')}">
     <span class="d">${esc(h.date)}</span><span class="e">${esc(h.name)}</span><span class="t">${esc(h.team || '')}${h.team_placement ? ` · ${ord(h.team_placement)}` : ''}</span>
-    <span class="r num">${h.placement != null ? '#' + h.placement : '–'}</span><span class="r num hide">${R(h.after)}</span><span class="r">${chg(h.before, h.after)}</span></a>`).join('')}</div>`;
+    <span class="r num">${h.placement != null ? '#' + h.placement : '–'}</span><span class="r num hide">${R(h.after)}</span><span class="r">${CANON() && h.noncanon ? '<span class="nc">NC</span>' : chg(h.before, h.after)}</span></a>`).join('')}</div>`;
 }
 
 const api = (u, body) => fetch(u, { method: body ? 'POST' : 'GET',
