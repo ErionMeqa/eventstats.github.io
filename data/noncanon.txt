@@ -1,92 +1,42 @@
 # Non-canon events: one event name per line, exactly as shown on the site.
 # With the "Canon only" switch on, these events are still listed but do not change anyone's rating.
+# This list = events that are NOT on eventelo.live (checked 2026-11-27 against all 413 of its events).
+# Events newer than its latest event (2026-10-11) are left counted until it catches up. Chamber Trials 12 is also kept: its date is only estimated.
 # Delete a line to make an event count again, or add a line to exclude one. Lines starting with # are ignored.
 
-# --- Marked (NC) in the stats sheets (22)
 MC Championship: Jingle Jam
-Pandora's Box U
+MC Championship: Pride 2021
+Chillars Championship V
+MC Championship: Scuffed
 Block Wars Pride 2023
 Block Wars Rookies
-MC Championship: Rising 2
 Block Wars Origins G2023
+MC Mania Birthday
 Block Wars Rookies 2
 Block Wars Origins Rookies
+Chillars Championship Rewind
+Biome Battle 2
 Pandora's Box Dragon Pit: Ascension
 Block Wars Rookies 3
 Block Wars Origins Rookies 2
 Pandora's Box Dragon Pit: Genesis
+MC Mania x InsideMC
+Chillars Championship Underdogs
+Biome Battle Wolfeei Invitational
+Biome Battle x The Wheel
 Block Wars Hispano
-Pandora's Box U2
 Block Wars Rookies 4
-Block Wars Brawl
+MC Championship: Magenta eTrophy
+Block Wars x Feinberg
 Block Wars Rookies 5
+Pandora's Box x Yo-Yo Slime
 Block Wars x Movember
 Block Wars CC
 Block Wars Origins CC 2
-Block Wars Rookies 6
-Block Wars Origins Reloaded
-
-# --- Pandora's Box commissioned events (54)
-Pandora's Box x BugBoi
-Pandora's Box x Group Project
-Pandora's Box x Yo-Yo Slime
-Pandora's Box x Last Dance
-Pandora's Box x Cdawg & ThatzRed
-Pandora's Box x Yappertron
-Pandora's Box x Challengers
-Pandora's Box x Slushies
-Pandora's Box x The World
-Pandora's Box x Game Changers
-Pandora's Box x Islanders
-Pandora's Box x New Beginning
-Pandora's Box x Ultimate
-Pandora's Box x Perfect 10
-Pandora's Box x SGN
-Pandora's Box x DMCA
-Pandora's Box x Nerf or Nothin
-Pandora's Box x Game Changers 2
-Pandora's Box x Ever Grande
-Pandora's Box x Blunt Rotation
-Pandora's Box x Geode SMP
-Pandora's Box x Aries' Birthday
-Pandora's Box x Breadlaz Brawl
-Pandora's Box x Swifyz Community
-Pandora's Box x Ender League
-Pandora's Box x Cabbit Cup
 Pandora's Box x Mosquito Mancave
-Pandora's Box x Rat Rampage
-Pandora's Box x BryTheGuyy
-Pandora's Box x ShineStarCarter
-Pandora's Box x Ready or Not 2
-Pandora's Box x Flower Festival
-Pandora's Box x Spoingode
-Pandora's Box x Competitive
-Pandora's Box x Ready or Not 3A
-Pandora's Box x Ready or Not 3B
-Pandora's Box x Summer Showdown
-Pandora's Box x Taco Bell
-Pandora's Box x Super Megatron
-Pandora's Box x C12dawg
-Pandora's Box x Star Sighted
-Pandora's Box x The Last Box
-Pandora's Box x Malcolm Todd Mayhem
-Pandora's Box x The Glorpening 2
-Pandora's Box x The Movie
-Pandora's Box x Klyx Testers
-Pandora's Box x ReddieWars
-Pandora's Box x Sunset Showdown
-Pandora's Box x Ready or Not 4A
-Pandora's Box x Ready or Not 4B
-Pandora's Box x Ready or Not 4C
-Pandora's Box x Ice Cold!
-Pandora's Box x Goldenrod
-Pandora's Box x Meow Mayhem
-
-# --- Chillars commissioned events (7)
+Block Wars Rookies 6
+Chillars Championship Pride
 Chillars Championship x ViddyVidVid
-Chillars Championship x Yo-Yo Slime
-Chillars Championship x The Fellas
-Chillars Championship x Almond & DNA
-Chillars Championship x Starblast
+Pandora's Box x ReddieWars
+MC Championship: Hispano
 Chillars Championship x Prof Pie
-Chillars Championship x Silliest
